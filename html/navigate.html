@@ -1,0 +1,136 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+
+  <!-- Container -->
+  <div class="container-fluid">
+
+    <!-- Hamburger icon -->
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar container -->
+    <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarNav">
+
+      <!-- Left align -->
+      <div class="navbar-left me-auto">
+
+        <!-- Navigate -->
+        <ul class="navbar-nav">
+
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link" 
+               ng-class="{'active cursor-default text-decoration-underline': state.id === 'home'}"
+               ui-sref="home">
+              <i class="fa-solid fa-home fa-lg me-1"></i>
+              <span class="text-capitalize text-small-caps">
+                {{'home_page' | translate:lang.data}}
+              </span>
+            </a>
+          </li>
+
+          <!-- Page1 -->
+          <li class="nav-item">
+            <a class="nav-link" 
+               ng-class="{'active cursor-default text-decoration-underline': state.id === 'page1'}"
+               ui-sref="page1">
+              <i class="fa-solid fa-images fa-lg me-1"></i>
+              <span class="text-capitalize text-small-caps">
+                {{'page' | translate:lang.data}}1
+              </span>
+            </a>
+          </li>
+
+          <!-- Page2 -->
+          <li class="nav-item">
+            <a class="nav-link" 
+               ng-class="{'active cursor-default text-decoration-underline': state.id === 'page2'}"
+               ui-sref="page2">
+              <i class="fa-solid fa-images fa-lg me-1"></i>
+              <span class="text-capitalize text-small-caps">
+                {{'page' | translate:lang.data}}2
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Center align -->
+      <div class="navbar-center mx-auto">
+
+        <!-- Navigate -->
+        <ul class="navbar-nav">
+
+          <!-- Page2 -->
+          <li class="nav-item">
+            <a class="nav-link" 
+               ng-class="{'active cursor-default text-decoration-underline': state.id === 'page3'}"
+               ui-sref="page3">
+              <i class="fa-solid fa-images fa-lg me-1"></i>
+              <span class="text-capitalize text-small-caps">
+                {{'page' | translate:lang.data}}3
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right align -->
+      <div class="navbar-right ms-auto">
+
+        <!-- Navigate -->
+        <ul class="navbar-nav">
+
+          <!-- Language -->
+          <li class="nav-item dropdown" 
+              ng-if="lang.available && lang.available.length > 1">
+              <a id="langDropdown" 
+                 href="#" 
+                 class="nav-link dropdown-toggle"  
+                 role="button" 
+                 data-bs-toggle="dropdown" 
+                 aria-expanded="false">
+                <img ng-src="{{app.commonPath+'media/image/countries/'+lang.available[lang.index].img}}" 
+                     class="me-1" 
+                     height="22" 
+                     alt="flag">
+                <span class="text-capitalize text-small-caps">
+                  {{lang.available[lang.index].local}}
+                </span>
+              </a>
+
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end" 
+                  aria-labelledby="langDropdown">
+
+                <!-- Language items -->
+                <li data-lang-id="{{x.id}}"
+                    class="dropdown-item cursor-pointer"
+                    ng-click="changeLanguage($event)"
+                    ng-repeat="x in lang.available" 
+                    ng-if="x.valid && $index != lang.index">
+                  <img ng-src="{{app.commonPath+'media/image/countries/'+x.img}}" 
+                       class="me-1" 
+                       height="22" 
+                       alt="flag">
+                  <span class="text-capitalize">
+                    {{x.name}}
+                  </span>
+                  <span ng-if="x.name != x.local">
+                    ({{x.local}})
+                  </span>
+                </li>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
