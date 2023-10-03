@@ -1,3 +1,17 @@
 .carousel-indicators button {
     border: 1px solid white !important;
 }
+
+main {
+    background-image:url('../img/hatter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    color: rgb(248, 242, 233);
+}
+
+h4,h1, h3 {
+    color: rgb(248, 234, 218);
+}
