@@ -1,4 +1,8 @@
 {
+  "teacher": "lehrer",
+  "news": "nachricht",
+  "page2": "gemeinschaft",
+  "page1": "kurse",
   "default": "standard",
   "user": "benutzer",
   "users": "benutzer",

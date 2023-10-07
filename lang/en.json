@@ -1,4 +1,8 @@
 {
+  "teacher": "teachers",
+  "news": "news",
+  "page2": "community",
+  "page1": "Courses",
   "default": "default",
   "user": "user",
   "users": "users",
