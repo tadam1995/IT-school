@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-custom bg-light">
 
   <!-- Container -->
   <div class="container-fluid">
@@ -21,6 +21,11 @@
       <!-- Left align -->
       <div class="navbar-left me-auto">
 
+        
+      </div>
+
+      <!-- Center align -->
+      <div class="navbar-center mx-auto">
         <!-- Navigate -->
         <ul class="navbar-nav">
 
@@ -29,7 +34,7 @@
             <a class="nav-link" 
                ng-class="{'active cursor-default text-decoration-underline': state.id === 'home'}"
                ui-sref="home">
-              <i class="fa-solid fa-home fa-lg me-1"></i>
+               <i class="fa-solid fa-house" style="color: #a7b181;"></i>
               <span class="text-capitalize text-small-caps">
                 {{'home_page' | translate:lang.data}}
               </span>
@@ -41,7 +46,7 @@
             <a class="nav-link" 
                ng-class="{'active cursor-default text-decoration-underline': state.id === 'page1'}"
                ui-sref="page1">
-              <i class="fa-solid fa-images fa-lg me-1"></i>
+               <i class="fa-solid fa-book-open" style="color: #a7b181;"></i>
               <span class="text-capitalize text-small-caps">
                 {{'page1' | translate:lang.data}}
               </span>
@@ -53,7 +58,7 @@
             <a class="nav-link" 
                ng-class="{'active cursor-default text-decoration-underline': state.id === 'page2'}"
                ui-sref="page2">
-              <i class="fa-solid fa-images fa-lg me-1"></i>
+               <i class="fa-solid fa-person-chalkboard" style="color: #a7b181;"></i>
               <span class="text-capitalize text-small-caps">
                 {{'page2' | translate:lang.data}}
               </span>
@@ -65,18 +70,13 @@
             <a class="nav-link" 
                ng-class="{'active cursor-default text-decoration-underline': state.id === 'page3'}"
                ui-sref="page3">
-              <i class="fa-solid fa-images fa-lg me-1"></i>
+              <i class="fa-solid fa-images fa-lg me-1" style="color: #a7b181;"></i>
               <span class="text-capitalize text-small-caps">
-                {{'page' | translate:lang.data}}3
+                {{'page3' | translate:lang.data}}
               </span>
             </a>
           </li>
         </ul>
-      </div>
-
-      <!-- Center align -->
-      <div class="navbar-center mx-auto">
-
         <!-- Navigate -->
         <ul class="navbar-nav">
 
@@ -89,6 +89,56 @@
 
         <!-- Navigate -->
         <ul class="navbar-nav">
+
+          <!-- Login -->
+          <li class="nav-item" 
+              ng-if="!user.id && (state.id !== 'user' || userParamsType !== 'login')">
+            <a class="nav-link" ui-sref="user({type: 'login'})"
+               ng-class="{'active': state.id === 'user' && userParamsType === 'login'}">
+              <i class="fa-solid fa-right-to-bracket fa-lg me-1" style="color: #a7b181;"></i>
+              <span class="text-capitalize text-small-caps">
+                {{'login' | translate:lang.data}}
+              </span>
+            </a>
+          </li>
+
+          <!-- Register -->
+          <li class="nav-item" 
+              ng-if="!user.id && state.id === 'user' && userParamsType === 'login'">
+            <a class="nav-link" ui-sref="register"
+               ng-class="{'active': state.id === 'user' && userParamsType === 'register'}">
+              <i class="fa-solid fa-right-to-bracket fa-lg me-1"></i>
+              <span class="text-capitalize text-small-caps">
+                {{'register' | translate:lang.data}}
+              </span>
+            </a>
+          </li>
+
+          <!-- Account -->
+          <li class="nav-item dropdown" 
+              ng-if="user.id">
+            <a id="userDropdown"
+               href="#" 
+               class="nav-link dropdown-toggle"
+               ng-class="{'disabled': state.id === 'user' && userParamsType === 'profile' && helper.isEdit}"
+               ng-attr-aria-disabled="{{state.id === 'user' && userParamsType === 'profile' && helper.isEdit}}"
+               role="button" 
+               data-bs-toggle="dropdown" 
+               aria-expanded="false">
+
+              <!-- Image -->
+              <div class="bg-img bg-img-cover overflow-hidden rounded-circle d-inline-block float-start me-2" 
+                   style="width:32px;height:32px;"
+                   ng-style="{'background-image':user.img_type?'url(data:'+user.img_type+';base64,'+user.img+')':'url('+app.commonPath+'media/image/blank/'+(user.gender==='F'?'fe':'')+'male-blank.webp)'}"
+                   ng-show="user.img || user.gender">
+              </div>
+
+              <!-- Account title -->
+              <div class="text-capitalize text-small-caps d-inline-block float-start">
+                {{'account' | translate:lang.data}}
+              </div>
+            </a>
+
 
           <!-- Language -->
           <li class="nav-item dropdown" 
@@ -107,6 +157,7 @@
                   {{lang.available[lang.index].local}}
                 </span>
               </a>
+              
 
               <!-- Dropdown menu -->
               <ul class="dropdown-menu dropdown-menu-end" 

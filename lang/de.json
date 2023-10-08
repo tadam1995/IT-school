@@ -1,13 +1,16 @@
 {
+  "school": "jakab hunor it-berufsfachschule",
   "teacher": "lehrer",
   "news": "nachricht",
   "page2": "gemeinschaft",
   "page1": "kurse",
+  "page3": "beziehung",
   "default": "standard",
   "user": "benutzer",
   "users": "benutzer",
   "language": "sprache",
   "home_page": "Startseite",
+  "title": "Willkommen auf der Website unserer Schule!",
   "page": "seite",
   "login": "anmeldung",
   "logout": "ausloggen",
@@ -51,5 +54,6 @@
   "forgot_password": "du hast dein passwort vergessen",
   "change_email": "Email adresse ändern",
   "change_password": "kennwort ändern",
-  "under_construction": "bauarbeiten im gange"
+  "under_construction": "bauarbeiten im gange",
+  "gallery": "galerie"
 }

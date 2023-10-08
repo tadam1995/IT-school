@@ -1,14 +1,16 @@
 {
+  "school": "jakab hunor informatikai szakiskola",
   "teacher": "tanárok",
   "news": "hírek",
   "page2": "közösség",
-  "page1": "szakok",
-  "title": "Jakab Hunor Informatikai Szakiskola",
+  "page1": "képzések",
+  "page3": "kapcsolat",
   "default": "alapértelmezett",
   "user": "felhasználó",
   "users": "felhasználók",
   "language": "nyelv",
   "home_page": "kezdőlap",
+  "title": "Üdvözlünk iskolánk weboldalán!",
   "page": "oldal",
   "login": "bejelentkezés",
   "logout": "kijelentkezés",
@@ -52,5 +54,6 @@
   "forgot_password": "elfelejtette a jelszavát",
   "change_email": "email cím megváltoztatása",
   "change_password": "jelszó módosítása",
-  "under_construction": "fejlesztés alatt"
+  "under_construction": "fejlesztés alatt",
+  "gallery": "galéria"
 }

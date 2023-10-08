@@ -86,14 +86,14 @@
   
                 <!-- Button -->
                 <button id="tab-3-tab" 
-                        class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
+                        class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
                         data-bs-toggle="pill"
                         data-bs-target="#tab-3"
                         role="tab" 
                         type="button" 
                         aria-controls="tab-3"
                         aria-selected="false">
-                  Tab3
+                  {{'gallery' | translate:lang.data}}
                 </button>
               </li>
             </ul>
@@ -283,4 +283,6 @@
         </div>
       </div>
     </main>
+     <!-- Footer -->
+  <footer ng-include src="'./html/footer.html'"></footer>
   </div>

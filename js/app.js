@@ -36,6 +36,31 @@
           url: '/page3',
           templateUrl: './html/page3.html',
           controller: 'page3Controller'
+        })
+        .state('login', {
+          url: '/login',
+          templateUrl: './html/user.html',
+					controller: 'userController'
+        })
+        .state('register', {
+          url: '/register',
+          templateUrl: './html/user.html',
+					controller: 'userController'
+        })
+        .state('profile', {
+          url: '/profile',
+          templateUrl: './html/user.html',
+					controller: 'userController'
+        })
+        .state('email', {
+          url: '/email',
+          templateUrl: './html/user.html',
+					controller: 'userController'
+        })
+        .state('password', {
+          url: '/password',
+          templateUrl: './html/user.html',
+					controller: 'userController'
         });
       
       $urlRouterProvider.otherwise('/');

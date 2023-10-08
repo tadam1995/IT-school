@@ -1,13 +1,16 @@
 {
+  "school": "jakab hunor it school",
   "teacher": "teachers",
   "news": "news",
   "page2": "community",
   "page1": "Courses",
+  "page3": "contact us",
   "default": "default",
   "user": "user",
   "users": "users",
   "language": "language",
   "home_page": "home page",
+  "title": "Welcome to the website of our school!",
   "page": "page",
   "login": "login",
   "logout": "logout",
@@ -51,5 +54,6 @@
   "forgot_password": "forgot your password",
   "change_email": "change email address",
   "change_password": "change password",
-  "under_construction": "under construction"
+  "under_construction": "under construction",
+  "gallery": "gallery"
 }
