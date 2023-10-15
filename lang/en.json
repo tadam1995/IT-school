@@ -55,5 +55,20 @@
   "change_email": "change email address",
   "change_password": "change password",
   "under_construction": "under construction",
-  "gallery": "gallery"
+  "gallery": "gallery",
+  "slogan": "We train the professionals of the future",
+  "training1": "Design and operation of automated vehicles",
+  "training2": "Design and operation of smart home systems",
+  "training3": "Design and operation of robot programming and robotics systems",
+  "training4": "Virtual reality (VR) and augmented reality (AR) development course",
+  "training5": "Development of artificial intelligence and data analysis",
+  "training6": "Digital marketing and personalized marketing major",
+  "training1_description": "Perhaps the most essential feature of autonomous vehicle driving systems is precisely how they handle the ambiguity and complexity of partially perceived traffic situations with disturbances. Jan Nagler, Jeroen van den Hoven and Dirk Helbing",
+  "training2_description": "The smart home is a logic-based, coordinated system where the units participating in the system (heating, lighting, shading, etc.) work together and support each other. All functions can be accessed from one interface, and connected automations can be created as desired.",
+  "training3_description": "One of the most important endeavors of robotics is the most efficient cooperation between humans and robots. With the ability to work in parallel with humans, modern robotic systems can adapt to the most rapidly changing conditions.",
+  "training4_description": "The so-called tracking systems, which are needed to determine the position of the user's body, hands, and head, as well as the tactile systems, which are designed to provide force and pressure feedback, play a huge role in the creation of virtual reality.",
+  "training5_description": "Artificial intelligence currently represents a significant branch of computer science that deals with intelligent behavior, machine learning, and machine adaptation. It has become a discipline that tries to provide answers to real-life problems.",
+  "training6_description": "The purpose of digital marketing is for the seller to have the opportunity to use more personal methods to build up the recognition/awareness of his company or business, and thus create a more human-centered communication.",
+  "purpose": "The goal of our school is to provide our students with knowledge that corresponds to today's rapidly changing world. We constantly monitor trends and adapt and develop our training courses accordingly.",
+  "in_more_detail": "in more detail"
 }

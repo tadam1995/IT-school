@@ -55,5 +55,20 @@
   "change_email": "Email adresse ändern",
   "change_password": "kennwort ändern",
   "under_construction": "bauarbeiten im gange",
-  "gallery": "galerie"
+  "gallery": "galerie",
+  "slogan": "Wir bilden die Fachkräfte der Zukunft aus",
+  "training1": "Design und Betrieb automatisierter Fahrzeuge",
+  "training2": "Konzeption und Betrieb von Smart-Home-Systemen",
+  "training3": "Design und Betrieb von Roboterprogrammierungs- und Robotiksystemen",
+  "training4": "Kurs zur Entwicklung von Virtual Reality (VR) und Augmented Reality (AR).",
+  "training5": "Entwicklung künstlicher Intelligenz und Datenanalyse",
+  "training6": "Hauptfach Digitales Marketing und personalisiertes Marketing",
+  "training1_description": "Das vielleicht wesentlichste Merkmal autonomer Fahrzeugfahrsysteme ist genau der Umgang mit der Mehrdeutigkeit und Komplexität teilweise wahrgenommener Verkehrssituationen mit Störungen. Jan Nagler, Jeroen van den Hoven und Dirk Helbing",
+  "training2_description": "Das Smart Home ist ein logikbasiertes, koordiniertes System, bei dem die am System beteiligten Einheiten (Heizung, Beleuchtung, Beschattung etc.) zusammenarbeiten und sich gegenseitig unterstützen. Alle Funktionen sind über eine Oberfläche abrufbar und vernetzte Automatisierungen können nach Wunsch erstellt werden.",
+  "training3_description": "Eine der wichtigsten Aufgaben der Robotik ist die möglichst effiziente Zusammenarbeit zwischen Mensch und Roboter. Durch die Fähigkeit, parallel mit Menschen zu arbeiten, können sich moderne Robotersysteme an die sich schnell ändernden Bedingungen anpassen.",
+  "training4_description": "Eine große Rolle bei der Gestaltung des Virtuellen spielen die sogenannten Trackingsysteme, die zur Positionsbestimmung von Körper, Händen und Kopf des Nutzers erforderlich sind, sowie die taktilen Systeme, die Kraft- und Druckrückmeldungen liefern sollen Wirklichkeit.",
+  "training5_description": "Künstliche Intelligenz stellt derzeit einen bedeutenden Zweig der Informatik dar, der sich mit intelligentem Verhalten, maschinellem Lernen und maschineller Anpassung beschäftigt. Es ist zu einer Disziplin geworden, die versucht, Antworten auf reale Probleme zu geben.",
+  "training6_description": "Der Zweck des digitalen Marketings besteht darin, dem Verkäufer die Möglichkeit zu geben, mit persönlicheren Methoden die Bekanntheit/Bekanntheit seines Unternehmens oder Geschäfts aufzubauen und so eine stärker auf den Menschen ausgerichtete Kommunikation zu schaffen.",
+  "purpose": "Das Ziel unserer Schule ist es, unseren Schülern Wissen zu vermitteln, das der heutigen, sich schnell verändernden Welt entspricht. Wir beobachten ständig Trends und passen unsere Schulungen entsprechend an und entwickeln sie weiter.",
+  "in_more_detail": "ausführlicher"
 }

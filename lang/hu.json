@@ -55,5 +55,20 @@
   "change_email": "email cím megváltoztatása",
   "change_password": "jelszó módosítása",
   "under_construction": "fejlesztés alatt",
-  "gallery": "galéria"
+  "gallery": "galéria",
+  "slogan": "A jövő szakembereit képezzük",
+  "training1": "Automatizált járművek tervezése és üzemeltetése szak",
+  "training2": "Smart home rendszerek tervezése és üzemeltetése szak",
+  "training3": "Robotprogramozó és robotikai rendszerek tervezése és üzemeltetése szak",
+  "training4": "Virtuális valóság (VR) és kiterjesztett valóság (AR) fejlesztő szak",
+  "training5": "Mesterséges intelligencia fejlesztése és adatelemzése szak",
+  "training6": "Digitális marketing és személyre szabott marketing szak",
+  "training1_description": "Az autonóm gépjárművezető rendszerek leglényegesebb tulajdonsága talán éppen az, hogy miképpen kezelik a részlegesen, zavarások mellett érzékelt közlekedési helyzetek többértelműségét és komplexitását. Jan Nagler, Jeroen van den Hoven és Dirk Helbing",
+  "training2_description": "Az okos otthon egy logikákra épülő, egymásra hangolt rendszer ahol a rendszerben résztvevő egységek (fűtés, világítás, árnyékolás stb…) összedolgoznak és támogatják egymást. Egy felületről érhető el minden funkció és tetszés szerint öszekapcsolódó automatikák alakíthatóak ki.",
+  "training3_description": "Az ember és a robot közötti minél hatékonyabb együttműködés a robotika egyik legfontosabb törekvése. Az emberrel párhuzamosan történő munkavégzés képességével a modern robotikai rendszerek ugyanis a leggyorsabban változó körülményekhez is tudnak alkalmazkodni.",
+  "training4_description": "A virtuális valóság létrehozásában óriási szerepe van az úgynevezett nyomkövető rendszereknek, melyek a felhasználó testének, kezeinek, fejének helyzetmeghatározására szükségesek, valamint a tapintási rendszereknek, melyek az erő és nyomás visszacsatolására hivatottak.",
+  "training5_description": "A mesterséges intelligencia jelenleg a számítógép-tudomány jelentős ágát képviseli, amely intelligens viselkedéssel, gépi tanulással, és a gépek adaptációjával foglalkozik. Olyan tudományággá vált, amely a valós életbeli problémákra próbál válaszokat adni.",
+  "training6_description": "Az digitális marketing célja, hogy az eladónak személyesebb módszerekkel van lehetősége cégének vagy üzletének ismertségét/tudatosságát felépíteni, és ezzel végeredményben egy emberközpontúbb kommunikációt létrehozni.",
+  "purpose": "Iskolánk célja, hogy olyan tudást adjunk át a tanulóinknak, amelyek a mai gyorsan változó világnak megfeleljenek. Folyamatosan figyeljük a trendeket és ennek megfelelően alakítjuk, fejlesztjük a képzéseinket.",
+  "in_more_detail": "Bővebben"
 }
