@@ -31,80 +31,37 @@
           <div class="carousel-indicators">
             <button type="button" 
                     data-bs-target="#carouselCarCaptions" 
-                    data-bs-slide-to="0" 
-                    class="active" 
-                    aria-current="true" 
-                    aria-label="Slide 1">
-            </button>
-            <button type="button" 
-                    data-bs-target="#carouselCarCaptions" 
-                    data-bs-slide-to="1" 
-                    aria-label="Slide 2">
-            </button>
-            <button type="button" 
-                    data-bs-target="#carouselCarCaptions" 
-                    data-bs-slide-to="2" 
-                    aria-label="Slide 3">
-            </button>
-            <button type="button" 
-                    data-bs-target="#carouselCarCaptions" 
-                    data-bs-slide-to="3" 
-                    aria-label="Slide 4">
+                    data-bs-slide-to="{{$index}}" 
+                    ng-class="{'active': $index === 0}" 
+                    aria-current="{{$index === 0 ? true : false}}" 
+                    aria-label="Slide {{$index+1}}"
+                    ng-repeat="x in carousel track by $index">
             </button>
           </div>
         
           <!-- Carousel images -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./media/image/car1.jpg" 
+
+            <div class="carousel-item"
+                 ng-class="{'active': $index === 0}"
+                 ng-repeat="x in carousel track by $index">
+              <img ng-src="./media/image/carousel/{{x}}" 
                    class="d-block w-100" 
                    alt="img">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="mb-4">Iskola foto 1</h5>
               </div>
             </div>
-            <div class="carousel-item">
-              <img src="./media/image/car2.jpg" 
-                   class="d-block w-100" 
-                   alt="img">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="mb-3">Iskola foto 2</h5>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./media/image/car3.jpg"  
-                   class="d-block w-100" 
-                   alt="img">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="mb-4">Iskola foto 3</h5>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./media/image/car4.jpg" 
-                   class="d-block w-100" 
-                   alt="img">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="mb-4">Iskola foto 4</h5>
-              </div>
-            </div>
           </div>
         
-          <!-- Previous -->
-          <button class="carousel-control-prev" 
+          <!-- Controls -->
+          <button class="carousel-control-{{x}}" 
                   type="button" 
                   data-bs-target="#carouselCarCaptions" 
-                  data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-        
-          <!-- Next -->
-          <button class="carousel-control-next" 
-                  type="button" 
-                  data-bs-target="#carouselCarCaptions" 
-                  data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+                  data-bs-slide="{{x}}"
+                  ng-repeat="x in ['prev','next'] track by $index">
+            <span class="carousel-control-{{x}}-icon" aria-hidden="true"></span>
+            <span class="visually-hidden text-capitalize">{{x}}</span>
           </button>
         </div>
       </div>

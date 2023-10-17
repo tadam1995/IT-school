@@ -19,7 +19,8 @@
       $stateProvider
         .state('home', {
           url: '/',
-          templateUrl: './html/home.html'
+          templateUrl: './html/home.html',
+          controller: 'homeController',
         })
         .state('page1', {
           url: '/page1',
@@ -210,6 +211,22 @@
           });
         }
       };
+    }
+  ])
+
+  // Home controller
+  .controller('homeController', [
+    '$scope',
+    'http',
+    function($scope, http) {
+
+      // Http request
+      http.request('./php/carousel.php')
+      .then(response => {
+        $scope.carousel = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e));
     }
   ])
 
