@@ -24,7 +24,7 @@
   "guest": "gast",
   "vip": "vip",
   "not_verified": "nicht verifiziert",
-  "name": "name",
+  "name": "nahme",
   "prefix_name": "präfixname",
   "first_name": "vorname",
   "middle_name": "zweiter vorname",
@@ -70,5 +70,6 @@
   "training5_description": "Künstliche Intelligenz stellt derzeit einen bedeutenden Zweig der Informatik dar, der sich mit intelligentem Verhalten, maschinellem Lernen und maschineller Anpassung beschäftigt. Es ist zu einer Disziplin geworden, die versucht, Antworten auf reale Probleme zu geben.",
   "training6_description": "Der Zweck des digitalen Marketings besteht darin, dem Verkäufer die Möglichkeit zu geben, mit persönlicheren Methoden die Bekanntheit/Bekanntheit seines Unternehmens oder Geschäfts aufzubauen und so eine stärker auf den Menschen ausgerichtete Kommunikation zu schaffen.",
   "purpose": "Das Ziel unserer Schule ist es, unseren Schülern Wissen zu vermitteln, das der heutigen, sich schnell verändernden Welt entspricht. Wir beobachten ständig Trends und passen unsere Schulungen entsprechend an und entwickeln sie weiter.",
-  "in_more_detail": "ausführlicher"
+  "in_more_detail": "ausführlicher",
+  "course": "wesentlich"
 }
