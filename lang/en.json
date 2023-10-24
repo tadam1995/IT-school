@@ -59,7 +59,7 @@
   "slogan": "We train the professionals of the future",
   "training1": "Design and operation of automated vehicles",
   "training2": "Design and operation of smart home systems",
-  "training3": "Design and operation of robot programming and robotics systems",
+  "training3": "Design and operation of robotic systems",
   "training4": "Virtual reality (VR) and augmented reality (AR) development course",
   "training5": "Development of artificial intelligence and data analysis",
   "training6": "Digital marketing and personalized marketing major",
@@ -71,5 +71,6 @@
   "training6_description": "The purpose of digital marketing is for the seller to have the opportunity to use more personal methods to build up the recognition/awareness of his company or business, and thus create a more human-centered communication.",
   "purpose": "The goal of our school is to provide our students with knowledge that corresponds to today's rapidly changing world. We constantly monitor trends and adapt and develop our training courses accordingly.",
   "in_more_detail": "in more detail",
-  "course": "course"
+  "course": "course",
+  "back": "back"
 }

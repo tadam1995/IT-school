@@ -34,6 +34,18 @@
           url: '/page3',
           templateUrl: './html/page3.html'
         })
+        .state('kepzes1', {
+          url: '/kepzes1',
+          templateUrl: './html/kepzes1.html',
+        })
+        .state('kepzes2', {
+          url: '/kepzes2',
+          templateUrl: './html/kepzes2.html',
+        })
+        .state('kepzes3', {
+          url: '/kepzes3',
+          templateUrl: './html/kepzes3.html',
+        })
         .state('user', {
           url: '/user',
           templateUrl: './html/user.html',
@@ -68,8 +80,13 @@
           templateUrl: './html/user.html',
 					controller: 'userController'
         });
+<<<<<<< HEAD
         */;
       
+=======
+        
+
+>>>>>>> ad639dc87cd4199560fa2810efdc1deaf030f01a
       $urlRouterProvider.otherwise('/');
     }
   ])
