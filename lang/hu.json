@@ -59,7 +59,7 @@
   "slogan": "A jövő szakembereit képezzük",
   "training1": "Automatizált járművek tervezése és üzemeltetése szak",
   "training2": "Smart home rendszerek tervezése és üzemeltetése szak",
-  "training3": "Robotprogramozó és robotikai rendszerek tervezése és üzemeltetése szak",
+  "training3": "Robotikai rendszerek tervezése és üzemeltetése szak",
   "training4": "Virtuális valóság (VR) és kiterjesztett valóság (AR) fejlesztő szak",
   "training5": "Mesterséges intelligencia fejlesztése és adatelemzése szak",
   "training6": "Digitális marketing és személyre szabott marketing szak",
@@ -71,5 +71,6 @@
   "training6_description": "Az digitális marketing célja, hogy az eladónak személyesebb módszerekkel van lehetősége cégének vagy üzletének ismertségét/tudatosságát felépíteni, és ezzel végeredményben egy emberközpontúbb kommunikációt létrehozni.",
   "purpose": "Iskolánk célja, hogy olyan tudást adjunk át a tanulóinknak, amelyek a mai gyorsan változó világnak megfeleljenek. Folyamatosan figyeljük a trendeket és ennek megfelelően alakítjuk, fejlesztjük a képzéseinket.",
   "in_more_detail": "Bővebben",
-  "course": "szak"
+  "course": "szak",
+  "back": "vissza"
 }

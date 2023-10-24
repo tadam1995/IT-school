@@ -59,7 +59,7 @@
   "slogan": "Wir bilden die Fachkräfte der Zukunft aus",
   "training1": "Design und Betrieb automatisierter Fahrzeuge",
   "training2": "Konzeption und Betrieb von Smart-Home-Systemen",
-  "training3": "Design und Betrieb von Roboterprogrammierungs- und Robotiksystemen",
+  "training3": "Design und Betrieb von Robotersystemen",
   "training4": "Kurs zur Entwicklung von Virtual Reality (VR) und Augmented Reality (AR).",
   "training5": "Entwicklung künstlicher Intelligenz und Datenanalyse",
   "training6": "Hauptfach Digitales Marketing und personalisiertes Marketing",
@@ -71,5 +71,6 @@
   "training6_description": "Der Zweck des digitalen Marketings besteht darin, dem Verkäufer die Möglichkeit zu geben, mit persönlicheren Methoden die Bekanntheit/Bekanntheit seines Unternehmens oder Geschäfts aufzubauen und so eine stärker auf den Menschen ausgerichtete Kommunikation zu schaffen.",
   "purpose": "Das Ziel unserer Schule ist es, unseren Schülern Wissen zu vermitteln, das der heutigen, sich schnell verändernden Welt entspricht. Wir beobachten ständig Trends und passen unsere Schulungen entsprechend an und entwickeln sie weiter.",
   "in_more_detail": "ausführlicher",
-  "course": "wesentlich"
+  "course": "wesentlich",
+  "back": "zurück"
 }
