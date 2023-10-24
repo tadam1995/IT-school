@@ -80,13 +80,8 @@
           templateUrl: './html/user.html',
 					controller: 'userController'
         });
-<<<<<<< HEAD
         */;
       
-=======
-        
-
->>>>>>> ad639dc87cd4199560fa2810efdc1deaf030f01a
       $urlRouterProvider.otherwise('/');
     }
   ])
