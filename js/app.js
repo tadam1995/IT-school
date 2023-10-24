@@ -20,7 +20,7 @@
         .state('home', {
           url: '/',
           templateUrl: './html/home.html',
-          controller: 'homeController',
+          controller: 'homeController'
         })
         .state('page1', {
           url: '/page1',
@@ -28,7 +28,8 @@
         })
         .state('page2', {
           url: '/page2',
-          templateUrl: './html/page2.html'
+          templateUrl: './html/page2.html',
+          controller: 'page2Controller'
         })
         .state('page3', {
           url: '/page3',
@@ -238,6 +239,22 @@
       http.request('./php/carousel.php')
       .then(response => {
         $scope.carousel = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e));
+    }
+  ])
+
+  // Pag2 controller
+  .controller('page2Controller', [
+    '$scope',
+    'http',
+    function($scope, http) {
+
+      // Http request
+      http.request('./php/teachers.php')
+      .then(response => {
+        $scope.teachers = response;
         $scope.$applyAsync();
       })
       .catch(e => console.log(e));
