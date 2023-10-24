@@ -42,6 +42,7 @@
             type: null
           }
         })
+        /*
         .state('login', {
           url: '/login',
           templateUrl: './html/user.html',
@@ -67,6 +68,7 @@
           templateUrl: './html/user.html',
 					controller: 'userController'
         });
+        */;
       
       $urlRouterProvider.otherwise('/');
     }

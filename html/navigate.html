@@ -105,7 +105,7 @@
           <!-- Register -->
           <li class="nav-item" 
               ng-if="!user.id && state.id === 'user' && userParamsType === 'login'">
-            <a class="nav-link" ui-sref="register"
+            <a class="nav-link" ui-sref="user({type: 'register'})"
                ng-class="{'active': state.id === 'user' && userParamsType === 'register'}">
               <i class="fa-solid fa-right-to-bracket fa-lg me-1"></i>
               <span class="text-capitalize text-small-caps">
@@ -138,6 +138,46 @@
                 {{'account' | translate:lang.data}}
               </div>
             </a>
+
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown">
+
+              <!-- User name/Nick name -->
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span
+                    class="text-capitalize text-small-caps"
+                    ng-if="user.nick_name"
+                  >
+                    {{user.nick_name}}
+                  </span>
+                  <span
+                    class="text-capitalize text-small-caps"
+                    ng-repeat="k in lang.rule[lang.type]"
+                    ng-if="!user.nick_name"
+                  >
+                    {{user[k]}}
+                  </span>
+                </a>
+              </li>
+
+              <!-- Divider -->
+              <li><hr class="dropdown-divider" /></li>
+
+              <!-- Logout -->
+              <li>
+                <a class="dropdown-item"
+                   href="javascript:void(0)"
+                   ng-click="logout()">
+                  <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                  <span class="text-capitalize text-small-caps">
+                    {{'logout' | translate:lang.data}}
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
 
 
           <!-- Language -->
