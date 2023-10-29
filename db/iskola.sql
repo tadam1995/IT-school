@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Okt 24. 20:05
--- Kiszolgáló verziója: 10.4.6-MariaDB
--- PHP verzió: 7.3.8
+-- Létrehozás ideje: 2023. Okt 28. 17:03
+-- Kiszolgáló verziója: 10.4.27-MariaDB
+-- PHP verzió: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,17 +31,19 @@ CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `courses`
 --
 
 INSERT INTO `courses` (`id`, `name`, `description`) VALUES
-(1, 'Szoftverfejlesztő és tesztelő', 'blabla'),
-(2, 'Érettségi előkészítő', 'blablabla'),
-(3, 'Automatizált járművek tervezése és üzemeltetése szak', ''),
-(4, 'Smart home rendszerek tervezése és üzemeltetése szak', '');
+(1, 'Automatizált járművek tervezése és üzemeltetése szak', ''),
+(2, 'Smart home rendszerek tervezése és üzemeltetése szak', ''),
+(3, 'Robotikai rendszerek tervezése és üzemeltetése szak', 'blabla'),
+(4, 'Virtuális valóság (VR) és kiterjesztett valóság (AR) fejlesztő szak', 'blablabla'),
+(5, 'Mesterséges intelligencia fejlesztése és adatelemzése szak', ''),
+(6, 'Digitális marketing és személyre szabott marketing szak', '');
 
 -- --------------------------------------------------------
 
@@ -54,17 +55,43 @@ CREATE TABLE `courses_subjects` (
   `id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `courses_subjects`
 --
 
 INSERT INTO `courses_subjects` (`id`, `course_id`, `subject_id`) VALUES
-(1, 3, 3),
-(2, 3, 4),
-(3, 3, 5),
-(4, 3, 6);
+(5, 1, 1),
+(6, 1, 2),
+(7, 1, 6),
+(8, 1, 7),
+(9, 1, 8),
+(10, 2, 9),
+(11, 2, 10),
+(12, 2, 11),
+(13, 2, 12),
+(14, 2, 13),
+(16, 3, 14),
+(17, 3, 15),
+(18, 3, 16),
+(19, 3, 17),
+(20, 3, 18),
+(21, 4, 19),
+(22, 4, 20),
+(23, 4, 21),
+(24, 4, 22),
+(25, 4, 23),
+(26, 5, 24),
+(27, 5, 25),
+(28, 5, 26),
+(29, 5, 27),
+(30, 5, 28),
+(31, 6, 31),
+(32, 6, 32),
+(33, 6, 33),
+(34, 6, 34),
+(35, 6, 35);
 
 -- --------------------------------------------------------
 
@@ -75,21 +102,45 @@ INSERT INTO `courses_subjects` (`id`, `course_id`, `subject_id`) VALUES
 CREATE TABLE `subjects` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `description` varchar(20) NOT NULL,
+  `description` varchar(200) NOT NULL,
   `teacher_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `subjects`
 --
 
 INSERT INTO `subjects` (`id`, `name`, `description`, `teacher_id`) VALUES
-(1, 'mathematics', 'mathematics_desc', 1),
-(2, 'physics', 'physics_desc', 4),
-(3, 'Jármű automatizálás', '', 1),
-(4, 'Autonóm járművek tervezése és fejlesztése', '', 2),
-(5, 'Robotika és szoftverfejlesztés', '', 3),
-(6, 'Járműüzemeltetés és flottakezelés', '', 4);
+(1, 'Autonóm járművek tervezése és fejlesztése', 'Ebben a tantárgyban a diákok az önvezető járműtechnológia tervezésének alapelveivel és gyakorlati alkalmazásával ismerkednek meg.', 1),
+(2, 'Robotika és szoftverfejlesztés járművek számára', 'Ez a tantárgy olyan készségeket tanít, amelyek segítségével a diákok képesek lesznek a járművek számára szükséges szoftvereket és algoritmusokat tervezni és fejleszteni.', 2),
+(6, 'Járműüzemeltetés és flottakezelés', 'Ennek a tantárgynak a keretében a diákok megismerik az önvezető járművek flottájának hatékony üzemeltetését és karbantartását.', 1),
+(7, 'Mesterséges intelligencia és gépi tanulás járműalkalmazásokban', 'Ez a tantárgy a gépi tanulás és mesterséges intelligencia alkalmazásait tanítja a járműiparban, például az önvezető autók fejlesztésében.', 1),
+(8, 'Járműbiztonság és jogi kérdések az önvezető járművek területén', 'Ennek a tantárgynak a célja a járművek biztonságának és az önvezető járművek jogi aspektusainak megértése és elemzése.', 6),
+(9, 'Okos Otthon Technológiák Alapjai', 'Ez a tantárgy bemutatja az okos otthon rendszerek alapjait, beleértve az IoT (Internet of Things) eszközöket, szenzorokat és vezérlőrendszereket.', 7),
+(10, 'Okos Hálózatok és Kommunikáció', 'Ennek a tantárgynak a célja az okos otthon eszközök közötti kommunikációs hálózatok tervezése és konfigurálása.', 4),
+(11, 'Okos Otthon Rendszertervezés és Integráció', 'Ez a tantárgy a gyakorlati aspektusokra összpontosít, például hogyan tervezzen és integráljon különböző okos otthon eszközöket egy összetett rendszerbe.', 4),
+(12, 'Automatizált Otthoni Biztonság és Védelem', 'Ez a tantárgy foglalkozik az otthoni biztonsági rendszerekkel és a hozzájuk kapcsolódó okos megoldásokkal.', 7),
+(13, 'Okos Házkezelés és Energiahatékonyság', 'Ez a tantárgy az okos otthonok energiahatékonyságával és energiagazdálkodásával foglalkozik, bemutatva az energiafelhasználás optimalizálásához használható technológiákat.', 7),
+(14, 'Robotika Alapjai', 'Ez a tantárgy bevezeti a hallgatókat a robotika alapvető fogalmaiba, történetébe és technológiai alapjaiba.', 2),
+(15, 'Robotikai Hardvertervezés és Elektronika', 'Ez a tantárgy a robotikai rendszerek hardverkomponenseivel foglalkozik, és megtanítja a diákokat tervezni és építeni robotokat.', 2),
+(16, 'Robotprogramozás és irányítás', 'Ez a tantárgy a robotok programozásának és irányításának elméleti és gyakorlati aspektusaival foglalkozik.', 2),
+(17, 'Mesterséges Intelligencia a Robotikában', 'Ez a tantárgy bemutatja, hogyan lehet a mesterséges intelligenciát használni a robotikában, például gépi tanulás és mesterséges neurális hálózatok alkalmazásával.', 9),
+(18, 'Robotika Alkalmazások és Fejlesztés', 'Ez a tantárgy a robotika különböző alkalmazásaival foglalkozik, például az ipari robotokkal, az önjáró járművekkel és a robotika az egészségügyben.', 9),
+(19, 'Virtuális Valóság és Kiterjesztett Valóság Alapjai', 'Ez a tantárgy a VR és AR technológiák alapvető fogalmaival és működési elveivel foglalkozik, bemutatva azokat a technikákat és eszközöket, amelyeket a fejlesztők használnak ezen a területen.', 3),
+(20, '3D Modellalkotás és Animáció', 'Ez a tantárgy a háromdimenziós modellalkotás és animáció technikáival foglalkozik, amelyek elengedhetetlenek a VR és AR tartalmak létrehozásához.', 3),
+(21, 'VR és AR Programozás', 'Ez a tantárgy a VR és AR alkalmazások fejlesztésére összpontosít, bemutatva a programozási nyelveket és platformokat, amelyekkel dolgozniuk kell a fejlesztőknek.', 3),
+(22, 'Felhasználói Élménytervezés VR és AR-ban', 'Ez a tantárgy a felhasználói élmény (UX) tervezésére összpontosít a virtuális valóság és kiterjesztett valóság alkalmazásokban, beleértve az interakciótervezést és a felhasználói felület kialakítását.', 3),
+(23, 'VR és AR alkalmazások az Egészségügyben és Oktatásban', 'Ez a tantárgy bemutatja a VR és AR alkalmazásokat az egészségügyi és oktatási területeken, és hogyan lehet ezeket a technológiákat használni oktatási és terápiás célokra.', 11),
+(24, 'Gépi Tanulás Alapjai', 'Ez a tantárgy bevezeti a hallgatókat a gépi tanulás alapjaiba, beleértve a felügyelt és felügyeletlen tanítást, a modellalkotást és a tanulási algoritmusokat.', 5),
+(25, 'Deep Learning és Neurális Hálózatok', ' Ez a tantárgy a mélytanulás és a neurális hálózatok elméletére és alkalmazásaira összpontosít, bemutatva a konvolúciós és rekurrens hálózatokat.', 5),
+(26, 'Adatbányászat és Adatelemzés', 'Ez a tantárgy olyan technikákat tanít, amelyek segítenek az adatok elemzésében, mint például a szegmentálás, az osztályozás és a klaszterezés.', 5),
+(27, 'Mesterséges Intelligencia alkalmazások', 'Ez a tantárgy az AI alkalmazásaira összpontosít különböző iparágakban, például az egészségügyben, az autóiparban és a pénzügyek területén.', 5),
+(28, 'Mesterséges Intelligencia Etika és Jogi Aspektusai', 'Ez a tantárgy a mesterséges intelligencia és gépi tanulás etikai kérdéseivel és jogi szempontjaival foglalkozik, például a személyes adatvédelemmel és a diszkriminációval kapcsolatos kérdésekkel.', 6),
+(31, 'Online Marketing Stratégiák és Kampányok', 'Ez a tantárgy tanítja a hallgatóknak az online marketing stratégiák és kampányok tervezését és végrehajtását, beleértve a keresőoptimalizálást (SEO), a fizetett hirdetéseket (PPC), a közösségi médiát ', 8),
+(32, 'Adatvezérelt Marketing és Analitika', 'Ez a tantárgy bemutatja az adatvezérelt marketing alapelveit és a marketinganalitika használatát a döntéshozatalhoz és a kampányok hatékonyságának méréséhez.', 8),
+(33, 'Személyre szabott Marketing és CRM', 'A hallgatók megtanulhatják a személyre szabott marketing stratégiák alkalmazását, valamint a Customer Relationship Management (CRM) rendszerek használatát az ügyfélkapcsolatok javításához.', 8),
+(34, 'Közösségi Média Marketing', ' Ez a tantárgy az egyes közösségi média platformokra (pl. Facebook, Instagram, Twitter) és azok hatékony használatára összpontosít a marketingkampányok részeként.', 10),
+(35, 'Innováció és Új Technológiák a Digitális Marketingben', 'Ez a tantárgy bemutatja az új technológiai trendeket és innovációkat a digitális marketing területén, például a mesterséges intelligenciát, a gépi tanulást és az AR/VR alkalmazásokat.', 10);
 
 -- --------------------------------------------------------
 
@@ -103,7 +154,7 @@ CREATE TABLE `teacher` (
   `surname` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `teacher`
@@ -113,7 +164,14 @@ INSERT INTO `teacher` (`id`, `first_name`, `surname`, `email`, `phone`) VALUES
 (1, 'Attila', 'Pataki', 'pataki.attila@jakabhunor.hu', '+36(30)481-68-88'),
 (2, 'Adél', 'Dudás', 'dudas.adel@jakabhunor.hu', '+36(30)811-60-91'),
 (3, 'Albert', 'Horváth', 'horvath.albert@jakabhunor.hu', '+36(70)054-52-97'),
-(4, 'Attila', 'Borbély', 'borbely.attila@jakabhunor.hu', '+36(70)683-78-22');
+(4, 'Attila', 'Borbély', 'borbely.attila@jakabhunor.hu', '+36(70)683-78-22'),
+(5, 'Gábor', 'Varga', 'varga.gabor@jakabhunor.hu', '+36(20)744-46-55'),
+(6, 'Zsolt', 'Dr. Molnár', 'drmolnar.zsolt@jakabhunor.hu', '+36(20)332-95-18'),
+(7, 'László', 'Nagy', 'nagy.laszlo@jakabhunor.hu', '+36(30)122-51-52'),
+(8, 'Andrea', 'Kovács', 'kovacs.andrea@jakabhunor.hu', '+36(70)927-15-22'),
+(9, 'Gábor', 'Dr. Barta', 'drbartagabor@jakabhunor.hu', '+36(20)586-14-56'),
+(10, 'Éva ', 'Mészáros', 'meszaros.eva@jakabhunor.hu', '+36(70)757-50-94'),
+(11, 'Péter', 'Szabó', 'szabo.peter@jakabhunor.hu', '+36(30)482-04-72');
 
 -- --------------------------------------------------------
 
@@ -148,7 +206,7 @@ CREATE TABLE `user` (
   `wrong_attempts` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `valid` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
   `verification_code` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `user`
@@ -216,25 +274,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT a táblához `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `courses_subjects`
 --
 ALTER TABLE `courses_subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT a táblához `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT a táblához `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `user`
