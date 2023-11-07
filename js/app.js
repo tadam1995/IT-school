@@ -22,18 +22,18 @@
           templateUrl: './html/home.html',
           controller: 'homeController'
         })
-        .state('page1', {
-          url: '/page1',
-          templateUrl: './html/page1.html'
+        .state('courses', {
+          url: '/courses',
+          templateUrl: './html/courses.html'
         })
-        .state('page2', {
-          url: '/page2',
-          templateUrl: './html/page2.html',
-          controller: 'page2Controller'
+        .state('community', {
+          url: '/community',
+          templateUrl: './html/community.html',
+          controller: 'communityController'
         })
-        .state('page3', {
-          url: '/page3',
-          templateUrl: './html/page3.html'
+        .state('contact', {
+          url: '/contact',
+          templateUrl: './html/contact.html'
         })
         .state('kepzes1', {
           url: '/kepzes1',
@@ -54,34 +54,7 @@
           params: {
             type: null
           }
-        })
-        /*
-        .state('login', {
-          url: '/login',
-          templateUrl: './html/user.html',
-					controller: 'userController'
-        })
-        .state('register', {
-          url: '/register',
-          templateUrl: './html/user.html',
-					controller: 'userController'
-        })
-        .state('profile', {
-          url: '/profile',
-          templateUrl: './html/user.html',
-					controller: 'userController'
-        })
-        .state('email', {
-          url: '/email',
-          templateUrl: './html/user.html',
-					controller: 'userController'
-        })
-        .state('password', {
-          url: '/password',
-          templateUrl: './html/user.html',
-					controller: 'userController'
         });
-        */;
       
       $urlRouterProvider.otherwise('/');
     }
@@ -201,7 +174,7 @@
     ($state, $rootScope, $timeout, trans, lang, user) => {
 
       // Transaction events
-			trans.events('home,page1,page2');
+			trans.events('home,courses,community');
 
       // Initialize language 
       lang.init();
@@ -245,8 +218,8 @@
     }
   ])
 
-  // Pag2 controller
-  .controller('page2Controller', [
+  // Community controller
+  .controller('communityController', [
     '$scope',
     'http',
     function($scope, http) {
@@ -260,6 +233,32 @@
       .catch(e => console.log(e));
     }
   ])
+
+  .controller("contactController", ['$scope', '$http', function ($scope, $http) {
+
+
+    $scope.formData = {
+
+        subject: '',
+        email: '',
+        message: ''
+    };
+    console.log(formData);
+    // process the form
+    $scope.processForm = function () {
+        $http({
+            method: 'POST',
+            url: 'contact.php',
+            data: $scope.formData,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        })
+
+
+    };
+
+
+} ])
+
 
   // User controller
   .controller('userController', [

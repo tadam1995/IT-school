@@ -1,0 +1,39 @@
+<!-- Page container -->
+<div class="page-container d-conditional vh-100">
+
+    <!-- Navigate -->
+    <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+  
+    <!-- Main -->
+    <main>
+  
+      <!-- Container -->
+      <div class="container pt-5">
+  
+        <!-- Row -->
+        <div class="row">
+  
+          <!-- Titel -->
+          <h1 class="text-center text-capitalize text-small-caps">
+            {{'page' | translate:lang.data}}3
+          </h1>
+        </div>
+      </div>
+      <div class=" container formcontainer">
+        
+        <form method="post">
+              
+              <input type="text" name="subject" class="form-control" placeholder="Subject..." ng-model="formData.subject">
+              
+              <input type="email" name="email" class="form-control" placeholder="Your email..." ng-model="formData.email">
+           
+              <textarea  rows="5" cols="50" class="form-control" placeholder="You message" ng-model="formData.message"></textarea>
+             
+              <button type="submit" ng-click="processForm()" class="btn btn-success btn-lg btn-block">Submit!</button>
+        </form>
+     </div>
+    </main>
+
+    <!-- Footer -->
+    <footer ng-include src="'./html/footer.html'"></footer>
+</div>
