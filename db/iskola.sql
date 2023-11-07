@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Okt 28. 17:03
--- Kiszolgáló verziója: 10.4.27-MariaDB
--- PHP verzió: 8.0.25
+-- Létrehozás ideje: 2023. Nov 07. 18:17
+-- Kiszolgáló verziója: 10.4.6-MariaDB
+-- PHP verzió: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,16 +29,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `courses` (
-  `id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`, `description`) VALUES
+INSERT INTO `courses` (`course_id`, `name`, `description`) VALUES
 (1, 'Automatizált járművek tervezése és üzemeltetése szak', ''),
 (2, 'Smart home rendszerek tervezése és üzemeltetése szak', ''),
 (3, 'Robotikai rendszerek tervezése és üzemeltetése szak', 'blabla'),
@@ -55,7 +56,7 @@ CREATE TABLE `courses_subjects` (
   `id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `courses_subjects`
@@ -100,17 +101,17 @@ INSERT INTO `courses_subjects` (`id`, `course_id`, `subject_id`) VALUES
 --
 
 CREATE TABLE `subjects` (
-  `id` int(11) NOT NULL,
+  `subject_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` varchar(200) NOT NULL,
   `teacher_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `subjects`
 --
 
-INSERT INTO `subjects` (`id`, `name`, `description`, `teacher_id`) VALUES
+INSERT INTO `subjects` (`subject_id`, `name`, `description`, `teacher_id`) VALUES
 (1, 'Autonóm járművek tervezése és fejlesztése', 'Ebben a tantárgyban a diákok az önvezető járműtechnológia tervezésének alapelveivel és gyakorlati alkalmazásával ismerkednek meg.', 1),
 (2, 'Robotika és szoftverfejlesztés járművek számára', 'Ez a tantárgy olyan készségeket tanít, amelyek segítségével a diákok képesek lesznek a járművek számára szükséges szoftvereket és algoritmusokat tervezni és fejleszteni.', 2),
 (6, 'Járműüzemeltetés és flottakezelés', 'Ennek a tantárgynak a keretében a diákok megismerik az önvezető járművek flottájának hatékony üzemeltetését és karbantartását.', 1),
@@ -149,18 +150,18 @@ INSERT INTO `subjects` (`id`, `name`, `description`, `teacher_id`) VALUES
 --
 
 CREATE TABLE `teacher` (
-  `id` int(11) NOT NULL,
+  `teacher_id` int(11) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `surname` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `teacher`
 --
 
-INSERT INTO `teacher` (`id`, `first_name`, `surname`, `email`, `phone`) VALUES
+INSERT INTO `teacher` (`teacher_id`, `first_name`, `surname`, `email`, `phone`) VALUES
 (1, 'Attila', 'Pataki', 'pataki.attila@jakabhunor.hu', '+36(30)481-68-88'),
 (2, 'Adél', 'Dudás', 'dudas.adel@jakabhunor.hu', '+36(30)811-60-91'),
 (3, 'Albert', 'Horváth', 'horvath.albert@jakabhunor.hu', '+36(70)054-52-97'),
@@ -206,7 +207,7 @@ CREATE TABLE `user` (
   `wrong_attempts` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `valid` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
   `verification_code` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `user`
@@ -239,7 +240,7 @@ INSERT INTO `user` (`id`, `type`, `prefix_name`, `first_name`, `middle_name`, `l
 -- A tábla indexei `courses`
 --
 ALTER TABLE `courses`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`course_id`);
 
 --
 -- A tábla indexei `courses_subjects`
@@ -251,13 +252,13 @@ ALTER TABLE `courses_subjects`
 -- A tábla indexei `subjects`
 --
 ALTER TABLE `subjects`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`subject_id`);
 
 --
 -- A tábla indexei `teacher`
 --
 ALTER TABLE `teacher`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`teacher_id`);
 
 --
 -- A tábla indexei `user`
@@ -274,7 +275,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT a táblához `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `courses_subjects`
@@ -286,13 +287,13 @@ ALTER TABLE `courses_subjects`
 -- AUTO_INCREMENT a táblához `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT a táblához `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `user`
