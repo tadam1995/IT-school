@@ -37,172 +37,27 @@
           <div class="row">
   
             <!-- Card-box -->
-            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5">
+            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5"
+                 ng-repeat="x in [].constructor(6) track by $index">
   
               <!-- Card -->
               <div class="card-box float-start border rounded-3 shadow p-3 me-3">
   
                 <!-- Image -->
                 <div class="card-thumbnail rounded-3 text-center">
-                  <img src="./media/image/ai-generated-8311501_640.jpg" 
+                  <img ng-src="./media/image/courses/courses_{{$index}}.jpg" 
                        class="img-fluid" 
                        alt="img">
                 </div>
   
                 <!-- Title -->
                 <h5 class="my-3 text-primary fw-bold text-center">
-                  {{'training1' | translate:lang.data}}
+                  {{'training'+($index+1) | translate:lang.data}}
                 </h5>
-  
-                
   
                 <!-- Button -->
                 <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
                         ui-sref="kepzes1">
-                        {{'in_more_detail' | translate:lang.data}} >> >>
-                </button>
-              </div>
-            </div>
-  
-            <!-- Card-box -->
-            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5">
-  
-              <!-- Card -->
-              <div class="card-box float-start border rounded-3 shadow p-3 me-3">
-  
-                <!-- Image -->
-                <div class="card-thumbnail rounded-3 text-center">
-                  <img src="./media/image/smart-home-2005993_640.png" 
-                       class="img-fluid" 
-                       alt="img">
-                </div>
-  
-                <!-- Title -->
-                <h5 class="my-3 text-primary fw-bold text-center">
-                  {{'training2' | translate:lang.data}}
-                </h5>
-  
-                <!-- Button -->
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
-                        ui-sref="kepzes2">
-                        {{'in_more_detail' | translate:lang.data}} >> >>
-                </button>
-              </div>
-            </div>
-  
-            <!-- Card-box -->
-            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5">
-  
-              <!-- Card -->
-              <div class="card-box float-start border rounded-3 shadow p-3 me-3">
-  
-                <!-- Image -->
-                <div class="card-thumbnail rounded-3 text-center">
-                  <img src="./media/image/pexels-thisisengineering-3913031.jpg" 
-                       class="img-fluid" 
-                       alt="img">
-                </div>
-  
-                <!-- Title -->
-                <h5 class="my-3 text-primary fw-bold text-center">
-                  {{'training3' | translate:lang.data}}
-                </h5>
-  
-                 
-
-                <!-- Button -->
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
-                        ui-sref="kepzes3">
-                        {{'in_more_detail' | translate:lang.data}} >> >>
-                </button>
-              </div>
-            </div>
-  
-            <!-- Card-box -->
-            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5">
-  
-              <!-- Card -->
-              <div class="card-box float-start border rounded-3 shadow p-3 me-3">
-  
-                <!-- Image -->
-                <div class="card-thumbnail rounded-3 text-center">
-                  <img src="./media/image/pexels-fauxels-3183187.jpg" 
-                       class="img-fluid" 
-                       alt="img">
-                </div>
-  
-                <!-- Title -->
-                <h5 class="my-3 text-primary fw-bold text-center">
-                  {{'training4' | translate:lang.data}}
-                </h5>
-  
-                <!-- Properties -->
-                <p class="text-secondary text-muted">
-                  {{'training4_description' | translate:lang.data}}                  
-                <!-- Button -->
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
-                        data-bs-toggle="modal" 
-                        data-bs-target="#my-modal-1">
-                        {{'in_more_detail' | translate:lang.data}} >> >>
-                </button>
-              </div>
-            </div>
-  
-            <!-- Card-box -->
-            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5">
-  
-              <!-- Card -->
-              <div class="card-box float-start border rounded-3 shadow p-3 me-3">
-  
-                <!-- Image -->
-                <div class="card-thumbnail rounded-3 text-center">
-                  <img src="./media/image/pexels-thisisengineering-3861969.jpg" 
-                       class="img-fluid" 
-                       alt="img">
-                </div>
-  
-                <!-- Title -->
-                <h5 class="my-3 text-primary fw-bold text-center">
-                  {{'training5' | translate:lang.data}}
-                </h5>
-  
-                <!-- Properties -->
-                <p class="text-secondary text-muted">
-                  {{'training5_description' | translate:lang.data}}  
-                <!-- Button -->
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
-                        data-bs-toggle="modal" 
-                        data-bs-target="#my-modal-1">
-                        {{'in_more_detail' | translate:lang.data}} >> >>
-                </button>
-              </div>
-            </div>
-  
-            <!-- Card-box -->
-            <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5">
-  
-              <!-- Card -->
-              <div class="card-box float-start border rounded-3 shadow p-3 me-3">
-  
-                <!-- Image -->
-                <div class="card-thumbnail rounded-3 text-center">
-                  <img src="./media/image/pexels-mikael-blomkvist-6476260.jpg" 
-                       class="img-fluid" 
-                       alt="img">
-                </div>
-  
-                <!-- Title -->
-                <h5 class="my-3 text-primary fw-bold text-center">
-                  {{'training6' | translate:lang.data}}
-                </h5>
-  
-                <!-- Properties -->
-                <p class="text-secondary text-muted">
-                  {{'training6_description' | translate:lang.data}}  
-                <!-- Button -->
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
-                        data-bs-toggle="modal" 
-                        data-bs-target="#my-modal-1">
                         {{'in_more_detail' | translate:lang.data}} >> >>
                 </button>
               </div>
