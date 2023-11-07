@@ -83,5 +83,10 @@
   "homenews_3_desc" : "Sanyi nagyon barátságos mosómedve, jót szórakozik a tanulóinkkal, amikor meglátogatjuk őt.",
   "homenews_4_title": "Márciusban indul az iskola aulájának felújítása",
   "homenews_4_desc" : "Tavasszal majdnem 2 hétig a főbejáraton való belépés szünetel, iskolánkba lépni a hátsó bejáraton lesz lehetőség a felújítás ideje alatt.",
-  "homenews_bottom" : "További híreink hamarosan..."
+  "homenews_bottom" : "További híreink hamarosan...",
+  "contact_title": "Kérdése van? Írjon nekünk!",
+  "contact_message": "Üzenet...",
+  "contact_subject": "Tárgy...",
+  "contact_email": "Az Ön e-mail címe...",
+  "contact_submit": "Küldés!"
 }
