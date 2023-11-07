@@ -1,5 +1,5 @@
 <!-- Page container -->
-<div class="page-container d-conditional vh-100">
+<div class="page-container d-conditional min-vh-100">
 
     <!-- Navigate -->
     <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
@@ -14,26 +14,29 @@
         <div class="row">
   
           <!-- Titel -->
-          <h1 class="text-center text-capitalize text-small-caps">
-            {{'page' | translate:lang.data}}3
-          </h1>
+          <div class="row mb-5">
+            <h1 class="text-center text-capitalize text-small-caps ng-binding">
+              {{'contact_title' | translate:lang.data}}
+            </h1>
+            <hr class="mt-5 ">
+          </div>
         </div>
       </div>
+
       <div class=" container formcontainer">
         
         <form method="post">
               
-              <input type="text" name="subject" class="form-control" placeholder="Subject..." ng-model="formData.subject">
+          <input type="text" name="subject" class="form-control" placeholder="{{'contact_subject' | translate:lang.data}}" ng-model="formData.subject">
               
-              <input type="email" name="email" class="form-control" placeholder="Your email..." ng-model="formData.email">
+          <input type="email" name="email" class="form-control" placeholder="{{'contact_email' | translate:lang.data}}" ng-model="formData.email">
            
-              <textarea  rows="5" cols="50" class="form-control" placeholder="You message" ng-model="formData.message"></textarea>
+          <textarea  rows="5" cols="50" class="form-control" placeholder="{{'contact_message' | translate:lang.data}}" ng-model="formData.message"></textarea>
              
-              <button type="submit" ng-click="processForm()" class="btn btn-success btn-lg btn-block">Submit!</button>
+          <button type="submit" ng-click="processForm()" class="btn btn-success btn-lg btn-block">{{'contact_submit' | translate: lang.data}}</button>
         </form>
-     </div>
+      </div>
     </main>
-
     <!-- Footer -->
     <footer ng-include src="'./html/footer.html'"></footer>
 </div>

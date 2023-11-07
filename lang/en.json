@@ -83,5 +83,10 @@
   "homenews_3_desc" : "Sanyi is a very friendly raccoon, he has fun with our students when we visit him.",
   "homenews_4_title": "The renovation of the school's hall will start in March",
   "homenews_4_desc" : "In the spring, entry through the main entrance is suspended for almost 2 weeks, and it will be possible to enter our school through the back entrance during the renovation.",
-  "homenews_bottom" : "More news coming soon..."
+  "homenews_bottom" : "More news coming soon...",
+  "contact_title": "Have a question? Contact us!",
+  "contact_message": "Message...",
+  "contact_subject": "Subject...",
+  "contact_email": "Your e-mail...",
+  "contact_submit": "Submit!"
 }

@@ -83,5 +83,10 @@
   "homenews_3_desc" : "Sanyi ist eine sehr freundliche Waschbärin, sie hat Spaß mit unseren Schülern, wenn wir sie besuchen.",
   "homenews_4_title": "Die Renovierung der Schulhalle wird im März beginnen",
   "homenews_4_desc" : "Im Frühjahr ist der Zutritt durch den Haupteingang für knapp 2 Wochen gesperrt, der Zutritt zu unserer Schule ist während der Renovierungsarbeiten über den Hintereingang möglich.",
-  "homenews_bottom" : "Weitere Neuigkeiten folgen in Kürze..."
+  "homenews_bottom" : "Weitere Neuigkeiten folgen in Kürze...",
+  "contact_title": "Eine Frage haben? Kontaktiere uns!",
+  "contact_message": "Nachricht...",
+  "contact_subject": "Betreff der Nachricht...",
+  "contact_email": "Ihre E-Mail-Adresse...",
+  "contact_submit": "Senden!"
 }
