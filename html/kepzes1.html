@@ -1,51 +1,44 @@
 <!-- Page container -->
 <div class="page-container d-conditional vh-100">
 
-    <!-- Navigate -->
-    <header class="sticky-top" ng-include src="'./html/navigate_kepzes.html'"></header>
-  
-    <!-- Main -->
-    <main>
-  
+  <!-- Navigate -->
+  <header class="sticky-top" ng-include src="'./html/navigate_kepzes.html'"></header>
+
+  <!-- Main -->
+  <main>
+
       <!-- Container -->
       <div class="container pt-5">
-  
-        <!-- Row -->
-        <div class="row">
-  
-          <!-- Titel -->
-          <h1 class="text-center text-capitalize text-small-caps">
-            {{'training1' | translate:lang.data}}
-          </h1>
 
-          <div class="images";>
-            <img src="./media/image/self-driving-car-companies.jpg" class="image" alt="Image 1">
+          <!-- Row -->
+          <div class="row">
+
+              <!-- Titel -->
+              <div class="text-center text-capitalize text-small-caps">
+                  <h1>{{'training1' | translate:lang.data}}</h1>
+              </div>
+
+              <div class="content">
+                  <img src="./media/image/onvezetoauto.jpg" alt="Leíró szöveg a képhez">
+                  <h5 class="text-center"><i>
+                      {{'training1_description' | translate:lang.data}}</i>
+                  </h5>
+              </div>
+
+              <div class="col-md-6">
+                  <h4>Tantárgyak:</h4>
+                  <div ng-repeat="subject in subjects">
+                      <h5>{{subject.subject_name}}</h5>
+                      <p>{{subject.description}}</p>
+                      <p>Oktató: {{subject.teacher_name}}</p>
+                  </div>
+              </div>
+
           </div>
 
-                
-
-          <!-- Properties -->
-          <p class="text-secondary text-muted">
-            {{'training1_description' | translate:lang.data}}                
-          </p>
-
-          <h3>Tantárgyak és tanárok</h3>
-          <h4>Jármű automatizálás Pataki Attila pataki.attila@jakabhunor.hu</h4>
-          <h5>A jármű automatizálás tantárgy célja a gépjárművek automatizált vezetési rendszereinek elméleti és gyakorlati megértése, valamint fejlesztése. A diákok ezen a kurzuson olyan készségeket sajátíthatnak el, amelyek lehetővé teszik számukra, hogy részt vegyenek az önvezető járműtechnológia fejlesztésében és karbantartásában. A tantárgy olyan témaköröket ölel fel, mint a gépi tanulás, műszaki rendszerek tervezése és járműadatok elemzése.</h5>
-          <h5>Autonóm járművek tervezése és fejlesztése Dr. Kovács Anna drkovacs.anna@jakabhunor.hu
-          <h5>Ebben a tantárgyban a diákok az önvezető járműtechnológia tervezésének alapelveivel és gyakorlati alkalmazásával ismerkednek meg.</h5>
-          <h5>Robotika és szoftverfejlesztés járművek számára Prof. Nagy Márton</h5>
-          <h5>Ez a tantárgy olyan készségeket tanít, amelyek segítségével a diákok képesek lesznek a járművek számára szükséges szoftvereket és algoritmusokat tervezni és fejleszteni.</h5>
-          <h5>Járműüzemeltetés és flottakezelés Dr. Tóth Eszter</h5> 
-          <h5>Ennek a tantárgynak a keretében a diákok megismerik az önvezető járművek flottájának hatékony üzemeltetését és karbantartását.</h5>
-          <h5>Mesterséges intelligencia és gépi tanulás járműalkalmazásokban Varga Gábor</h5>
-          <h5>Ez a tantárgy a gépi tanulás és mesterséges intelligencia alkalmazásait tanítja a járműiparban, például az önvezető autók fejlesztésében.</h5>
-          <h5>Járműbiztonság és jogi kérdések az önvezető járművek területén Dr. Molnár Zsolt</h5>
-          <h5>Ennek a tantárgynak a célja a járművek biztonságának és az önvezető járművek jogi aspektusainak megértése és elemzése.</h5>
-        </div>
       </div>
-    </main>
+  </main>
 
-    <!-- Footer -->
-    <footer ng-include src="'./html/footer.html'"></footer>
+  <!-- Footer -->
+  <footer ng-include src="'./html/footer.html'"></footer>
 </div>
