@@ -12,7 +12,7 @@ $query = "SELECT  CONCAT_WS(' ', `surname`, `first_name`) AS `name`,
                   `phone`,
                   ( SELECT GROUP_CONCAT(`subjects`.`name` SEPARATOR ', ')
                     FROM `subjects`
-                    WHERE `subjects`.`teacher_id` = `teacher`.`id`
+                    WHERE `subjects`.`teacher_id` = `teacher`.`teacher_id`
                   ) AS `subjects`
           FROM `teacher`
           ORDER BY `name`;";
