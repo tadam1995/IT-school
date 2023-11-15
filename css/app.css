@@ -1,21 +1,17 @@
-.carousel-indicators button {
-    border: 1px solid white !important;
-}
-
-main {
-    background-color: rgb(245, 239, 231);
-    background-repeat: no-repeat;
+body{
+    background-image: url("../media/image/background.jpg");
+    color: #ffffff;
     background-size: cover;
 }
 
+.carousel-indicators button {
+    border: 1px solid white !important;
+}
 .navbar-custom {
     background-color: rgb(202, 206, 191) !important;
     font-family: Montserrat !important;
     font-size: larger !important;
     font-weight: bold !important;
-}
-.footer-bg {
-    background-color: rgb(202, 206, 191) !important;
 }
 .images {
   display: flex;
@@ -45,4 +41,64 @@ header {
     .page-container.contact main {
         min-height: calc(100% - 190px);
     }
+}
+.navbar_ {
+    background-color: transparent;;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+  }
+
+  .hover-underline-animation:active {
+    color:#6c6565
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .navfont {
+    color: #ffffff;
+    font-size:x-large;
+  }
+.logo {
+    width: 50px;    
+    height: 50px;
+    border-radius: 150px;
+    color: #ffffff;
+}
+.cardbox {
+  background-color: #492828;
+  display: inline;
+  border: #492828;
+  border-radius: 150px;
+}
+.h5{
+  color: #ffffff !important;
+}
+.footer_ {
+  background-color: transparent;
+}
+h1,h2,h3,h4,h5,p {
+  color: #ffffff !important;
+}
+.homecontainer {
+  background-color: #492828 !important;
 }
