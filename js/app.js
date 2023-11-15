@@ -38,6 +38,7 @@
         .state('kepzes1', {
           url: '/kepzes1',
           templateUrl: './html/kepzes1.html',
+          controller: 'kepzes1Controller',
         })
         .state('kepzes2', {
           url: '/kepzes2',
@@ -228,6 +229,22 @@
       http.request('./php/teachers.php')
       .then(response => {
         $scope.teachers = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e));
+    }
+  ])
+
+  // Kepzes controller
+  .controller('kepzes1Controller', [
+    '$scope',
+    'http',
+    function($scope, http) {
+
+      // Http request
+      http.request('./php/subjects.php')
+      .then(response => {
+        $scope.subjects = response;
         $scope.$applyAsync();
       })
       .catch(e => console.log(e));
