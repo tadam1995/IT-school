@@ -1,0 +1,62 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+
+  <!-- Container -->
+  <div class="container-fluid">
+
+    <img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo">
+
+    <!-- Hamburger icon -->
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar container -->
+    <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarNav">
+
+      <!-- Left align -->
+      <div class="navbar-left me-auto">
+
+        <!-- Navigate -->
+        <ul class="navbar-nav">
+
+          <!--  -->
+          <li class="nav-item">
+            <a class="nav-link" 
+               ng-class="{'active cursor-default text-decoration-underline': state.id === 'home'}"
+               ui-sref="home">
+              <span class="text-capitalize text-small-caps">
+                <p class="hover-underline-animation navfont">{{'home_page' | translate:lang.data}}</p>
+              </span>
+            </a>
+          </li>
+
+          <!--  -->
+          <li class="nav-item">
+            
+          </li>
+
+          
+        </ul>
+      </div>
+
+      
+
+      <!-- Right align -->
+      <div class="navbar-right ms-auto">
+
+        <!-- Navigate -->
+        <ul class="navbar-nav">
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
