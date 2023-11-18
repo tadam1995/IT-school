@@ -6,7 +6,7 @@
 
 
     <!-- Hamburger icon -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -76,7 +76,7 @@
             <li class="nav-item" ng-if="!user.id && (state.id !== 'user' || userParamsType !== 'login')">
               <a class="nav-link" ui-sref="user({type: 'login'})"
                 ng-class="{'active': state.id === 'user' && userParamsType === 'login'}">
-                <span class="text-capitalize text-small-caps navfont menuitem">
+                <span class="text-capitalize text-small-caps hover-underline-animation navfont menuitem">
                   {{'login' | translate:lang.data}}
                 </span>
               </a>
@@ -86,7 +86,7 @@
             <li class="nav-item" ng-if="!user.id && state.id === 'user' && userParamsType === 'login'">
               <a class="nav-link" ui-sref="user({type: 'register'})"
                 ng-class="{'active': state.id === 'user' && userParamsType === 'register'}">
-                <span class="text-capitalize text-small-caps navfont menuitem">
+                <span class="text-capitalize text-small-caps hover-underline-animation navfont menuitem">
                   {{'register' | translate:lang.data}}
                 </span>
               </a>
@@ -107,7 +107,7 @@
                 </div>
 
                 <!-- Account title -->
-                <div class="text-capitalize text-small-caps d-inline-block float-start navfont">
+                <div class="text-capitalize text-small-caps d-inline-block float-start navfont hover-underline-animation">
                   {{'account' | translate:lang.data}}
                 </div>
               </a>
@@ -137,7 +137,7 @@
                 <li>
                   <a class="dropdown-item" href="javascript:void(0)" ng-click="logout()">
                     <i class="fa-solid fa-right-from-bracket fa-lg"></i>
-                    <span class="text-capitalize text-small-caps navfont">
+                    <span class="text-capitalize text-small-caps navfont hover-underline-animation">
                       {{'logout' | translate:lang.data}}
                     </span>
                   </a>
@@ -152,7 +152,7 @@
                 aria-expanded="false">
                 <img ng-src="{{app.commonPath+'media/image/countries/'+lang.available[lang.index].img}}" class="me-1"
                   height="22" alt="flag">
-                <span class="text-capitalize text-small-caps navfont">
+                <span class="text-capitalize text-small-caps navfont hover-underline-animation">
                   {{lang.available[lang.index].local}}
                 </span>
               </a>

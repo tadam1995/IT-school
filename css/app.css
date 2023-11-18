@@ -49,7 +49,7 @@ header {
 
 .navbar_ {
   background-color: transparent;
-  ;
+  z-index:1000;
 }
 
 .hover-underline-animation {
@@ -59,7 +59,7 @@ header {
 }
 
 .hover-underline-animation:active {
-  color: #6c6565
+  color: #492828;
 }
 
 .hover-underline-animation::after {
@@ -120,6 +120,13 @@ p {
   background-color: #492828 !important;
 }
 
-.menuitem {
-  background-color: #682f2f;
+.footfont{
+  color: #492828 !important;
+  font-size: 14px !important;
+}
+.hamburger {
+  background-color: #ffffff;
+}
+.navv {
+  background-color: #492828;
 }
