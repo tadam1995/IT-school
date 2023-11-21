@@ -251,30 +251,30 @@
     }
   ])
 
-  .controller("contactController", ['$scope', '$http', function ($scope, $http) {
+  .controller("contactController", [
+    '$scope', '$http', 
+    function ($scope, $http) {
 
-
-    $scope.formData = {
-
-        subject: '',
-        email: '',
-        message: ''
-    };
-    console.log(formData);
-    // process the form
-    $scope.processForm = function () {
+      // ?
+      $scope.formData = {
+          subject: '',
+          email: '',
+          message: ''
+      };
+      
+      console.log(formData);
+      
+      // process the form
+      $scope.processForm = function () {
         $http({
-            method: 'POST',
-            url: 'contact.php',
-            data: $scope.formData,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        })
-
-
-    };
-
-
-} ])
+          method: 'POST',
+          url: 'contact.php',
+          data: $scope.formData,
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        });
+      }
+    } 
+  ])
 
 
   // User controller
