@@ -24,7 +24,8 @@
         })
         .state('courses', {
           url: '/courses',
-          templateUrl: './html/courses.html'
+          templateUrl: './html/courses.html',
+          controller: 'coursesController'
         })
         .state('community', {
           url: '/community',
@@ -47,6 +48,14 @@
         .state('kepzes3', {
           url: '/kepzes3',
           templateUrl: './html/kepzes3.html',
+        })
+        .state('kepzesek', {
+          url: '/kepzesek',
+          templateUrl: './html/kepzesek.html',
+          controller: 'kepzesekController',
+          params: {
+            course: null
+          }
         })
         .state('user', {
           url: '/user',
@@ -248,6 +257,40 @@
         $scope.$applyAsync();
       })
       .catch(e => console.log(e));
+    }
+  ])
+
+  // Courses controller
+  .controller('coursesController', [
+    '$scope',
+    'http',
+    function($scope, http) {
+
+      // Http request
+      http.request('./php/courses.php')
+      .then(response => {
+        $scope.courses = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e));
+    }
+  ])
+
+  // Kepzesek controller
+  .controller('kepzesekController', [
+    '$rootScope',
+    '$scope',
+    '$state',
+    '$stateParams',
+    function($rootScope, $scope, $state, $stateParams) {
+
+      // Get/Check parameters
+      $scope.course = $stateParams.course;
+      if (!$scope.course) {
+        $state.go($rootScope.state.prev);
+        return;
+      }
+      console.log($scope.course);
     }
   ])
 

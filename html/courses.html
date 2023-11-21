@@ -38,7 +38,7 @@
   
             <!-- Card-box -->
             <div class="card-car col-12 col-md-6 col-lg-4 mx-auto mt-5"
-                 ng-repeat="x in [].constructor(6) track by $index">
+                 ng-repeat="course in courses track by $index">
   
               <!-- Card -->
               <div class="card-box float-start border rounded-3 shadow p-3 me-3 cardbox">
@@ -52,12 +52,12 @@
   
                 <!-- Title -->
                 <h5 class="my-3 text-primary fw-bold text-center h5">
-                  {{'training'+($index+1) | translate:lang.data}}
+                  {{course.course_name | translate:lang.data}}
                 </h5>
   
                 <!-- Button -->
                 <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
-                        ui-sref="kepzes1">
+                        ui-sref="kepzesek({course:course})">
                         {{'in_more_detail' | translate:lang.data}} >> >>
                 </button>
               </div>
