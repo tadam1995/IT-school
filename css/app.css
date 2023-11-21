@@ -98,11 +98,6 @@ header {
   border: #492828;
   border-radius: 150px;
 }
-
-.h5 {
-  color: #ffffff !important;
-}
-
 .footer_ {
   background-color: transparent;
 }
@@ -121,7 +116,7 @@ p {
 }
 
 .footfont{
-  color: #492828 !important;
+  color: #ffffff !important;
   font-size: 14px !important;
 }
 .hamburger {
@@ -129,4 +124,8 @@ p {
 }
 .navv {
   background-color: #492828;
+}
+.footdiv{
+  background-color: transparent;
+  backdrop-filter: blur(20px);
 }
