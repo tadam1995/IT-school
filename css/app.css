@@ -129,3 +129,7 @@ p {
   background-color: transparent;
   backdrop-filter: blur(20px);
 }
+
+.courses-title {
+  background-color:rgba(0,0,0,0.5);
+}
