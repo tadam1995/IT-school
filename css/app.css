@@ -1,18 +1,9 @@
 body {
-  background-image: url("../media/image/background.jpg");
-  color: #ffffff;
-  background-size: cover;
+  background-color: #ffffff;
 }
 
 .carousel-indicators button {
   border: 1px solid white !important;
-}
-
-.navbar-custom {
-  background-color: rgb(202, 206, 191) !important;
-  font-family: Montserrat !important;
-  font-size: larger !important;
-  font-weight: bold !important;
 }
 
 .images {
@@ -47,19 +38,10 @@ header {
   }
 }
 
-.navbar_ {
-  background-color: transparent;
-  z-index:1000;
-}
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;
   color: #ffffff;
-}
-
-.hover-underline-animation:active {
-  color: #492828;
 }
 
 .hover-underline-animation::after {
@@ -80,11 +62,6 @@ header {
   transform-origin: bottom left;
 }
 
-.navfont {
-  color: #ffffff;
-  font-size: x-large;
-}
-
 .logo {
   width: 50px;
   height: 50px;
@@ -93,43 +70,69 @@ header {
 }
 
 .cardbox {
-  background-color: #492828;
+  background-color: #e6e6e6;
   display: inline;
   border: #492828;
-  border-radius: 150px;
-}
-.footer_ {
-  background-color: transparent;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  color: #ffffff !important;
-}
-
-.homecontainer {
-  background-color: #492828 !important;
-}
-
-.footfont{
-  color: #ffffff !important;
-  font-size: 14px !important;
-}
-.hamburger {
-  background-color: #ffffff;
-}
-.navv {
-  background-color: #492828;
-}
-.footdiv{
-  background-color: transparent;
-  backdrop-filter: blur(20px);
+  border-radius: 20px;
 }
 
 .courses-title {
   background-color:rgba(0,0,0,0.5);
+}
+.navbar, .footer{
+  background-color: rgb(46, 46, 193);
+}
+.nav-item{
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+.navfont{
+  color:rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-nav{
+  width:100%;
+  margin-left: 0;
+  margin-bottom: 0
+}
+.foot-item{
+  color:rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
+.courses_container {
+  position: relative;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.btn {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.courses_container:hover .image {
+  opacity: 0.3;
+}
+
+.courses_container:hover .middle {
+  opacity: 1;
+}
+
+.detail {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }

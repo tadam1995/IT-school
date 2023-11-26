@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-right navbar-expand-lg navbar_">
+<nav class="navbar navbar-right navbar-expand-lg">
 
   <!-- Container -->
   <div class="container-fluid">
@@ -10,7 +10,7 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo">
+    <a ui-sref="home"><img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo"></a>
 
     <!-- Navbar container -->
     <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarNav">
@@ -23,9 +23,9 @@
 
           <!--Home-->
           <li class="nav-item">
-            <a class="nav-link" ng-class="{'active cursor-default text-decoration-underline': state.id === 'home'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'home'}"
               ui-sref="home">
-              <span class="text-capitalize text-small-caps menuitem">
+              <span>
                 <p class="hover-underline-animation navfont">{{'home_page' | translate:lang.data}}</p>
               </span>
             </a>
@@ -33,9 +33,9 @@
 
           <!--Courses-->
           <li class="nav-item">
-            <a class="nav-link" ng-class="{'active cursor-default text-decoration-underline': state.id === 'courses'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'courses'}"
               ui-sref="courses">
-              <span class="text-capitalize text-small-caps menuitem">
+              <span>
                 <p class="hover-underline-animation navfont">{{'courses' | translate:lang.data}}</p>
               </span>
             </a>
@@ -43,18 +43,18 @@
 
           <!--Community-->
           <li class="nav-item">
-            <a class="nav-link" ng-class="{'active cursor-default text-decoration-underline': state.id === 'community'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'community'}"
               ui-sref="community">
-              <span class="text-capitalize text-small-caps menuitem">
+              <span>
                 <p class="hover-underline-animation navfont">{{'community' | translate:lang.data}}</p>
               </span>
             </a>
           </li>
           <!--Contact-->
           <li class="nav-item">
-            <a class="nav-link" ng-class="{'active cursor-default text-decoration-underline': state.id === 'contact'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default fw-bold fs-6 text-uppercase': state.id === 'contact'}"
               ui-sref="contact">
-              <span class="text-capitalize text-small-caps menuitem">
+              <span>
                 <p class="hover-underline-animation navfont">{{'contact' | translate:lang.data}}</p>
               </span>
             </a>
@@ -76,7 +76,7 @@
             <li class="nav-item" ng-if="!user.id && (state.id !== 'user' || userParamsType !== 'login')">
               <a class="nav-link" ui-sref="user({type: 'login'})"
                 ng-class="{'active': state.id === 'user' && userParamsType === 'login'}">
-                <span class="text-capitalize text-small-caps hover-underline-animation navfont menuitem">
+                <span class="hover-underline-animation navfont text-uppercase">
                   {{'login' | translate:lang.data}}
                 </span>
               </a>
@@ -86,7 +86,7 @@
             <li class="nav-item" ng-if="!user.id && state.id === 'user' && userParamsType === 'login'">
               <a class="nav-link" ui-sref="user({type: 'register'})"
                 ng-class="{'active': state.id === 'user' && userParamsType === 'register'}">
-                <span class="text-capitalize text-small-caps hover-underline-animation navfont menuitem">
+                <span class="hover-underline-animation navfont text-uppercase">
                   {{'register' | translate:lang.data}}
                 </span>
               </a>
@@ -107,7 +107,7 @@
                 </div>
 
                 <!-- Account title -->
-                <div class="text-capitalize text-small-caps d-inline-block float-start navfont hover-underline-animation">
+                <div class="d-inline-block float-start navfont hover-underline-animation text-uppercase">
                   {{'account' | translate:lang.data}}
                 </div>
               </a>
@@ -137,7 +137,7 @@
                 <li>
                   <a class="dropdown-item" href="javascript:void(0)" ng-click="logout()">
                     <i class="fa-solid fa-right-from-bracket fa-lg"></i>
-                    <span class="text-capitalize text-small-caps navfont hover-underline-animation">
+                    <span class="navfont hover-underline-animation text-uppercase">
                       {{'logout' | translate:lang.data}}
                     </span>
                   </a>

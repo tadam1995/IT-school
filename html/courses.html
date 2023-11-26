@@ -8,7 +8,7 @@
     <main class="mt-5">
   
       <!-- Container -->
-      <div class="container pt-5 pb-3 courses-title">
+      <div class="container pt-5 pb-3">
   
         <!-- Row -->
         <div class="row">
@@ -43,12 +43,12 @@
                  ng-repeat="course in courses track by $index">
   
               <!-- Card -->
-              <div class="card-box float-start border rounded-3 shadow p-3 me-3 cardbox">
+              <div class="card-box float-start border rounded-3 shadow p-3 me-3 cardbox courses_container">
   
                 <!-- Image -->
                 <div class="card-thumbnail rounded-3 text-center">
                   <img ng-src="./media/image/courses/courses_{{$index}}.jpg" 
-                       class="img-fluid" 
+                       class="image" 
                        alt="img">
                 </div>
   
@@ -58,7 +58,7 @@
                 </h5>
   
                 <!-- Button -->
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm"
+                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm detail"
                         ui-sref="kepzesek({course:course})">
                         {{'in_more_detail' | translate:lang.data}} >> >>
                 </button>
