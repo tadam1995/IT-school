@@ -53,7 +53,7 @@
                   <button class="btn btn-sm btn-primary px-4 shadow-sm detail 
                                  position-absolute top-50 start-50 translate-middle"
                           ui-sref="kepzesek({course:course})">
-                    {{'in_more_detail' | translate:lang.data}} >> >>
+                    <span class="text-capitalize">{{'in_more_detail' | translate:lang.data}}</span>
                   </button>       
                 </div>
   
@@ -62,12 +62,6 @@
                   {{course.course_name | translate:lang.data}}
                 </h5>
   
-                <!-- Button 
-                <button class="btn btn-sm btn-primary float-end px-4 shadow-sm detail"
-                        ui-sref="kepzesek({course:course})">
-                        {{'in_more_detail' | translate:lang.data}} >> >>
-                </button>
-                -->
               </div>
             </div>
           </div>

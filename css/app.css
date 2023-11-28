@@ -82,7 +82,7 @@ header {
   background-color:rgba(0,0,0,0.5);
 }
 .navbar, .footer{
-  background-color: rgb(46, 46, 193);
+  background-image: linear-gradient(to right, rgb(48, 50, 163) , rgb(103, 104, 173));
 }
 .nav-item{
   list-style-type: none;
@@ -91,7 +91,8 @@ header {
 }
 .navfont{
   color:rgb(255, 255, 255);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
 }
 .navbar-nav{
   width:100%;
@@ -115,13 +116,20 @@ header {
   backface-visibility: hidden;
 }
 .btn.detail {
-  background-color: #04AA6D;
-  color: white;
+  background-color: white;
+  border-radius: 15px;
+  border-color: #bdbdbd;
+  color:rgb(48, 50, 163);
   font-size: 16px;
   opacity: 0;
   text-align: center;
   -webkit-transition: all .5s ease;
           transition: all .5s ease;
+}
+.btn.detail:hover {
+  color:rgb(48, 50, 163);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
 }
 
 .courses_container:hover .btn.detail {
