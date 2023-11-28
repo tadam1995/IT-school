@@ -5,7 +5,11 @@
   <div class="container-fluid">
 
     <!-- Logo -->
-    <a ui-sref="home"><img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo"></a>
+    <a class="nav-link"
+       ng-class="{'disabled': state.id==='user'}"
+       ui-sref="home">
+       <img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo">
+    </a>
 
     <!-- Hamburger icon -->
     <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,7 +29,7 @@
 
           <!--Home-->
           <li class="nav-item">
-            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'home'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'home','disabled': state.id==='user'}"
               ui-sref="home">
               <span>
                 <p class="hover-underline-animation navfont">{{'home_page' | translate:lang.data}}</p>
@@ -35,7 +39,7 @@
 
           <!--Courses-->
           <li class="nav-item">
-            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'courses'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'courses','disabled': state.id==='user'}"
               ui-sref="courses">
               <span>
                 <p class="hover-underline-animation navfont">{{'courses' | translate:lang.data}}</p>
@@ -45,7 +49,7 @@
 
           <!--Community-->
           <li class="nav-item">
-            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'community'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'community','disabled': state.id==='user'}"
               ui-sref="community">
               <span>
                 <p class="hover-underline-animation navfont">{{'community' | translate:lang.data}}</p>
@@ -55,7 +59,7 @@
 
           <!--Contact-->
           <li class="nav-item">
-            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default fw-bold fs-6 text-uppercase': state.id === 'contact'}"
+            <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default fw-bold fs-6 text-uppercase': state.id === 'contact','disabled': state.id==='user'}"
               ui-sref="contact">
               <span>
                 <p class="hover-underline-animation navfont">{{'contact' | translate:lang.data}}</p>

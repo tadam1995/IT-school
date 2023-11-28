@@ -29,9 +29,9 @@ if (!is_null($result)) {
 
 // Set query
 $query = "INSERT INTO `user`
-					(`type`, `prefix_name`, `first_name`, `middle_name`, `last_name`, `suffix_name`, `nick_name`, `born`, `gender`, `img`, `img_type`, `country`, `country_code`, `phone`, `city`, `postcode`, `address`, `email`, `password`, `created`, `verification_code`) 
+					(`type`, `first_name`, `middle_name`, `last_name`, `born`, `gender`, `img`, `img_type`, `country`, `country_code`, `phone`, `city`, `postcode`, `address`, `email`, `password`, `created`, `verification_code`) 
 					 VALUES 
-					('N', :prefix_name, :first_name, :middle_name, :last_name, :suffix_name, :nick_name, :born, :gender, :img, :img_type, :country, :country_code, :phone, :city, :postcode, :address, :email, :password,  :created, :verification_code)";
+					('N', :first_name, :middle_name, :last_name, :born, :gender, :img, :img_type, :country, :country_code, :phone, :city, :postcode, :address, :email, :password,  :created, :verification_code)";
 
 // Creates a new password hash
 $args['password'] = password_hash($args['password'], PASSWORD_DEFAULT);

@@ -728,7 +728,7 @@
             });
 
           // Go prevent state or to home
-          } else if (['login','register','profile'].includes($rootScope.state.prev))
+          } else if ($rootScope.state.prev === 'user')
                 $state.go('home');
           else  $state.go($scope.state.prev);
         },

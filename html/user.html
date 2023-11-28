@@ -8,7 +8,7 @@
   <main>
 
 		<!-- Container -->
-		<div class="container py-5">
+		<div class="container py-5 login_container col-6 mb-3 mt-5">
 
 			<!-- Row -->
 			<div class="row justify-content-center">
@@ -16,6 +16,7 @@
 				<!-- Title -->
 				<h4 class="text-center mb-4 text-capitalize text-small-caps">
 					<i class="fas"
+						 
 						 ng-class="{'fa-users': userParamsType==='register', 
 				  							'fa-user': userParamsType==='login' || userParamsType==='profile'}">
 					</i>
@@ -33,7 +34,7 @@
 							 ng-switch-when="profile">
 						<label for="identifier" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<i class="fa-solid fa-id-badge"></i>
+							<i class="fa-solid fa-id-badge" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'identifier' | translate:lang.data}}:
 							</span>
@@ -55,7 +56,7 @@
 							 ng-switch-when="profile">
 						<label for="type" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<i class="fa-solid fa-user-gear"></i>
+							<i class="fa-solid fa-user-gear" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'type' | translate:lang.data}}:
 							</span>
@@ -82,7 +83,7 @@
 							 ng-switch-when="profile">
 						<label for="email" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<i class="fa-solid fa-id-badge"></i>
+							<i class="fa-solid fa-id-badge" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'email' | translate:lang.data}}:
 							</span>
@@ -102,36 +103,6 @@
 					<!-- Dividing line -->
 					<hr class="text-muted" 
 							ng-switch-when="profile">
-
-					<!-- NAME -->
-					<!-- Prefix name -->
-					<div class="row input-row mb-2" 
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
-						<label for="prefix_name" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<i class="fa-solid fa-user fa-xl"></i>
-							<span class="ms-1 text-capitalize">
-								{{'prefix_name' | translate:lang.data}}:
-							</span>
-						</label>
-						
-						<div class="col-11 col-sm-7 position-relative">
-							<input id="prefix_name" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('prefix_name' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.prefix_name"
-										 ng-focus="methods.setFocusedElement($event)"
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 maxlength="20"
-										 ng-clear-icon>
-						</div>
-						<div class="col-1 pt-1"></div>
-					</div>
 
 					<!-- First name -->
 					<div class="row input-row mb-2"
@@ -226,59 +197,6 @@
 						</div>
 					</div>
 
-					<!-- Suffix name -->
-					<div class="row input-row mb-2" 
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
-						<label for="suffix_name" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<span class="ms-1 text-capitalize">
-								{{'suffix_name' | translate:lang.data}}:
-							</span>
-						</label>
-						<div class="col-11 col-sm-7 position-relative">
-							<input id="suffix_name" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('suffix_name' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.suffix_name"
-										 ng-focus="methods.setFocusedElement($event)"  
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"  
-										 maxlength="20"
-										 ng-clear-icon>
-						</div>
-						<div class="col-1 pt-1"></div>
-					</div>
-
-					<!-- Nick name -->
-					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
-						<label for="nick_name" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<span class="ms-1 text-capitalize">
-								{{'nickname' | translate:lang.data}}:
-							</span>
-						</label>
-						<div class="col-11 col-sm-7 position-relative">
-							<input id="nick_name" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('nickname' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.nick_name"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 maxlength="50"
-										 ng-clear-icon>
-						</div>
-						<div class="col-1 pt-1"></div>
-					</div>
 
 					<!-- Dividing line -->
 					<hr class="text-muted" 
@@ -292,7 +210,7 @@
 						<label for="born" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-calendar-days"></i>
+							<i class="fa-solid fa-calendar-days" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'born' | translate:lang.data}}:
 							</span>
@@ -324,7 +242,7 @@
 							 			ng-switch-when-separator="|">
 						<legend class="col-form-label col-form-label-sm col-sm-4 pt-0 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-venus-mars"></i>
+							<i class="fa-solid fa-venus-mars" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'gender' | translate:lang.data}}:
 							</span>
@@ -376,7 +294,7 @@
 							 ng-switch-when-separator="|">
 						<label for="image" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
-							<i class="fa-solid fa-id-card fa-xl"></i>
+							<i class="fa-solid fa-id-card fa-xl" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'image' | translate:lang.data}}:
 							</span>
@@ -400,7 +318,7 @@
 										  ng-style="{'background-image':model.img_type?'url(data:'+model.img_type+';base64,'+model.img+')':(model.gender?'url('+app.commonPath+'media/image/blank/'+(model.gender==='F'?'fe':'')+'male-blank.webp)':'')}">
 									<span class="text-center text-muted"
 												ng-show="!model.img && !model.gender">
-										<i class="fa-solid fa-upload"></i><br>
+										<i class="fa-solid fa-upload" ></i><br>
 										<span class="fs-sm">Max: 64KB</span>
 									</span>							
               	</div>
@@ -421,7 +339,7 @@
 						<label for="country" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-flag"></i>
+							<i class="fa-solid fa-flag" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'country' | translate:lang.data}}:
 							</span>
@@ -506,7 +424,7 @@
 						<label for="city" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-city"></i>
+							<i class="fa-solid fa-city" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'city' | translate:lang.data}}:
 							</span>
@@ -540,7 +458,7 @@
 						<label for="postcode" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-list-ol"></i>
+							<i class="fa-solid fa-list-ol" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'postcode' | translate:lang.data}}:
 							</span>
@@ -575,7 +493,7 @@
 						<label for="address" 
 									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-location-dot"></i>
+							<i class="fa-solid fa-location-dot" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'address' | translate:lang.data}}:
 							</span>
@@ -613,7 +531,7 @@
 						<label for="email" 
 									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-envelope"></i>
+							<i class="fa-solid fa-envelope" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'email' | translate:lang.data}}:
 							</span>
@@ -646,7 +564,7 @@
 						<label for="email2" 
 									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-regular fa-envelope"></i>
+							<i class="fa-regular fa-envelope" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'email' | translate:lang.data}}
 							</span>
@@ -681,7 +599,7 @@
 						<label for="password" 
 									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-key"></i>
+							<i class="fa-solid fa-key" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'password' | translate:lang.data}}:
 							</span>
@@ -726,7 +644,7 @@
 						<label for="password2" 
 									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-solid fa-unlock-keyhole"></i>
+							<i class="fa-solid fa-unlock-keyhole" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'password' | translate:lang.data}}
 							</span>
@@ -767,7 +685,7 @@
 											 ng-disabled="!helper.isEdit"
 											 ng-display-password>
 								<label class="form-check-label" for="show-password">
-									<i class="fa-solid fa-eye mx-1"></i>
+									<i class="fa-solid fa-eye mx-1" ></i>
 									<span>{{'display_password' | translate:lang.data}}</span>
 								</label>
 							</div>
@@ -782,7 +700,7 @@
 							 ng-if="helper.isEdit">
 						<div class="col-form-label col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
-							<i class="fa-regular fa-hand-point-right fa-xl"></i>
+							<i class="fa-regular fa-hand-point-right fa-xl" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'code' | translate:lang.data}}:
 							</span>
@@ -803,7 +721,7 @@
 							<div class="input-group input-group-sm">
 								<div class="input-group-prepend">
               		<span class="input-group-text rounded-0 h-100">
-              			<i class="fas fa-robot"></i>
+              			<i class="fas fa-robot" ></i>
               		</span>
               	</div>
               	<input id="testcode"
@@ -825,7 +743,7 @@
 									<button class="btn btn-sm btn-light text-capitalize text-small-caps btnClickEffect"
 													ng-click="methods.testcodeRefresh($event)"
 													ng-disabled="!helper.isEdit">
-              			<i class="fas fa-sync-alt"></i>
+              			<i class="fas fa-sync-alt" ></i>
 										<span class="ms-1">
 											{{'refresh' | translate:lang.data}}
 										</span>
@@ -857,13 +775,13 @@
 											ng-click="methods.accept()"
 											disabled>
 								<span ng-if="userParamsType==='login'">
-									<i class="fa-solid fa-right-to-bracket"></i>
+									<i class="fa-solid fa-right-to-bracket" ></i>
 									<span class="ms-1">
 										{{'login' | translate:lang.data}}
 									</span>
 								</span>
 								<span ng-if="userParamsType==='register'">
-									<i class="fa-solid fa-address-card"></i>
+									<i class="fa-solid fa-address-card" ></i>
 									<span class="ms-1">
 										{{'register' | translate:lang.data}}
 									</span>
@@ -885,12 +803,13 @@
 											class="btn btn-secondary text-capitalize text-small-caps btnClickEffect"
 											style="width:160px"
 											ng-click="methods.cancel()">
-								<i class="fa-solid fa-circle-xmark"></i>
+								<i class="fa-solid fa-circle-xmark" ></i>
 								<span class="ms-1">
 									{{'cancel' | translate:lang.data}}
 								</span>
 							</button>
 						</div>
+
 
 						<!-- Forgot password -->
 						<div class="col-6 px-1 mt-3 text-end" 
@@ -914,7 +833,7 @@
 											class="btn btn-primary text-capitalize text-small-caps btnClickEffect"
 											style="width:160px"
 											ng-click="methods.edit()">
-								<i class="fa-solid fa-pen-to-square"></i>
+								<i class="fa-solid fa-pen-to-square" ></i>
 								<span class="ms-1">
 									{{'edit' | translate:lang.data}}
 								</span>
