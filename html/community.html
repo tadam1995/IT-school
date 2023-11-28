@@ -141,8 +141,8 @@
                    aria-labelledby="tab-2-tab">
   
                 <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto">
-                  <table  class="table table-bordered table-striped table-sm mt-3"
-                          ng-if="teachers.length">
+                  <table class="table table-bordered table-striped table-sm mt-3"
+                         ng-if="teachers.length">
                     <caption class="caption-top text-center">Lorem ipsum</caption>
                     <thead class="table-dark">
                       <tr>
@@ -156,7 +156,7 @@
                     <tbody>
                       <tr ng-repeat="teacher in teachers">
                         <td class="text-end">{{$index+1}}</td>
-                        <td class="text-start">{{teacher.name}}</td>
+                        <td class="text-start">{{teacher.full_name}}</td>
                         <td class="text-start">{{teacher.phone}}</td>
                         <td class="text-start">{{teacher.email}}</td>
                         <td class="text-start">{{teacher.subjects}}</td>
