@@ -143,3 +143,9 @@ header {
   opacity: 1;
 }
 
+.login_container{
+  background-color: rgb(230, 230, 230);
+  border-radius: 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
