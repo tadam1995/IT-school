@@ -156,7 +156,10 @@
                     <tbody>
                       <tr ng-repeat="teacher in teachers">
                         <td class="text-end">{{$index+1}}</td>
-                        <td class="text-start">{{teacher.full_name}}</td>
+                        <td class="text-start">
+                          <a data-bs-toggle="modal" 
+                          data-bs-target="#my-modal-1">
+                          {{teacher.full_name}}</a></td>
                         <td class="text-start">{{teacher.phone}}</td>
                         <td class="text-start">{{teacher.email}}</td>
                         <td class="text-start">{{teacher.subjects}}</td>
@@ -271,6 +274,35 @@
         </div>
       </div>
     </main>
+      <!-- Modal -->
+  <div  id="my-modal-1" class="modal fade" 
+  data-bs-backdrop="static" 
+  data-bs-keyboard="false" 
+  tabindex="-1" 
+  aria-labelledby="staticBackdropLabel" 
+  aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content">
+ <div class="modal-header">
+   <h5 class="modal-title" id="staticBackdropLabel">{{teacher.full_name}}</h5>
+   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+   <h2>név</h2>
+   <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore, porro provident quaerat minima     rem, unde non accusamus voluptas sint praesentium totam repellat accusantium sunt corporis ab sit     commodi. Beatae!
+   </p>
+   <hr>
+   <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore, porro provident quaerat minima     rem, unde non accusamus voluptas sint praesentium totam repellat accusantium sunt corporis ab sit     commodi. Beatae!
+   </p>
+ </div>
+ <div class="modal-footer">
+   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+ </div>
+</div>
+</div>
+</div>
     
     <!-- Footer -->
     <footer ng-include src="'./html/footer.html'"></footer>
