@@ -234,6 +234,15 @@
     'http',
     function($scope, http) {
 
+      $scope.teacherImg = "1.jpg";
+      $scope.teacherContent = "AAAAAAAAAAAAAAAAAAAA Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident incidunt culpa, fugiat, et aliquid unde laudantium fugit amet, accusamus ipsum. Pariatur fugit, voluptates quibusdam odio excepturi sit nemo ratione.";
+
+      $scope.teacherData = (event) => {
+        let element = event.currentTarget;
+        $scope.teacherImg = element.dataset.img;
+        $scope.teacherContent = element.dataset.content;
+        $scope.$applyAsync();
+      }
       // Http request
       http.request('./php/teachers.php')
       .then(response => {

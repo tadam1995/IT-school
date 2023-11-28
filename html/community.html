@@ -158,8 +158,13 @@
                         <td class="text-end">{{$index+1}}</td>
                         <td class="text-start">
                           <a data-bs-toggle="modal" 
-                          data-bs-target="#my-modal-1">
-                          {{teacher.full_name}}</a></td>
+                             data-bs-target="#my-modal-1"
+                             data-img="{{teacher.img}}"
+                             data-content="{{teacher.content}}"
+                             ng-click="teacherData($event)">
+                            {{teacher.full_name}}
+                          </a>
+                        </td>
                         <td class="text-start">{{teacher.phone}}</td>
                         <td class="text-start">{{teacher.email}}</td>
                         <td class="text-start">{{teacher.subjects}}</td>
@@ -253,12 +258,10 @@
  <div class="modal-body">   
    <h2>név</h2>
 
-<img ng-src="./media/image/teacher/1.jpg" 
+<img ng-src="./media/image/teacher/{{teacherImg}}" 
      class="d-block w-100" 
      alt="img">
-      <p>
-     heló Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore, porro provident quaerat minima     rem, unde non accusamus voluptas sint praesentium totam repellat accusantium sunt corporis ab sit     commodi. Beatae!
-   </p>
+      <p>{{teacherContent}}</p>
  </div>
  <div class="modal-footer">
    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>

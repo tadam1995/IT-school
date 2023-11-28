@@ -10,7 +10,9 @@ $db = new Database();
 $query = "SELECT CONCAT_WS(' ', `teacher`.`surname`, `teacher`.`first_name`) 
             AS  `full_name`,
                 `teacher`.
-                `email`, 
+                `email`,
+                `img`,
+                `content`,
                 `teacher`.`phone`,
             (SELECT GROUP_CONCAT(`subjects`.`subject_name` SEPARATOR ', ')
               FROM `subjects`
