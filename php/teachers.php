@@ -7,15 +7,17 @@ require_once('../../../common/php/environment.php');
 $db = new Database();
 
 // Set query
-$query = "SELECT  CONCAT_WS(' ', `surname`, `first_name`) AS `name`,
-                  `email`, 
-                  `phone`,
-                  ( SELECT GROUP_CONCAT(`subjects`.`name` SEPARATOR ', ')
-                    FROM `subjects`
-                    WHERE `subjects`.`teacher_id` = `teacher`.`teacher_id`
-                  ) AS `subjects`
-          FROM `teacher`
-          ORDER BY `name`;";
+$query = "SELECT CONCAT_WS(' ', `teacher`.`surname`, `teacher`.`first_name`) 
+            AS  `full_name`,
+                `teacher`.
+                `email`, 
+                `teacher`.`phone`,
+            (SELECT GROUP_CONCAT(`subjects`.`subject_name` SEPARATOR ', ')
+              FROM `subjects`
+              WHERE `subjects`.`teacher_id` = `teacher`.`teacher_id`)
+                AS `subjects`
+                FROM `teacher`
+                ORDER BY `full_name`;";
 
 // Execute query with argument
 $result = $db->execute($query);
