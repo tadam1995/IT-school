@@ -2,7 +2,7 @@
 <div class="page-container d-conditional vh-100">
 
   <!-- Navigate -->
-  <header class="ssticky-top" ng-include src="'./html/navigate.html'"></header>
+  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
 
   <!-- Main -->
   <main>
@@ -80,19 +80,21 @@
         <!-- Rental process -->
         <ul class="row list-unstyled text-center mt-4">
 
-          <li class="col-12 col-lg-6 mb-2 cardbox"
+          <li class="col-12 col-lg-6 my-2"
               ng-repeat="x in [].constructor(4) track by $index">
-            <div class="row">
-              <div class="col-6">
-                <div class="position-relative mt-2">
-                  <img class="img-fluid" ng-src="./media/image/home/{{$index+1}}.jpg" alt="img">
+            <div class="cardbox p-2">
+              <div class="row row-cols-1 row-col-md-2 g-4">
+                <div class="col-6">
+                  <div class="position-relative mt-2">
+                    <img class="img-fluid" ng-src="./media/image/home/{{$index+1}}.jpg" alt="img">
+                  </div>
                 </div>
-              </div>
-              <div class="col-6 text-muted text-start">  
-                <h4 class="mt-2">{{'homenews_'+($index+1)+'_title' | translate:lang.data}}</h4>
-                <p>
-                  {{'homenews_'+($index+1)+'_desc' | translate:lang.data}}
-                </p>
+                <div class="col-6 text-muted text-start">  
+                  <h4 class="mt-2">{{'homenews_'+($index+1)+'_title' | translate:lang.data}}</h4>
+                  <p>
+                    {{'homenews_'+($index+1)+'_desc' | translate:lang.data}}
+                  </p>
+                </div>
               </div>
             </div>
           </li>

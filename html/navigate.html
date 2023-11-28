@@ -4,13 +4,15 @@
   <!-- Container -->
   <div class="container-fluid">
 
+    <!-- Logo -->
+    <a ui-sref="home"><img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo"></a>
 
     <!-- Hamburger icon -->
     <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a ui-sref="home"><img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo"></a>
+    
 
     <!-- Navbar container -->
     <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarNav">
@@ -50,6 +52,7 @@
               </span>
             </a>
           </li>
+
           <!--Contact-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2" ng-class="{'active cursor-default fw-bold fs-6 text-uppercase': state.id === 'contact'}"
@@ -61,8 +64,6 @@
           </li>
         </ul>
       </div>
-
-
 
       <!-- Right align -->
       <div class="navbar-right ms-auto">
