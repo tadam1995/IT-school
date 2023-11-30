@@ -75,7 +75,6 @@ header {
   border: #492828;
   border-radius: 20px;
   min-height: 280px;
-
 }
 
 .courses-title {
@@ -148,4 +147,7 @@ header {
   border-radius: 50px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
+}
+.img_car{
+  border-top-left-radius: 20px;
 }
