@@ -161,6 +161,7 @@
                              data-bs-target="#my-modal-1"
                              data-img="{{teacher.img}}"
                              data-content="{{teacher.content}}"
+                             data-full_name="{{teacher.full_name}}"
                              ng-click="teacherData($event)">
                             {{teacher.full_name}}
                           </a>
@@ -250,26 +251,24 @@
   aria-labelledby="staticBackdropLabel" 
   aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-<div class="modal-content">
- <div class="modal-header">
-   <h5 class="modal-title" id="staticBackdropLabel">tanár 1</h5>
-   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
- </div>
- <div class="modal-body">   
-   <h2>név</h2>
-
-<img ng-src="./media/image/teacher/{{teacherImg}}" 
-     class="d-block w-100" 
-     alt="img">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="staticBackdropLabel">{{teacherFull_name}}</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <img ng-src="./media/image/teacher/{{teacherImg}}" 
+      class="d-block w-100" 
+      alt="img">
       <p>{{teacherContent}}</p>
- </div>
- <div class="modal-footer">
-   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
- </div>
-</div>
-</div>
-</div>
-    
-    <!-- Footer -->
-    <footer ng-include src="'./html/footer.html'"></footer>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+    </div>
   </div>
+
+      <!-- Footer -->
+  <footer ng-include src="'./html/footer.html'"></footer>
+</div>
