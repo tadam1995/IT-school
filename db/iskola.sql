@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 14. 22:29
+-- Létrehozás ideje: 2023. Dec 03. 16:50
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -153,25 +153,27 @@ CREATE TABLE `teacher` (
   `first_name` varchar(50) NOT NULL,
   `surname` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone` varchar(20) NOT NULL
+  `phone` varchar(20) NOT NULL,
+  `img` varchar(20) NOT NULL,
+  `content` varchar(6000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `teacher`
 --
 
-INSERT INTO `teacher` (`teacher_id`, `first_name`, `surname`, `email`, `phone`) VALUES
-(1, 'Attila', 'Pataki', 'pataki.attila@jakabhunor.hu', '+36(30)481-68-88'),
-(2, 'Adél', 'Dudás', 'dudas.adel@jakabhunor.hu', '+36(30)811-60-91'),
-(3, 'Albert', 'Horváth', 'horvath.albert@jakabhunor.hu', '+36(70)054-52-97'),
-(4, 'Attila', 'Borbély', 'borbely.attila@jakabhunor.hu', '+36(70)683-78-22'),
-(5, 'Gábor', 'Varga', 'varga.gabor@jakabhunor.hu', '+36(20)744-46-55'),
-(6, 'Zsolt', 'Dr. Molnár', 'drmolnar.zsolt@jakabhunor.hu', '+36(20)332-95-18'),
-(7, 'László', 'Nagy', 'nagy.laszlo@jakabhunor.hu', '+36(30)122-51-52'),
-(8, 'Andrea', 'Kovács', 'kovacs.andrea@jakabhunor.hu', '+36(70)927-15-22'),
-(9, 'Gábor', 'Dr. Barta', 'drbartagabor@jakabhunor.hu', '+36(20)586-14-56'),
-(10, 'Éva ', 'Mészáros', 'meszaros.eva@jakabhunor.hu', '+36(70)757-50-94'),
-(11, 'Péter', 'Szabó', 'szabo.peter@jakabhunor.hu', '+36(30)482-04-72');
+INSERT INTO `teacher` (`teacher_id`, `first_name`, `surname`, `email`, `phone`, `img`, `content`) VALUES
+(1, 'Attila', 'Pataki', 'pataki.attila@jakabhunor.hu', '+36(30)481-68-88', '1.jpg', '\"Sziasztok, Pataki Attila vagyok, és lelkesen kalauzolom titeket az autonóm járművek izgalmas világába. A Járműüzemeltetés és flottakezelés, valamint a Mesterséges Intelligencia és gépi tanulás járműalkalmazásokban ismeretanyagot is veletek osztom meg. Célom, hogy segítsem a tudásotokat ezeken a területeken, és felkészítselek titeket a jövő közlekedési és technológiai kihívásaira. Gyertek, és fedezzük fel együtt a járműfejlesztés új dimenzióit!\"'),
+(2, 'Adél', 'Dudás', 'dudas.adel@jakabhunor.hu', '+36(30)811-60-91', '2.jpg', '\"Sziasztok, Dudás Adél vagyok, és veletek fedezzük fel a robotika és szoftverfejlesztés izgalmas világát, kifejezetten járművek számára. A Robotika Alapjai, a Robotikai Hardvertervezés és Elektronika, valamint a Robotprogramozás és irányítás tantárgyakban osztom meg veletek a tudásomat. Célom, hogy inspiráljalak titeket és segítsek kialakítani a szükséges képességeket ezen a dinamikus területen. Gyertek, és vegyetek részt a robotika varázslatos világában, ahol a gépek életre kelnek a szoftverfejlesztés és a mérnöki kreativitás révén!\"'),
+(3, 'Albert', 'Horváth', 'horvath.albert@jakabhunor.hu', '+36(70)054-52-97', '3.jpg', '\"Sziasztok, Horváth Albert vagyok, és veletek járom körbe a Virtuális Valóság és Kiterjesztett Valóság lenyűgöző világát. A 3D Modellalkotás és Animáció, valamint a VR és AR Programozás tantárgyakban pedig segítek nektek megismerni a digitális térképzés és programozás csodálatos területeit. Célom, hogy inspiráljalak titeket és ösztönözzem a kreativitásotokat, miközben együtt fedezzük fel a virtuális és kiterjesztett valóság alapjait. Gyertek, és hozzuk létre együtt a jövő digitális élményeit!\"'),
+(4, 'Attila', 'Borbély', 'borbely.attila@jakabhunor.hu', '+36(70)683-78-22', '4.jpg', '\"Szia, Borbély Attila vagyok, és nagyon örülök, hogy itt lehetek veletek az informatikai szakiskolában. Számomra az Okos Hálózatok és Kommunikáció nem csak tantárgy, hanem szenvedély. Emellett elkötelezett vagyok az Okos Otthon Rendszertervezés és Integráció terén is. Célom, hogy inspiráljalak titeket és segítsek felkészülni az informatika izgalmas és dinamikus világára.\"'),
+(5, 'Gábor', 'Varga', 'varga.gabor@jakabhunor.hu', '+36(20)744-46-55', '5.jpg', '\"Sziasztok, Varga Gábor vagyok, és veletek mélyedünk el a gépi tanulás lenyűgöző világában. A Gépi Tanulás Alapjai, a Deep Learning és Neurális Hálózatok, az Adatbányászat és Adatelemzés, valamint a Mesterséges Intelligencia alkalmazások tantárgyakban segítek nektek felfedezni az intelligens technológiák és adatelemzés rejtelmeit. Célom, hogy inspiráljalak titeket és segítsek kialakítani azokat a képességeket, amelyekre szükség lesz a mesterséges intelligencia területén. Gyertek, és induljunk el együtt a jövő kihívásainak megoldása felé!\"'),
+(6, 'Zsolt', 'Dr. Molnár', 'drmolnar.zsolt@jakabhunor.hu', '+36(20)332-95-18', '6.jpg', '\"Halló mindenkinek, Dr. Molnár Zsolt vagyok, és veletek tárgyaljuk meg a járműbiztonság és jogi kérdéseket az önvezető járművek területén. A Mesterséges Intelligencia Etika és Jogi Aspektusai tantárgyakban pedig segítek nektek felfedezni az MI felelős és etikai alkalmazását. Célom, hogy nemcsak elméleti ismereteket adjak át, hanem segítsek felkészülni a valós kihívásokra, amelyekkel az önvezető járművek és mesterséges intelligencia terén találkozhattok. Gyertek, és vegyetek részt a diskurzusban, amely formálja a jövő mobilitását és technológiai fejlődését!\"'),
+(7, 'László', 'Nagy', 'nagy.laszlo@jakabhunor.hu', '+36(30)122-51-52', '7.jpg', '\"Sziasztok, Nagy László vagyok, és veletek járom körbe az okos otthon technológiák izgalmas világát. Az Okos Otthon Technológiák Alapjai, az Automatizált Otthoni Biztonság és Védelem, valamint az Okos Házkezelés és Energiahatékonyság tantárgyakban segítek nektek felfedezni a modern otthonok automatizációjának és energiahatékonyságának legújabb trendjeit. Célom, hogy olyan tudást adjak át, amely segít titeket okos és fenntartható otthonok tervezésében és kezelésében. Gyertek, és együtt alakítsuk ki az otthonok jövőjét!\"'),
+(8, 'Andrea', 'Kovács', 'kovacs.andrea@jakabhunor.hu', '+36(70)927-15-22', '8.jpg', '\"Sziasztok, Kovács Andrea vagyok, és veletek veszem számba az online marketing kifinomult világát. Az Online Marketing Stratégiák és Kampányok, az Adatvezérelt Marketing és Analitika, valamint a Személyre szabott Marketing és CRM tantárgyakban segítek nektek megérteni a digitális marketing eszközök és adatok által vezérelt stratégiák fontosságát. Célom, hogy felkészítselek titeket a sikeres marketing tervezésére és végrehajtására a digitális térben. Gyertek, és fedezzük fel együtt a marketing dinamikus és változatos világát!\"'),
+(9, 'Gábor', 'Dr. Barta', 'drbartagabor@jakabhunor.hu', '+36(20)586-14-56', '9.jpg', '\"Helló, Dr. Barta Gábor vagyok, és lelkesen osztom meg veletek a Mesterséges Intelligencia a Robotikában és a Robotika Alkalmazások és Fejlesztés tudásomat. Az MI és robotika világa számomra nemcsak egy tantárgy, hanem életforma. Célom, hogy segítsek nektek felfedezni ezen izgalmas területek rejtelmeit, és inspiráljalak titeket a fejlesztés és alkalmazások világában.\"'),
+(10, 'Éva ', 'Mészáros', 'meszaros.eva@jakabhunor.hu', '+36(70)757-50-94', '10.jpg', '\"Sziasztok, Mészáros Éva vagyok, és veletek mélyedünk el a közösségi média marketing izgalmas területén. Az Innováció és Új Technológiák a Digitális Marketingben tantárgyakban segítek nektek megismerni a legfrissebb trendeket és módszereket. Célom, hogy felkészítselek titeket a digitális marketing dinamikus világára, különös hangsúlyt fektetve a közösségi média stratégiákra és az innovációra. Gyertek, és fedezzük fel együtt, hogyan lehetünk hatékonyak és kreatívak a digitális marketing terén!\"'),
+(11, 'Péter', 'Szabó', 'szabo.peter@jakabhunor.hu', '+36(30)482-04-72', '11.jpg', '\"Sziasztok, Szabó Péter vagyok, és veletek együtt mélyedünk el a virtuális és kiterjesztett valóság alkalmazásaiban az egészségügyben és oktatásban. A VR és AR alkalmazások az Egészségügyben és Oktatásban tantárgyakban segítek nektek felfedezni a technológiai innováció határait ezeken a kulcsfontosságú területeken. Célom, hogy inspiráljalak titeket és segítsek kialakítani a kreatív és hatékony megoldásokat ezen a dinamikus és fejlődő területen. Gyertek, és vegyünk részt együtt a jövő egészségügyi és oktatási fejlesztéseiben!\"');
 
 -- --------------------------------------------------------
 
