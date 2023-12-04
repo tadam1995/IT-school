@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 03. 16:50
+-- Létrehozás ideje: 2023. Dec 04. 23:16
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `courses` (
   `course_id` int(11) NOT NULL,
   `course_name` varchar(100) NOT NULL,
-  `description` varchar(20) NOT NULL
+  `description` varchar(6000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -38,12 +38,12 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `course_name`, `description`) VALUES
-(1, 'Automatizált járművek tervezése és üzemeltetése szak', ''),
-(2, 'Smart home rendszerek tervezése és üzemeltetése szak', ''),
-(3, 'Robotikai rendszerek tervezése és üzemeltetése szak', 'blabla'),
-(4, 'Virtuális valóság (VR) és kiterjesztett valóság (AR) fejlesztő szak', 'blablabla'),
-(5, 'Mesterséges intelligencia fejlesztése és adatelemzése szak', ''),
-(6, 'Digitális marketing és személyre szabott marketing szak', '');
+(1, 'Automatizált járművek tervezése és üzemeltetése szak', 'Az Automatizált Járművek Tervezése és Üzemeltetése szakon diákjaink elmélyülhetnek az önvezető járművek tervezésében és fejlesztésében. A program magában foglalja a járműüzemeltetés és karbantartás szakmai aspektusait, valamint korszerű technológiák alkalmazását az autonóm járművek tervezése során. Ez a szak egyedülálló lehetőséget kínál a hallgatóknak, hogy elsajátítsák az innovatív járműtechnológiák tervezésének és üzemeltetésének készségeit a jövő mobilitási ágazatában.'),
+(2, 'Smart home rendszerek tervezése és üzemeltetése szak', 'A Smart Home Rendszerek Tervezése és Üzemeltetése szakon diákjaink olyan tudást szerezhetnek, amely lehetővé teszi számukra, hogy intelligens otthonokat tervezzenek és üzemeltessenek. A program kiterjed az okos otthon rendszerek integrációjára, a biztonságos és hatékony energiafelhasználásra, valamint az otthoni automatizáció tervezésére. Ezen a szakon résztvevő hallgatóink a digitális innovációk iránti szenvedélyüket ötvözhetik azzal a képességgel, hogy a jövő otthonainak tervezésében és fejlesztésében jártas szakemberekké váljanak.'),
+(3, 'Robotikai rendszerek tervezése és üzemeltetése szak', 'A Robotikai Rendszerek Tervezése és Üzemeltetése szakon diákjaink a robotikai technológiák mélyebb rétegeibe nyerhetnek bepillantást. A program kiterjed a robotikai rendszerek tervezésére, fejlesztésére és üzemeltetésére, beleértve a hardvertervezést és az elektronikai elemek integrációját. Ezen a szakon résztvevő hallgatók innovatív projekteken keresztül fejleszthetik a robottechnológia iránti szenvedélyüket, és felkészülhetnek a jövő intelligens automatizációs kihívásaira.'),
+(4, 'Virtuális valóság (VR) és kiterjesztett valóság (AR) fejlesztő szak', 'A Virtuális Valóság (VR) és Kiterjesztett Valóság (AR) Fejlesztő szakon diákjaink a digitális élmények teremtésének mestereivé válhatnak. A program célja a VR és AR technológiák elmélyült megértése, beleértve az alkalmazásfejlesztést, 3D modellezést és interaktív élmények tervezését. Ezen a szakon résztvevő hallgatók kreativitásukat ötvözhetik a high-tech világban, és felkészülhetnek a virtuális és kiterjesztett valóság területén rejlő innovációs kihívásokra.'),
+(5, 'Mesterséges intelligencia fejlesztése és adatelemzése szak', 'A Mesterséges Intelligencia Fejlesztése és Adatelemzése szakon diákjaink elmélyedhetnek a mesterséges intelligencia tervezésének és fejlesztésének művészetében. A program kiterjed a gépi tanulás és adatelemzés gyakorlati alkalmazásaira, lehetővé téve a hallgatók számára, hogy valós életbeli problémákra alkalmazzák az MI megoldásokat. Ezen a szakon résztvevő hallgatók olyan eszközöket sajátíthatnak el, amelyek segítségével hatékonyan hozzáférhetnek és kiértékelhetik a nagy adathalmazokat, elősegítve ezzel az intelligens rendszerek fejlesztését.'),
+(6, 'Digitális marketing és személyre szabott marketing szak', 'A Digitális Marketing és Személyre Szabott Marketing szakon diákjaink mélyreható ismereteket szerezhetnek a digitális marketing terén, ahol a modern online eszközök és stratégiák segítségével építhetik fel a márkákat. A program kiemelten foglalkozik a személyre szabott marketinggel, lehetőséget adva a hallgatóknak az egyedi és célzott üzenetek tervezésére a potenciális ügyfelek számára. Ezen a szakon résztvevő diákok a digitális üzleti világban való hatékony navigációra és az online jelenlét optimalizálására készülnek, miközben elsajátítják a személyre szabott marketing legfrissebb trendjeit és eszközeit.');
 
 -- --------------------------------------------------------
 
