@@ -1,274 +1,240 @@
 <!-- Page container -->
 <div class="page-container d-conditional vh-100">
 
-    <!-- Navigate -->
-    <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
-  
-    <!-- Main -->
-    <main>
-  
-      <!-- Container -->
-      <div class="container pt-5">
-  
+  <!-- Navigate -->
+  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Container -->
+    <div class="container pt-5">
+
+      <!-- Row -->
+      <div class="row">
+
+        <!-- Titel -->
+        <h1 class="text-center text-capitalize text-small-caps">
+          {{'community' | translate:lang.data}}
+        </h1>
+      </div>
+
+      <!-- Row -->
+      <div class="row text-center mt-4">
+
+        <!-- Grid -->
+        <div class="col-11 col-md-10 col-xl-8 mx-auto">
+
+          <!-- Title -->
+          <h6 class="fst-italic text-uppercase display-6">
+            {{'community_title' | translate:lang.data}}
+          </h6>
+
+          <!-- Content -->
+          <p class="text-muted fs-5 fst-italic px-4 mt-3">
+            {{'community_title_desc' | translate:lang.data}}
+          </p>
+        </div>
+
+
+        <!-- Row -->
+        <div class="row mt-3">
+          <hr>
+
+          <!-- Tab buttons -->
+          <ul id="form-tab" class="nav nav-pills justify-content-center mt-3" role="tablist">
+
+
+            <!-- Tab1 -->
+            <li class="nav-item nav-item-pills mx-2" role="presentation">
+
+              <!-- Button -->
+              <button id="tab-2-tab" class="btn btn-outline-secondary active ms-2 mb-2 btn-pills-tab text-capitalize"
+                data-bs-toggle="pill" data-bs-target="#tab-2" role="tab" type="button" aria-controls="tab-2"
+                aria-selected="false">
+                {{'teacher' | translate:lang.data}}
+              </button>
+            </li>
+
+            <!-- Tab2 -->
+            <li class="nav-item nav-item-pills mx-2" role="presentation">
+
+              <!-- Button -->
+              <button id="tab-3-tab" class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
+                data-bs-toggle="pill" data-bs-target="#tab-3" role="tab" type="button" aria-controls="tab-3"
+                aria-selected="false">
+                {{'gallery' | translate:lang.data}}
+              </button>
+            </li>
+          </ul>
+        </div>
+
         <!-- Row -->
         <div class="row">
-  
-          <!-- Titel -->
-          <h1 class="text-center text-capitalize text-small-caps">
-            {{'community' | translate:lang.data}}
-          </h1>
-        </div>
 
-        <!-- Row -->
-        <div class="row text-center mt-4">
+          <!-- Tab content -->
+          <div class="tab-content">
 
-            <!-- Grid -->
-            <div class="col-11 col-md-10 col-xl-8 mx-auto">
-            
-              <!-- Title -->
-              <h6 class="fst-italic text-uppercase display-6">
-                {{'community_title' | translate:lang.data}}
-              </h6>
-  
-              <!-- Content -->
-              <p class="text-muted fs-5 fst-italic px-4 mt-3">          	
-                {{'community_title_desc' | translate:lang.data}}
-              </p>
+            <!-- Tab1 panel -->
+            <div id="tab-1" class="tab-pane fade  p-3 text-center" role="tabpanel" aria-labelledby="tab-1-tab">
+
+              <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">Lorem ipsum dolor</h1>
+                  <p class="col-md-8 fs-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aut, impedit
+                    fugiat quibusdam quas eum neque aliquam ea nostrum adipisci omnis tempora quidem. Corporis harum
+                    laboriosam repellat deleniti. Qui, consequatur!</p>
+                  <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#my-modal-1">
+                    >> Lorem
+                  </button>
+                </div>
+              </div>
+
+
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                  <div class="h-100 p-5 text-white bg-dark rounded-3">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id asperiores quisquam magnam expedita
+                      sed ducimus fugit aperiam hic dolorem voluptatibus. Eligendi qui atque neque repudiandae. Corporis
+                      autem odio laboriosam vero.</p>
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                      data-bs-target="#my-modal-1">
+                      >> Lorem
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore, porro provident quaerat
+                      minima rem, unde non accusamus voluptas sint praesentium totam repellat accusantium sunt corporis
+                      ab sit commodi. Beatae!</p>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                      data-bs-target="#my-modal-1">
+                      >> Lorem
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-          
-  
-          <!-- Row -->
-          <div class="row mt-3">
+
+            <!-- Tab2 panel -->
+            <div id="tab-2" class="tab-pane fade show active p-3 text-center" role="tabpanel"
+              aria-labelledby="tab-2-tab">
+
+              <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto">
+                <table class="table table-bordered table-striped table-sm mt-3" ng-if="teachers.length">
+                  <caption class="caption-top text-center">Lorem ipsum</caption>
+                  <thead class="table-dark">
+                    <tr>
+                      <th class="text-capitalize">#</th>
+                      <th class="text-capitalize">{{'name' | translate:lang.data}}</th>
+                      <th class="text-capitalize">{{'phone' | translate:lang.data}}</th>
+                      <th class="text-capitalize">{{'email' | translate:lang.data}}</th>
+                      <th class="text-capitalize">{{'course' | translate:lang.data}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="teacher in teachers">
+                      <td class="text-end">{{$index+1}}</td>
+                      <td class="text-start">
+                        <a data-bs-toggle="modal" data-bs-target="#my-modal-1" data-img="{{teacher.img}}"
+                          data-content="{{teacher.content}}" data-full_name="{{teacher.full_name}}"
+                          ng-click="teacherData($event)">
+                          {{teacher.full_name}}
+                        </a>
+                      </td>
+                      <td class="text-start">{{teacher.phone}}</td>
+                      <td class="text-start">{{teacher.email}}</td>
+                      <td class="text-start">{{teacher.subjects}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="mt-5">
+                  <hr>
+                  <h3 class="my-3">Lorem ipsum dolor sit amet</h3>
+                  <img src="https://dummyimage.com/200x150" class="img-fluid float-start me-3" alt="img">
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
+                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
+                    ducimus tempore repellat ad facilis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
+                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
+                    ducimus tempore repellat ad facilis.
+                  </p>
+
+                  <img src="https://dummyimage.com/200x150" class="img-fluid float-end ms-3" alt="img">
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
+                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
+                    ducimus tempore repellat ad facilis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
+                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
+                    ducimus tempore repellat ad facilis.
+                  </p>
+
+                  <img src="https://dummyimage.com/200x150" class="img-fluid float-start me-3" alt="img">
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
+                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
+                    ducimus tempore repellat ad facilis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
+                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
+                    ducimus tempore repellat ad facilis.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab3 panel -->
+            <div id="tab-3" class="tab-pane fade p-3 text-center" role="tabpanel" aria-labelledby="tab-3-tab">
+
+              <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                  <img src="https://dummyimage.com/1600x600" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+
+                  <img src="https://dummyimage.com/1600x600" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                  <img src="https://dummyimage.com/1600x600" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                  <img src="https://dummyimage.com/1600x600" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                  <img src="https://dummyimage.com/1600x600" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                  <img src="https://dummyimage.com/1600x600" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                </div>
+              </div>
+            </div>
             <hr>
-  
-            <!-- Tab buttons -->
-            <ul id="form-tab"
-                class="nav nav-pills justify-content-center mt-3" 
-                role="tablist">
-  
-              
-              <!-- Tab1 -->
-              <li class="nav-item nav-item-pills mx-2"
-                  role="presentation">
-  
-                <!-- Button -->
-                <button id="tab-2-tab" 
-                        class="btn btn-outline-secondary active ms-2 mb-2 btn-pills-tab text-capitalize"
-                        data-bs-toggle="pill"
-                        data-bs-target="#tab-2"
-                        role="tab" 
-                        type="button" 
-                        aria-controls="tab-2"
-                        aria-selected="false">
-                    {{'teacher' | translate:lang.data}}
-                </button>
-              </li>
-  
-              <!-- Tab2 -->
-              <li class="nav-item nav-item-pills mx-2"
-                  role="presentation">
-  
-                <!-- Button -->
-                <button id="tab-3-tab" 
-                        class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
-                        data-bs-toggle="pill"
-                        data-bs-target="#tab-3"
-                        role="tab" 
-                        type="button" 
-                        aria-controls="tab-3"
-                        aria-selected="false">
-                  {{'gallery' | translate:lang.data}}
-                </button>
-              </li>
-            </ul>
-          </div>
-  
-          <!-- Row -->
-          <div class="row">
-  
-            <!-- Tab content -->
-            <div class="tab-content">
-  
-              <!-- Tab1 panel -->
-              <div id="tab-1" 
-                   class="tab-pane fade  p-3 text-center"
-                   role="tabpanel"
-                   aria-labelledby="tab-1-tab">
-  
-                    <div class="p-5 mb-4 bg-light rounded-3">
-                      <div class="container-fluid py-5">
-                        <h1 class="display-5 fw-bold">Lorem ipsum dolor</h1>
-                        <p class="col-md-8 fs-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aut, impedit fugiat quibusdam quas eum neque aliquam ea nostrum adipisci omnis tempora quidem. Corporis harum laboriosam repellat deleniti. Qui, consequatur!</p>
-                        <button type="button" class="btn btn-primary btn-lg" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#my-modal-1">
-                            >> Lorem
-                        </button>
-                      </div>
-                    </div>
-                 
-              
-                  <div class="row align-items-md-stretch">
-                    <div class="col-md-6">
-                      <div class="h-100 p-5 text-white bg-dark rounded-3">
-                        <h2>Lorem ipsum dolor</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id asperiores quisquam magnam expedita sed ducimus fugit aperiam hic dolorem voluptatibus. Eligendi qui atque neque repudiandae. Corporis autem odio laboriosam vero.</p>
-                        <button type="button" class="btn btn-outline-light" 
-                              data-bs-toggle="modal" 
-                              data-bs-target="#my-modal-1">
-                          >> Lorem
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="h-100 p-5 bg-light border rounded-3">
-                        <h2>Lorem ipsum dolor</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore, porro provident quaerat minima rem, unde non accusamus voluptas sint praesentium totam repellat accusantium sunt corporis ab sit commodi. Beatae!</p>
-                        <button type="button" class="btn btn-outline-secondary" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#my-modal-1">
-                          >> Lorem
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-  
-              <!-- Tab2 panel -->
-              <div id="tab-2" 
-                   class="tab-pane fade show active p-3 text-center"
-                   role="tabpanel"
-                   aria-labelledby="tab-2-tab">
-  
-                <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto">
-                  <table class="table table-bordered table-striped table-sm mt-3"
-                         ng-if="teachers.length">
-                    <caption class="caption-top text-center">Lorem ipsum</caption>
-                    <thead class="table-dark">
-                      <tr>
-                        <th class="text-capitalize">#</th>
-                        <th class="text-capitalize">{{'name' | translate:lang.data}}</th>
-                        <th class="text-capitalize">{{'phone' | translate:lang.data}}</th>
-                        <th class="text-capitalize">{{'email' | translate:lang.data}}</th>
-                        <th class="text-capitalize">{{'course' | translate:lang.data}}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="teacher in teachers">
-                        <td class="text-end">{{$index+1}}</td>
-                        <td class="text-start">
-                          <a data-bs-toggle="modal" 
-                             data-bs-target="#my-modal-1"
-                             data-img="{{teacher.img}}"
-                             data-content="{{teacher.content}}"
-                             data-full_name="{{teacher.full_name}}"
-                             ng-click="teacherData($event)">
-                            {{teacher.full_name}}
-                          </a>
-                        </td>
-                        <td class="text-start">{{teacher.phone}}</td>
-                        <td class="text-start">{{teacher.email}}</td>
-                        <td class="text-start">{{teacher.subjects}}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-  
-                  <div class="mt-5">
-                    <hr>
-                    <h3 class="my-3">Lorem ipsum dolor sit amet</h3>
-                    <img  src="https://dummyimage.com/200x150" 
-                          class="img-fluid float-start me-3" 
-                          alt="img">
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias ducimus tempore repellat ad facilis.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias ducimus tempore repellat ad facilis.
-                    </p>
-  
-                    <img  src="https://dummyimage.com/200x150" 
-                          class="img-fluid float-end ms-3" 
-                          alt="img">
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias ducimus tempore repellat ad facilis.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias ducimus tempore repellat ad facilis.
-                    </p>
-  
-                    <img  src="https://dummyimage.com/200x150" 
-                          class="img-fluid float-start me-3" 
-                          alt="img">
-                    <p class="text-justify">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias ducimus tempore repellat ad facilis.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias ducimus tempore repellat ad facilis.
-                    </p>            
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Tab3 panel -->
-              <div id="tab-3" 
-                   class="tab-pane fade p-3 text-center"
-                   role="tabpanel"
-                   aria-labelledby="tab-3-tab">
-              
-                <div class="row">
-                  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <img  src="https://dummyimage.com/1600x600"
-                          class="w-100 shadow-1-strong rounded mb-4"
-                          alt="img">
-                    
-                    <img  src="https://dummyimage.com/1600x600"
-                          class="w-100 shadow-1-strong rounded mb-4"
-                          alt="img">
-                    <img  src="https://dummyimage.com/1600x600"
-                          class="w-100 shadow-1-strong rounded mb-4"
-                          alt="img">
-                  </div>
-                  <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img  src="https://dummyimage.com/1600x600"
-                          class="w-100 shadow-1-strong rounded mb-4"
-                          alt="img">
-                    <img  src="https://dummyimage.com/1600x600"
-                          class="w-100 shadow-1-strong rounded mb-4"
-                          alt="img">
-                  </div>
-                  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <img  src="https://dummyimage.com/1600x600"
-                          class="w-100 shadow-1-strong rounded mb-4"
-                          alt="img">
-                  </div>
-                </div>
-              </div>
-              <hr>
-            </div>
           </div>
         </div>
       </div>
-    </main>
-      <!-- Modal -->
-  <div  id="my-modal-1" class="modal fade" 
-  data-bs-backdrop="static" 
-  data-bs-keyboard="false" 
-  tabindex="-1" 
-  aria-labelledby="staticBackdropLabel" 
-  aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="staticBackdropLabel">{{teacherFull_name}}</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-    <div class="modal-body">
-      <img ng-src="./media/image/teacher/{{teacherImg}}" 
-      class="d-block w-100" 
-      alt="img">
-      <p>{{teacherContent}}</p>
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{'close' | translate:lang.data}}</button>
+  </main>
+  <!-- Modal -->
+  <div id="my-modal-1" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">{{teacherFull_name}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img ng-src="./media/image/teacher/{{teacherImg}}" class="d-block w-100" alt="img">
+          <p>{{teacherContent}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{'close' |
+            translate:lang.data}}</button>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 
-      <!-- Footer -->
+  <!-- Footer -->
   <footer ng-include src="'./html/footer.html'"></footer>
 </div>
