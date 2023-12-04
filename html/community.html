@@ -24,12 +24,6 @@
 
         <!-- Grid -->
         <div class="col-11 col-md-10 col-xl-8 mx-auto">
-
-          <!-- Title -->
-          <h6 class="fst-italic text-uppercase display-6">
-            {{'community_title' | translate:lang.data}}
-          </h6>
-
           <!-- Content -->
           <p class="text-muted fs-5 fst-italic px-4 mt-3">
             {{'community_title_desc' | translate:lang.data}}
@@ -75,58 +69,14 @@
           <!-- Tab content -->
           <div class="tab-content">
 
-            <!-- Tab1 panel -->
-            <div id="tab-1" class="tab-pane fade  p-3 text-center" role="tabpanel" aria-labelledby="tab-1-tab">
-
-              <div class="p-5 mb-4 bg-light rounded-3">
-                <div class="container-fluid py-5">
-                  <h1 class="display-5 fw-bold">Lorem ipsum dolor</h1>
-                  <p class="col-md-8 fs-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aut, impedit
-                    fugiat quibusdam quas eum neque aliquam ea nostrum adipisci omnis tempora quidem. Corporis harum
-                    laboriosam repellat deleniti. Qui, consequatur!</p>
-                  <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-                    data-bs-target="#my-modal-1">
-                    >> Lorem
-                  </button>
-                </div>
-              </div>
 
 
-              <div class="row align-items-md-stretch">
-                <div class="col-md-6">
-                  <div class="h-100 p-5 text-white bg-dark rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id asperiores quisquam magnam expedita
-                      sed ducimus fugit aperiam hic dolorem voluptatibus. Eligendi qui atque neque repudiandae. Corporis
-                      autem odio laboriosam vero.</p>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                      data-bs-target="#my-modal-1">
-                      >> Lorem
-                    </button>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="h-100 p-5 bg-light border rounded-3">
-                    <h2>Lorem ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore, porro provident quaerat
-                      minima rem, unde non accusamus voluptas sint praesentium totam repellat accusantium sunt corporis
-                      ab sit commodi. Beatae!</p>
-                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
-                      data-bs-target="#my-modal-1">
-                      >> Lorem
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab2 panel -->
+            <!-- Tab panel -->
             <div id="tab-2" class="tab-pane fade show active p-3 text-center" role="tabpanel"
               aria-labelledby="tab-2-tab">
 
               <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto">
                 <table class="table table-bordered table-striped table-sm mt-3" ng-if="teachers.length">
-                  <caption class="caption-top text-center">Lorem ipsum</caption>
                   <thead class="table-dark">
                     <tr>
                       <th class="text-capitalize">#</th>
@@ -155,41 +105,27 @@
 
                 <div class="mt-5">
                   <hr>
-                  <h3 class="my-3">Lorem ipsum dolor sit amet</h3>
-                  <img src="https://dummyimage.com/200x150" class="img-fluid float-start me-3" alt="img">
+                  <h3 class="my-3"><em>{{'comm_tab_title' | translate: lang.data}}</em></h3>
+                  <hr>
+                  <img src="./media/image/community/1.jpg" class="img-fluid float-start me-3 rounded" alt="img">
                   <p class="text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
-                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
-                    ducimus tempore repellat ad facilis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
-                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
-                    ducimus tempore repellat ad facilis.
+                    {{'community_1' | translate:lang.data}}
                   </p>
-
-                  <img src="https://dummyimage.com/200x150" class="img-fluid float-end ms-3" alt="img">
+                  <hr>
+                  <img src="./media/image/community/2.jpg" class="img-fluid float-end ms-3 rounded" alt="img">
                   <p class="text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
-                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
-                    ducimus tempore repellat ad facilis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
-                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
-                    ducimus tempore repellat ad facilis.
+                    {{'community_2' | translate:lang.data}}
                   </p>
-
-                  <img src="https://dummyimage.com/200x150" class="img-fluid float-start me-3" alt="img">
+                  <hr>
+                  <img src="./media/image/community/3.jpg" class="img-fluid float-start me-3 rounded" alt="img">
                   <p class="text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
-                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
-                    ducimus tempore repellat ad facilis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda voluptates reiciendis
-                    eos illo! Aliquam, expedita amet repellendus impedit quaerat ratione deserunt ullam, esse molestias
-                    ducimus tempore repellat ad facilis.
+                    {{'community_3' | translate:lang.data}}
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Tab3 panel -->
+            <!-- Tab2 panel -->
             <div id="tab-3" class="tab-pane fade p-3 text-center" role="tabpanel" aria-labelledby="tab-3-tab">
 
               <div class="row">
