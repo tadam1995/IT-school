@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 05. 20:01
--- Kiszolgáló verziója: 10.4.6-MariaDB
--- PHP verzió: 7.3.8
+-- Létrehozás ideje: 2023. Dec 05. 21:39
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +31,7 @@ CREATE TABLE `courses` (
   `course_id` int(11) NOT NULL,
   `course_name` varchar(100) NOT NULL,
   `description` varchar(6000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `courses`
@@ -56,7 +55,7 @@ CREATE TABLE `courses_subjects` (
   `id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `courses_subjects`
@@ -105,7 +104,7 @@ CREATE TABLE `subjects` (
   `subject_name` varchar(100) NOT NULL,
   `description` varchar(200) NOT NULL,
   `teacher_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `subjects`
@@ -157,7 +156,7 @@ CREATE TABLE `teacher` (
   `phone` varchar(20) NOT NULL,
   `img` varchar(20) NOT NULL,
   `content` varchar(6000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `teacher`
@@ -209,7 +208,7 @@ CREATE TABLE `user` (
   `wrong_attempts` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `valid` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
   `verification_code` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `user`
