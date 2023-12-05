@@ -102,7 +102,7 @@
                           ng-init="subjects=teacher.subjects.split(',')">
                         <ul>
                           <li ng-repeat="subject in subjects">
-                            {{subject}}
+                            {{subject | translate:lang.data}}
                           </li>
                         </ul>
                       </td>

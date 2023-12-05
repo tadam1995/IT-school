@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 04. 23:16
--- Kiszolgáló verziója: 10.4.28-MariaDB
--- PHP verzió: 8.2.4
+-- Létrehozás ideje: 2023. Dec 05. 20:01
+-- Kiszolgáló verziója: 10.4.6-MariaDB
+-- PHP verzió: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -31,19 +32,19 @@ CREATE TABLE `courses` (
   `course_id` int(11) NOT NULL,
   `course_name` varchar(100) NOT NULL,
   `description` varchar(6000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `courses`
 --
 
 INSERT INTO `courses` (`course_id`, `course_name`, `description`) VALUES
-(1, 'Automatizált járművek tervezése és üzemeltetése szak', 'Az Automatizált Járművek Tervezése és Üzemeltetése szakon diákjaink elmélyülhetnek az önvezető járművek tervezésében és fejlesztésében. A program magában foglalja a járműüzemeltetés és karbantartás szakmai aspektusait, valamint korszerű technológiák alkalmazását az autonóm járművek tervezése során. Ez a szak egyedülálló lehetőséget kínál a hallgatóknak, hogy elsajátítsák az innovatív járműtechnológiák tervezésének és üzemeltetésének készségeit a jövő mobilitási ágazatában.'),
-(2, 'Smart home rendszerek tervezése és üzemeltetése szak', 'A Smart Home Rendszerek Tervezése és Üzemeltetése szakon diákjaink olyan tudást szerezhetnek, amely lehetővé teszi számukra, hogy intelligens otthonokat tervezzenek és üzemeltessenek. A program kiterjed az okos otthon rendszerek integrációjára, a biztonságos és hatékony energiafelhasználásra, valamint az otthoni automatizáció tervezésére. Ezen a szakon résztvevő hallgatóink a digitális innovációk iránti szenvedélyüket ötvözhetik azzal a képességgel, hogy a jövő otthonainak tervezésében és fejlesztésében jártas szakemberekké váljanak.'),
-(3, 'Robotikai rendszerek tervezése és üzemeltetése szak', 'A Robotikai Rendszerek Tervezése és Üzemeltetése szakon diákjaink a robotikai technológiák mélyebb rétegeibe nyerhetnek bepillantást. A program kiterjed a robotikai rendszerek tervezésére, fejlesztésére és üzemeltetésére, beleértve a hardvertervezést és az elektronikai elemek integrációját. Ezen a szakon résztvevő hallgatók innovatív projekteken keresztül fejleszthetik a robottechnológia iránti szenvedélyüket, és felkészülhetnek a jövő intelligens automatizációs kihívásaira.'),
-(4, 'Virtuális valóság (VR) és kiterjesztett valóság (AR) fejlesztő szak', 'A Virtuális Valóság (VR) és Kiterjesztett Valóság (AR) Fejlesztő szakon diákjaink a digitális élmények teremtésének mestereivé válhatnak. A program célja a VR és AR technológiák elmélyült megértése, beleértve az alkalmazásfejlesztést, 3D modellezést és interaktív élmények tervezését. Ezen a szakon résztvevő hallgatók kreativitásukat ötvözhetik a high-tech világban, és felkészülhetnek a virtuális és kiterjesztett valóság területén rejlő innovációs kihívásokra.'),
-(5, 'Mesterséges intelligencia fejlesztése és adatelemzése szak', 'A Mesterséges Intelligencia Fejlesztése és Adatelemzése szakon diákjaink elmélyedhetnek a mesterséges intelligencia tervezésének és fejlesztésének művészetében. A program kiterjed a gépi tanulás és adatelemzés gyakorlati alkalmazásaira, lehetővé téve a hallgatók számára, hogy valós életbeli problémákra alkalmazzák az MI megoldásokat. Ezen a szakon résztvevő hallgatók olyan eszközöket sajátíthatnak el, amelyek segítségével hatékonyan hozzáférhetnek és kiértékelhetik a nagy adathalmazokat, elősegítve ezzel az intelligens rendszerek fejlesztését.'),
-(6, 'Digitális marketing és személyre szabott marketing szak', 'A Digitális Marketing és Személyre Szabott Marketing szakon diákjaink mélyreható ismereteket szerezhetnek a digitális marketing terén, ahol a modern online eszközök és stratégiák segítségével építhetik fel a márkákat. A program kiemelten foglalkozik a személyre szabott marketinggel, lehetőséget adva a hallgatóknak az egyedi és célzott üzenetek tervezésére a potenciális ügyfelek számára. Ezen a szakon résztvevő diákok a digitális üzleti világban való hatékony navigációra és az online jelenlét optimalizálására készülnek, miközben elsajátítják a személyre szabott marketing legfrissebb trendjeit és eszközeit.');
+(1, 'courses1', 'courses1_description'),
+(2, 'courses2', 'courses2_description'),
+(3, 'courses3', 'courses3_description'),
+(4, 'courses4', 'courses4_description'),
+(5, 'courses5', 'courses5_description'),
+(6, 'courses6', 'courses6_description');
 
 -- --------------------------------------------------------
 
@@ -55,43 +56,43 @@ CREATE TABLE `courses_subjects` (
   `id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `courses_subjects`
 --
 
 INSERT INTO `courses_subjects` (`id`, `course_id`, `subject_id`) VALUES
-(5, 1, 1),
-(6, 1, 2),
-(7, 1, 6),
-(8, 1, 7),
-(9, 1, 8),
-(10, 2, 9),
-(11, 2, 10),
-(12, 2, 11),
-(13, 2, 12),
-(14, 2, 13),
-(16, 3, 14),
-(17, 3, 15),
-(18, 3, 16),
-(19, 3, 17),
-(20, 3, 18),
-(21, 4, 19),
-(22, 4, 20),
-(23, 4, 21),
-(24, 4, 22),
-(25, 4, 23),
-(26, 5, 24),
-(27, 5, 25),
-(28, 5, 26),
-(29, 5, 27),
-(30, 5, 28),
-(31, 6, 31),
-(32, 6, 32),
-(33, 6, 33),
-(34, 6, 34),
-(35, 6, 35);
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 1, 4),
+(5, 1, 5),
+(6, 2, 6),
+(7, 2, 7),
+(8, 2, 8),
+(9, 2, 9),
+(10, 2, 10),
+(11, 3, 11),
+(12, 3, 12),
+(13, 3, 13),
+(14, 3, 14),
+(15, 3, 15),
+(16, 4, 16),
+(17, 4, 17),
+(18, 4, 18),
+(19, 4, 19),
+(20, 4, 20),
+(21, 5, 21),
+(22, 5, 22),
+(23, 5, 23),
+(24, 5, 24),
+(25, 5, 25),
+(26, 6, 26),
+(27, 6, 27),
+(28, 6, 28),
+(29, 6, 29),
+(30, 6, 30);
 
 -- --------------------------------------------------------
 
@@ -104,43 +105,43 @@ CREATE TABLE `subjects` (
   `subject_name` varchar(100) NOT NULL,
   `description` varchar(200) NOT NULL,
   `teacher_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `subjects`
 --
 
 INSERT INTO `subjects` (`subject_id`, `subject_name`, `description`, `teacher_id`) VALUES
-(1, 'Autonóm járművek tervezése és fejlesztése', 'Ebben a tantárgyban a diákok az önvezető járműtechnológia tervezésének alapelveivel és gyakorlati alkalmazásával ismerkednek meg.', 1),
-(2, 'Robotika és szoftverfejlesztés járművek számára', 'Ez a tantárgy olyan készségeket tanít, amelyek segítségével a diákok képesek lesznek a járművek számára szükséges szoftvereket és algoritmusokat tervezni és fejleszteni.', 2),
-(6, 'Járműüzemeltetés és flottakezelés', 'Ennek a tantárgynak a keretében a diákok megismerik az önvezető járművek flottájának hatékony üzemeltetését és karbantartását.', 1),
-(7, 'Mesterséges intelligencia és gépi tanulás járműalkalmazásokban', 'Ez a tantárgy a gépi tanulás és mesterséges intelligencia alkalmazásait tanítja a járműiparban, például az önvezető autók fejlesztésében.', 1),
-(8, 'Járműbiztonság és jogi kérdések az önvezető járművek területén', 'Ennek a tantárgynak a célja a járművek biztonságának és az önvezető járművek jogi aspektusainak megértése és elemzése.', 6),
-(9, 'Okos Otthon Technológiák Alapjai', 'Ez a tantárgy bemutatja az okos otthon rendszerek alapjait, beleértve az IoT (Internet of Things) eszközöket, szenzorokat és vezérlőrendszereket.', 7),
-(10, 'Okos Hálózatok és Kommunikáció', 'Ennek a tantárgynak a célja az okos otthon eszközök közötti kommunikációs hálózatok tervezése és konfigurálása.', 4),
-(11, 'Okos Otthon Rendszertervezés és Integráció', 'Ez a tantárgy a gyakorlati aspektusokra összpontosít, például hogyan tervezzen és integráljon különböző okos otthon eszközöket egy összetett rendszerbe.', 4),
-(12, 'Automatizált Otthoni Biztonság és Védelem', 'Ez a tantárgy foglalkozik az otthoni biztonsági rendszerekkel és a hozzájuk kapcsolódó okos megoldásokkal.', 7),
-(13, 'Okos Házkezelés és Energiahatékonyság', 'Ez a tantárgy az okos otthonok energiahatékonyságával és energiagazdálkodásával foglalkozik, bemutatva az energiafelhasználás optimalizálásához használható technológiákat.', 7),
-(14, 'Robotika Alapjai', 'Ez a tantárgy bevezeti a hallgatókat a robotika alapvető fogalmaiba, történetébe és technológiai alapjaiba.', 2),
-(15, 'Robotikai Hardvertervezés és Elektronika', 'Ez a tantárgy a robotikai rendszerek hardverkomponenseivel foglalkozik, és megtanítja a diákokat tervezni és építeni robotokat.', 2),
-(16, 'Robotprogramozás és irányítás', 'Ez a tantárgy a robotok programozásának és irányításának elméleti és gyakorlati aspektusaival foglalkozik.', 2),
-(17, 'Mesterséges Intelligencia a Robotikában', 'Ez a tantárgy bemutatja, hogyan lehet a mesterséges intelligenciát használni a robotikában, például gépi tanulás és mesterséges neurális hálózatok alkalmazásával.', 9),
-(18, 'Robotika Alkalmazások és Fejlesztés', 'Ez a tantárgy a robotika különböző alkalmazásaival foglalkozik, például az ipari robotokkal, az önjáró járművekkel és a robotika az egészségügyben.', 9),
-(19, 'Virtuális Valóság és Kiterjesztett Valóság Alapjai', 'Ez a tantárgy a VR és AR technológiák alapvető fogalmaival és működési elveivel foglalkozik, bemutatva azokat a technikákat és eszközöket, amelyeket a fejlesztők használnak ezen a területen.', 3),
-(20, '3D Modellalkotás és Animáció', 'Ez a tantárgy a háromdimenziós modellalkotás és animáció technikáival foglalkozik, amelyek elengedhetetlenek a VR és AR tartalmak létrehozásához.', 3),
-(21, 'VR és AR Programozás', 'Ez a tantárgy a VR és AR alkalmazások fejlesztésére összpontosít, bemutatva a programozási nyelveket és platformokat, amelyekkel dolgozniuk kell a fejlesztőknek.', 3),
-(22, 'Felhasználói Élménytervezés VR és AR-ban', 'Ez a tantárgy a felhasználói élmény (UX) tervezésére összpontosít a virtuális valóság és kiterjesztett valóság alkalmazásokban, beleértve az interakciótervezést és a felhasználói felület kialakítását.', 3),
-(23, 'VR és AR alkalmazások az Egészségügyben és Oktatásban', 'Ez a tantárgy bemutatja a VR és AR alkalmazásokat az egészségügyi és oktatási területeken, és hogyan lehet ezeket a technológiákat használni oktatási és terápiás célokra.', 11),
-(24, 'Gépi Tanulás Alapjai', 'Ez a tantárgy bevezeti a hallgatókat a gépi tanulás alapjaiba, beleértve a felügyelt és felügyeletlen tanítást, a modellalkotást és a tanulási algoritmusokat.', 5),
-(25, 'Deep Learning és Neurális Hálózatok', ' Ez a tantárgy a mélytanulás és a neurális hálózatok elméletére és alkalmazásaira összpontosít, bemutatva a konvolúciós és rekurrens hálózatokat.', 5),
-(26, 'Adatbányászat és Adatelemzés', 'Ez a tantárgy olyan technikákat tanít, amelyek segítenek az adatok elemzésében, mint például a szegmentálás, az osztályozás és a klaszterezés.', 5),
-(27, 'Mesterséges Intelligencia alkalmazások', 'Ez a tantárgy az AI alkalmazásaira összpontosít különböző iparágakban, például az egészségügyben, az autóiparban és a pénzügyek területén.', 5),
-(28, 'Mesterséges Intelligencia Etika és Jogi Aspektusai', 'Ez a tantárgy a mesterséges intelligencia és gépi tanulás etikai kérdéseivel és jogi szempontjaival foglalkozik, például a személyes adatvédelemmel és a diszkriminációval kapcsolatos kérdésekkel.', 6),
-(31, 'Online Marketing Stratégiák és Kampányok', 'Ez a tantárgy tanítja a hallgatóknak az online marketing stratégiák és kampányok tervezését és végrehajtását, beleértve a keresőoptimalizálást (SEO), a fizetett hirdetéseket (PPC), a közösségi médiát ', 8),
-(32, 'Adatvezérelt Marketing és Analitika', 'Ez a tantárgy bemutatja az adatvezérelt marketing alapelveit és a marketinganalitika használatát a döntéshozatalhoz és a kampányok hatékonyságának méréséhez.', 8),
-(33, 'Személyre szabott Marketing és CRM', 'A hallgatók megtanulhatják a személyre szabott marketing stratégiák alkalmazását, valamint a Customer Relationship Management (CRM) rendszerek használatát az ügyfélkapcsolatok javításához.', 8),
-(34, 'Közösségi Média Marketing', ' Ez a tantárgy az egyes közösségi média platformokra (pl. Facebook, Instagram, Twitter) és azok hatékony használatára összpontosít a marketingkampányok részeként.', 10),
-(35, 'Innováció és Új Technológiák a Digitális Marketingben', 'Ez a tantárgy bemutatja az új technológiai trendeket és innovációkat a digitális marketing területén, például a mesterséges intelligenciát, a gépi tanulást és az AR/VR alkalmazásokat.', 10);
+(1, 'subjects1', 'subjects1_description', 1),
+(2, 'subjects2', 'subjects2_description', 2),
+(3, 'subjects3', 'subjects3_description', 1),
+(4, 'subjects4', 'subjects4_description', 1),
+(5, 'subjects5', 'subjects5_description', 6),
+(6, 'subjects6', 'subjects6_description', 7),
+(7, 'subjects7', 'subjects7_description', 4),
+(8, 'subjects8', 'subjects8_description', 4),
+(9, 'subjects9', 'subjects9_description', 7),
+(10, 'subjects10', 'subjects10_description', 7),
+(11, 'subjects11', 'subjects11_description', 2),
+(12, 'subjects12', 'subjects12_description', 2),
+(13, 'subjects13', 'subjects13_description', 2),
+(14, 'subjects14', 'subjects14_description', 9),
+(15, 'subjects15', 'subjects15_description', 9),
+(16, 'subjects16', 'subjects16_description', 3),
+(17, 'subjects17', 'subjects17_description', 3),
+(18, 'subjects18', 'subjects18_description', 3),
+(19, 'subjects19', 'subjects19_description', 3),
+(20, 'subjects20', 'subjects20_description', 11),
+(21, 'subjects21', 'subjects21_description', 5),
+(22, 'subjects22', 'subjects22_description', 5),
+(23, 'subjects23', 'subjects23_description', 5),
+(24, 'subjects24', 'subjects24_description', 5),
+(25, 'subjects25', 'subjects25_description', 6),
+(26, 'subjects26', 'subjects26_description', 8),
+(27, 'subjects27', 'subjects27_description', 8),
+(28, 'subjects28', 'subjects28_description', 8),
+(29, 'subjects29', 'subjects29_description', 10),
+(30, 'subjects30', 'subjects30_description', 10);
 
 -- --------------------------------------------------------
 
@@ -156,24 +157,24 @@ CREATE TABLE `teacher` (
   `phone` varchar(20) NOT NULL,
   `img` varchar(20) NOT NULL,
   `content` varchar(6000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `teacher`
 --
 
 INSERT INTO `teacher` (`teacher_id`, `first_name`, `surname`, `email`, `phone`, `img`, `content`) VALUES
-(1, 'Attila', 'Pataki', 'pataki.attila@jakabhunor.hu', '+36(30)481-68-88', '1.jpg', '\"Sziasztok, Pataki Attila vagyok, és lelkesen kalauzolom titeket az autonóm járművek izgalmas világába. A Járműüzemeltetés és flottakezelés, valamint a Mesterséges Intelligencia és gépi tanulás járműalkalmazásokban ismeretanyagot is veletek osztom meg. Célom, hogy segítsem a tudásotokat ezeken a területeken, és felkészítselek titeket a jövő közlekedési és technológiai kihívásaira. Gyertek, és fedezzük fel együtt a járműfejlesztés új dimenzióit!\"'),
-(2, 'Adél', 'Dudás', 'dudas.adel@jakabhunor.hu', '+36(30)811-60-91', '2.jpg', '\"Sziasztok, Dudás Adél vagyok, és veletek fedezzük fel a robotika és szoftverfejlesztés izgalmas világát, kifejezetten járművek számára. A Robotika Alapjai, a Robotikai Hardvertervezés és Elektronika, valamint a Robotprogramozás és irányítás tantárgyakban osztom meg veletek a tudásomat. Célom, hogy inspiráljalak titeket és segítsek kialakítani a szükséges képességeket ezen a dinamikus területen. Gyertek, és vegyetek részt a robotika varázslatos világában, ahol a gépek életre kelnek a szoftverfejlesztés és a mérnöki kreativitás révén!\"'),
-(3, 'Albert', 'Horváth', 'horvath.albert@jakabhunor.hu', '+36(70)054-52-97', '3.jpg', '\"Sziasztok, Horváth Albert vagyok, és veletek járom körbe a Virtuális Valóság és Kiterjesztett Valóság lenyűgöző világát. A 3D Modellalkotás és Animáció, valamint a VR és AR Programozás tantárgyakban pedig segítek nektek megismerni a digitális térképzés és programozás csodálatos területeit. Célom, hogy inspiráljalak titeket és ösztönözzem a kreativitásotokat, miközben együtt fedezzük fel a virtuális és kiterjesztett valóság alapjait. Gyertek, és hozzuk létre együtt a jövő digitális élményeit!\"'),
-(4, 'Attila', 'Borbély', 'borbely.attila@jakabhunor.hu', '+36(70)683-78-22', '4.jpg', '\"Szia, Borbély Attila vagyok, és nagyon örülök, hogy itt lehetek veletek az informatikai szakiskolában. Számomra az Okos Hálózatok és Kommunikáció nem csak tantárgy, hanem szenvedély. Emellett elkötelezett vagyok az Okos Otthon Rendszertervezés és Integráció terén is. Célom, hogy inspiráljalak titeket és segítsek felkészülni az informatika izgalmas és dinamikus világára.\"'),
-(5, 'Gábor', 'Varga', 'varga.gabor@jakabhunor.hu', '+36(20)744-46-55', '5.jpg', '\"Sziasztok, Varga Gábor vagyok, és veletek mélyedünk el a gépi tanulás lenyűgöző világában. A Gépi Tanulás Alapjai, a Deep Learning és Neurális Hálózatok, az Adatbányászat és Adatelemzés, valamint a Mesterséges Intelligencia alkalmazások tantárgyakban segítek nektek felfedezni az intelligens technológiák és adatelemzés rejtelmeit. Célom, hogy inspiráljalak titeket és segítsek kialakítani azokat a képességeket, amelyekre szükség lesz a mesterséges intelligencia területén. Gyertek, és induljunk el együtt a jövő kihívásainak megoldása felé!\"'),
-(6, 'Zsolt', 'Dr. Molnár', 'drmolnar.zsolt@jakabhunor.hu', '+36(20)332-95-18', '6.jpg', '\"Halló mindenkinek, Dr. Molnár Zsolt vagyok, és veletek tárgyaljuk meg a járműbiztonság és jogi kérdéseket az önvezető járművek területén. A Mesterséges Intelligencia Etika és Jogi Aspektusai tantárgyakban pedig segítek nektek felfedezni az MI felelős és etikai alkalmazását. Célom, hogy nemcsak elméleti ismereteket adjak át, hanem segítsek felkészülni a valós kihívásokra, amelyekkel az önvezető járművek és mesterséges intelligencia terén találkozhattok. Gyertek, és vegyetek részt a diskurzusban, amely formálja a jövő mobilitását és technológiai fejlődését!\"'),
-(7, 'László', 'Nagy', 'nagy.laszlo@jakabhunor.hu', '+36(30)122-51-52', '7.jpg', '\"Sziasztok, Nagy László vagyok, és veletek járom körbe az okos otthon technológiák izgalmas világát. Az Okos Otthon Technológiák Alapjai, az Automatizált Otthoni Biztonság és Védelem, valamint az Okos Házkezelés és Energiahatékonyság tantárgyakban segítek nektek felfedezni a modern otthonok automatizációjának és energiahatékonyságának legújabb trendjeit. Célom, hogy olyan tudást adjak át, amely segít titeket okos és fenntartható otthonok tervezésében és kezelésében. Gyertek, és együtt alakítsuk ki az otthonok jövőjét!\"'),
-(8, 'Andrea', 'Kovács', 'kovacs.andrea@jakabhunor.hu', '+36(70)927-15-22', '8.jpg', '\"Sziasztok, Kovács Andrea vagyok, és veletek veszem számba az online marketing kifinomult világát. Az Online Marketing Stratégiák és Kampányok, az Adatvezérelt Marketing és Analitika, valamint a Személyre szabott Marketing és CRM tantárgyakban segítek nektek megérteni a digitális marketing eszközök és adatok által vezérelt stratégiák fontosságát. Célom, hogy felkészítselek titeket a sikeres marketing tervezésére és végrehajtására a digitális térben. Gyertek, és fedezzük fel együtt a marketing dinamikus és változatos világát!\"'),
-(9, 'Gábor', 'Dr. Barta', 'drbartagabor@jakabhunor.hu', '+36(20)586-14-56', '9.jpg', '\"Helló, Dr. Barta Gábor vagyok, és lelkesen osztom meg veletek a Mesterséges Intelligencia a Robotikában és a Robotika Alkalmazások és Fejlesztés tudásomat. Az MI és robotika világa számomra nemcsak egy tantárgy, hanem életforma. Célom, hogy segítsek nektek felfedezni ezen izgalmas területek rejtelmeit, és inspiráljalak titeket a fejlesztés és alkalmazások világában.\"'),
-(10, 'Éva ', 'Mészáros', 'meszaros.eva@jakabhunor.hu', '+36(70)757-50-94', '10.jpg', '\"Sziasztok, Mészáros Éva vagyok, és veletek mélyedünk el a közösségi média marketing izgalmas területén. Az Innováció és Új Technológiák a Digitális Marketingben tantárgyakban segítek nektek megismerni a legfrissebb trendeket és módszereket. Célom, hogy felkészítselek titeket a digitális marketing dinamikus világára, különös hangsúlyt fektetve a közösségi média stratégiákra és az innovációra. Gyertek, és fedezzük fel együtt, hogyan lehetünk hatékonyak és kreatívak a digitális marketing terén!\"'),
-(11, 'Péter', 'Szabó', 'szabo.peter@jakabhunor.hu', '+36(30)482-04-72', '11.jpg', '\"Sziasztok, Szabó Péter vagyok, és veletek együtt mélyedünk el a virtuális és kiterjesztett valóság alkalmazásaiban az egészségügyben és oktatásban. A VR és AR alkalmazások az Egészségügyben és Oktatásban tantárgyakban segítek nektek felfedezni a technológiai innováció határait ezeken a kulcsfontosságú területeken. Célom, hogy inspiráljalak titeket és segítsek kialakítani a kreatív és hatékony megoldásokat ezen a dinamikus és fejlődő területen. Gyertek, és vegyünk részt együtt a jövő egészségügyi és oktatási fejlesztéseiben!\"');
+(1, 'Attila', 'Pataki', 'pataki.attila@jakabhunor.hu', '+36(30)481-68-88', '1.jpg', 'teachers1_content'),
+(2, 'Adél', 'Dudás', 'dudas.adel@jakabhunor.hu', '+36(30)811-60-91', '2.jpg', 'teachers2_content'),
+(3, 'Albert', 'Horváth', 'horvath.albert@jakabhunor.hu', '+36(70)054-52-97', '3.jpg', 'teachers3_content'),
+(4, 'Attila', 'Borbély', 'borbely.attila@jakabhunor.hu', '+36(70)683-78-22', '4.jpg', 'teachers4_content'),
+(5, 'Gábor', 'Varga', 'varga.gabor@jakabhunor.hu', '+36(20)744-46-55', '5.jpg', 'teachers5_content'),
+(6, 'Zsolt', 'Dr. Molnár', 'drmolnar.zsolt@jakabhunor.hu', '+36(20)332-95-18', '6.jpg', 'teachers6_content'),
+(7, 'László', 'Nagy', 'nagy.laszlo@jakabhunor.hu', '+36(30)122-51-52', '7.jpg', 'teachers7_content'),
+(8, 'Andrea', 'Kovács', 'kovacs.andrea@jakabhunor.hu', '+36(70)927-15-22', '8.jpg', 'teachers8_content'),
+(9, 'Gábor', 'Dr. Barta', 'drbartagabor@jakabhunor.hu', '+36(20)586-14-56', '9.jpg', 'teachers9_content'),
+(10, 'Éva ', 'Mészáros', 'meszaros.eva@jakabhunor.hu', '+36(70)757-50-94', '10.jpg', 'teachers10_content'),
+(11, 'Péter', 'Szabó', 'szabo.peter@jakabhunor.hu', '+36(30)482-04-72', '11.jpg', 'teachers11_content');
 
 -- --------------------------------------------------------
 
@@ -208,7 +209,7 @@ CREATE TABLE `user` (
   `wrong_attempts` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `valid` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
   `verification_code` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `user`
