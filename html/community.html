@@ -98,7 +98,14 @@
                       </td>
                       <td class="text-start">{{teacher.phone}}</td>
                       <td class="text-start">{{teacher.email}}</td>
-                      <td class="text-start">{{teacher.subjects}}</td>
+                      <td class="text-start" 
+                          ng-init="subjects=teacher.subjects.split(',')">
+                        <ul>
+                          <li ng-repeat="subject in subjects">
+                            {{subject}}
+                          </li>
+                        </ul>
+                      </td>
                     </tr>
                   </tbody>
                 </table>

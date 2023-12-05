@@ -293,8 +293,9 @@
   ])
 
   .controller("contactController", [
-    '$scope', '$http', 
-    function ($scope, $http) {
+    '$scope', 
+    'http', 
+    function ($scope, http) {
 
       // ?
       $scope.formData = {
@@ -307,12 +308,16 @@
       
       // process the form
       $scope.processForm = function () {
-        $http({
-          method: 'POST',
-          url: 'contact.php',
-          data: $scope.formData,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        });
+
+        // Http request
+        http.request({
+          url : `./php/contact.php`,
+          data: $scope.formData
+        })
+        .then(response => {
+          console.log(response);
+        })
+        .catch(e => {console.log(e);});
       }
     } 
   ])

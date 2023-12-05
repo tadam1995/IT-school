@@ -1,17 +1,17 @@
 <?php
 
 
-$post_data = file_get_contents("php://input");
-$data = json_decode($post_data);
+//$post_data = file_get_contents("php://input");
+//$data = json_decode($post_data);
 
 
 
 //email information
-$to = "dgera90x@gmail.com";
+$to = "gera.denes-e2022@keri.mako.hu";
 
-$subject = $data['subject'];
-$userEmail=$data['email'];
-$message=$data['message'];
+$subject = "Próba";
+$userEmail="gera.denes-e2022@keri.mako.hu";
+$message="Próba szöveg!";
 
 
 
