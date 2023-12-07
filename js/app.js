@@ -22,6 +22,11 @@
           templateUrl: './html/home.html',
           controller: 'homeController'
         })
+        .state('introduction', {
+          url: '/introduction',
+          templateUrl: './html/introduction.html',
+          controller: 'introductionController'
+        })
         .state('courses', {
           url: '/courses',
           templateUrl: './html/courses.html',
@@ -171,7 +176,7 @@
     ($state, $rootScope, $timeout, trans, lang, user) => {
 
       // Transaction events
-			trans.events('home,courses,community');
+			trans.events('home,introduction,courses,community');
 
       // Initialize language 
       lang.init();
@@ -201,6 +206,22 @@
 
   // Home controller
   .controller('homeController', [
+    '$scope',
+    'http',
+    function($scope, http) {
+
+      // Http request
+      http.request('./php/carousel.php')
+      .then(response => {
+        $scope.carousel = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e));
+    }
+  ])
+
+   // Introduction controller
+   .controller('introductionController', [
     '$scope',
     'http',
     function($scope, http) {

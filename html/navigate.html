@@ -35,6 +35,17 @@
             </a>
           </li>
 
+          <!--Introduction-->
+          <li class="nav-item">
+            <a class="nav-link text-lowercase mt-2"
+              ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'introduction','disabled': state.id==='user'}"
+              ui-sref="introduction">
+              <span>
+                <p class="hover-underline-animation navfont">{{'introduction' | translate:lang.data}}</p>
+              </span>
+            </a>
+          </li>
+
           <!--Courses-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2"
