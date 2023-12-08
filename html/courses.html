@@ -5,7 +5,7 @@
     <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
   
     <!-- Main -->
-    <main>
+    <main class="fade-in">
   
       <!-- Container -->
       <div class="container pt-5">
@@ -50,7 +50,7 @@
                 <!-- Image -->
                 <div class="card-thumbnail position-relative rounded-3 courses_container">
                   <img ng-src="./media/image/courses/courses_{{$index}}.jpg" 
-                       class="image" 
+                       class="image fade-in-3s" 
                        alt="img">
                   <button class="btn btn-sm btn-primary px-4 shadow-sm detail 
                                  position-absolute top-50 start-50 translate-middle"
@@ -71,5 +71,5 @@
     </main>
   
     <!-- Footer -->
-    <footer ng-include src="'./html/footer.html'"></footer>
+    <footer class="sticky-bottom" ng-include src="'./html/footer.html'"></footer>
   </div>

@@ -5,13 +5,13 @@
     <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
   
     <!-- Main -->
-    <main>
+    <main class="h-100 fade-in d-flex text-center w-100">
   
       <!-- Container -->
-      <div class="container pt-5">
+      <div class="container py-5 login_container col-6 mb-3 mt-5">
   
         <!-- Row -->
-        <div class="row">
+        <div class="row justify-content-center">
   
           <!-- Titel -->
           <div class="row mb-2">
@@ -28,22 +28,22 @@
           
 
           <div class="mt-2">
-            <img src="./media/image/introduction/1.jpg" class="img-fluid float-start me-3 rounded" alt="img">
+            <img src="./media/image/introduction/1.jpg" class="img-fluid float-start me-3 rounded fade-in-2s" alt="img">
             <p class="text-justify mt-5">
                 {{'introduction_1_desc' | translate:lang.data}}
             </p>
             <hr>
-            <img src="./media/image/introduction/2.jpg" class="img-fluid float-end ms-3 rounded" alt="img">
+            <img src="./media/image/introduction/2.jpg" class="img-fluid float-end ms-3 rounded fade-in-3s" alt="img">
             <p class="text-justify mt-3">
                 {{'introduction_2_desc' | translate:lang.data}}
             </p>
             <hr>
-            <img src="./media/image/introduction/3.jpg" class="img-fluid float-start me-3 rounded" alt="img">
+            <img src="./media/image/introduction/3.jpg" class="img-fluid float-start me-3 rounded fade-in-4s" alt="img">
             <p class="text-justify">
                 {{'introduction_3_desc' | translate:lang.data}}
             </p>
             <hr>
-            <img src="./media/image/introduction/4.jpg" class="img-fluid float-end me-3 rounded" alt="img">
+            <img src="./media/image/introduction/4.jpg" class="img-fluid float-end me-3 rounded fade-in-5s ms-3 br-round" alt="img">
             <p class="text-justify">
                 {{'introduction_4_desc' | translate:lang.data}}
             </p>
@@ -61,5 +61,5 @@
     </main>
 
     <!-- Footer -->
-    <footer ng-include src="'./html/footer.html'"></footer>
+    <footer class="sticky-bottom" ng-include src="'./html/footer.html'"></footer>
 </div>
