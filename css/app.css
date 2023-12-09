@@ -1,16 +1,5 @@
-body {
-  background-color: #ffffff;
-}
-
 .carousel-indicators button {
   border: 1px solid white !important;
-}
-
-.images {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 20px;
 }
 
 .image {
@@ -187,4 +176,19 @@ p{
 }
 .br-round{
   border-bottom-right-radius: 20px !important;
+}
+.bg{
+  background-image: url("../media/image/background/bg1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+tr:hover {
+  background-color: coral !important;
+}
+tbody {
+  border-radius: 10px !important;
 }
