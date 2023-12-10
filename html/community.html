@@ -46,7 +46,7 @@
             <li class="nav-item nav-item-pills mx-2" role="presentation">
 
               <!-- Button -->
-              <button id="tab-2-tab" class="btn btn-outline-secondary active ms-2 mb-2 btn-pills-tab text-capitalize"
+              <button id="tab-2-tab" class="comm_btn btn-outline-secondary active ms-2 mb-2 btn-pills-tab text-capitalize"
                 data-bs-toggle="pill" data-bs-target="#tab-2" role="tab" type="button" aria-controls="tab-2"
                 aria-selected="false">
                 {{'teacher' | translate:lang.data}}
@@ -57,7 +57,7 @@
             <li class="nav-item nav-item-pills mx-2" role="presentation">
 
               <!-- Button -->
-              <button id="tab-3-tab" class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
+              <button id="tab-3-tab" class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
                 data-bs-toggle="pill" data-bs-target="#tab-3" role="tab" type="button" aria-controls="tab-3"
                 aria-selected="false">
                 {{'gallery' | translate:lang.data}}
@@ -79,27 +79,27 @@
               aria-labelledby="tab-2-tab">
 
               <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto">
-                <table class="table table-striped table-sm mt-3" ng-if="teachers.length">
+                <table class="table-striped table-sm mt-3" ng-if="teachers.length">
                   <thead class="table-dark">
                     <tr>
-                      <th class="text-capitalize">#</th>
-                      <th class="text-capitalize">{{'name' | translate:lang.data}}</th>
-                      <th class="text-capitalize">{{'phone' | translate:lang.data}}</th>
-                      <th class="text-capitalize">{{'email' | translate:lang.data}}</th>
-                      <th class="text-capitalize">{{'course' | translate:lang.data}}</th>
+                      <th class="text-capitalize fs-5"><u>#</u></th>
+                      <th class="text-capitalize fs-5"><u>{{'name' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-5"><u>{{'phone' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-5"><u>{{'email' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-5"><u>{{'course' | translate:lang.data}}</u></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr ng-repeat="teacher in teachers">
                       <td class="text-end">{{$index+1}}</td>
                       <td class="text-start">
-                        <a data-bs-toggle="modal" data-bs-target="#my-modal-1" data-img="{{teacher.img}}"
+                        <a class="fs-5" data-bs-toggle="modal" data-bs-target="#my-modal-1" data-img="{{teacher.img}}"
                           data-content="{{teacher.content}}" data-full_name="{{teacher.full_name}}"
                           ng-click="teacherData($event)">
                           {{teacher.full_name}}
                         </a>
                       </td>
-                      <td class="text-start">{{teacher.phone}}</td>
+                      <td class="text-start w-100 text-center">{{teacher.phone}}</td>
                       <td class="text-start">{{teacher.email}}</td>
                       <td class="text-start" 
                           ng-init="subjects=teacher.subjects.split(',')">
