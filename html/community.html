@@ -35,27 +35,38 @@
 
 
         <!-- Row -->
-        <div class="row mt-3">
-          
+        <div id="menu" class="row mt-3">
+
 
           <!-- Tab buttons -->
           <ul id="form-tab" class="nav nav-pills justify-content-center mt-3" role="tablist">
 
 
             <!-- Tab1 -->
-            <li class="nav-item nav-item-pills mx-2" role="presentation">
+            <li class="nav-item nav-item-pills mx-2 active" role="presentation">
 
               <!-- Button -->
-              <button id="tab-2-tab" class="comm_btn btn-outline-secondary active ms-2 mb-2 btn-pills-tab text-capitalize"
+              <button id="tab-1-tab"
+                class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab active text-capitalize"
+                data-bs-toggle="pill" data-bs-target="#tab-1" role="tab" type="button" aria-controls="tab-1"
+                aria-selected="true">
+                {{'about' | translate:lang.data}}
+              </button>
+            </li>
+
+
+            <!-- Tab2 -->
+            <li class="nav-item nav-item-pills mx-2" role="presentation">
+              <!-- Button -->
+              <button id="tab-2-tab" class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
                 data-bs-toggle="pill" data-bs-target="#tab-2" role="tab" type="button" aria-controls="tab-2"
                 aria-selected="false">
                 {{'teacher' | translate:lang.data}}
               </button>
             </li>
 
-            <!-- Tab2 -->
+            <!-- Tab3 -->
             <li class="nav-item nav-item-pills mx-2" role="presentation">
-
               <!-- Button -->
               <button id="tab-3-tab" class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
                 data-bs-toggle="pill" data-bs-target="#tab-3" role="tab" type="button" aria-controls="tab-3"
@@ -73,36 +84,58 @@
           <div class="tab-content">
 
 
+            <!-- Tab 1 panel -->
+            <div id="tab-1" class="tab-pane fade show active p-3 text-center" role="tabpanel"
+              aria-labelledby="tab-1-tab">
+              <div class="mt-5">
+                <hr>
+                <h3 class="my-3"><em>{{'comm_tab_title' | translate: lang.data}}</em></h3>
+                <hr>
+                <img src="./media/image/community/1.jpg" class="img-fluid float-start me-3 rounded" alt="img">
+                <p class="text-justify">
+                  {{'community_1' | translate:lang.data}}
+                </p>
+                <hr>
+                <img src="./media/image/community/2.jpg" class="img-fluid float-end ms-3 rounded" alt="img">
+                <p class="text-justify">
+                  {{'community_2' | translate:lang.data}}
+                </p>
+                <hr>
+                <img src="./media/image/community/3.jpg" class="img-fluid float-start me-3 rounded" alt="img">
+                <p class="text-justify">
+                  {{'community_3' | translate:lang.data}}
+                </p>
+              </div>
 
-            <!-- Tab panel -->
-            <div id="tab-2" class="tab-pane fade show active p-3 text-center" role="tabpanel"
-              aria-labelledby="tab-2-tab">
+            </div>
+
+            <!-- Tab 2 panel -->
+            <div id="tab-2" class="tab-pane fade p-3 text-center" role="tabpanel" aria-labelledby="tab-2-tab">
 
               <div class="col-12 col-sm-11 col-md-10 col-lg-8 mx-auto">
                 <table class="table-striped table-sm mt-3" ng-if="teachers.length">
-                  <thead class="table-dark">
+                  <thead class="table-light">
                     <tr>
-                      <th class="text-capitalize fs-5"><u>#</u></th>
-                      <th class="text-capitalize fs-5"><u>{{'name' | translate:lang.data}}</u></th>
-                      <th class="text-capitalize fs-5"><u>{{'phone' | translate:lang.data}}</u></th>
-                      <th class="text-capitalize fs-5"><u>{{'email' | translate:lang.data}}</u></th>
-                      <th class="text-capitalize fs-5"><u>{{'course' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-6"><u>#</u></th>
+                      <th class="text-capitalize fs-6"><u>{{'name' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-6"><u>{{'phone' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-6"><u>{{'email' | translate:lang.data}}</u></th>
+                      <th class="text-capitalize fs-6"><u>{{'course' | translate:lang.data}}</u></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr ng-repeat="teacher in teachers">
                       <td class="text-end">{{$index+1}}</td>
                       <td class="text-start">
-                        <a class="fs-5" data-bs-toggle="modal" data-bs-target="#my-modal-1" data-img="{{teacher.img}}"
-                          data-content="{{teacher.content}}" data-full_name="{{teacher.full_name}}"
-                          ng-click="teacherData($event)">
+                        <a class="table-text" data-bs-toggle="modal" data-bs-target="#my-modal-1"
+                          data-img="{{teacher.img}}" data-content="{{teacher.content}}"
+                          data-full_name="{{teacher.full_name}}" ng-click="teacherData($event)">
                           {{teacher.full_name}}
                         </a>
                       </td>
-                      <td class="text-start w-100 text-center">{{teacher.phone}}</td>
+                      <td class="text-start w-100 text-center table-text">{{teacher.phone}}</td>
                       <td class="text-start">{{teacher.email}}</td>
-                      <td class="text-start" 
-                          ng-init="subjects=teacher.subjects.split(',')">
+                      <td class="text-start table-text" ng-init="subjects=teacher.subjects.split(',')">
                         <ul>
                           <li ng-repeat="subject in subjects">
                             {{subject | translate:lang.data}}
@@ -113,29 +146,11 @@
                   </tbody>
                 </table>
 
-                <div class="mt-5">
-                  <hr>
-                  <h3 class="my-3"><em>{{'comm_tab_title' | translate: lang.data}}</em></h3>
-                  <hr>
-                  <img src="./media/image/community/1.jpg" class="img-fluid float-start me-3 rounded" alt="img">
-                  <p class="text-justify">
-                    {{'community_1' | translate:lang.data}}
-                  </p>
-                  <hr>
-                  <img src="./media/image/community/2.jpg" class="img-fluid float-end ms-3 rounded" alt="img">
-                  <p class="text-justify">
-                    {{'community_2' | translate:lang.data}}
-                  </p>
-                  <hr>
-                  <img src="./media/image/community/3.jpg" class="img-fluid float-start me-3 rounded" alt="img">
-                  <p class="text-justify">
-                    {{'community_3' | translate:lang.data}}
-                  </p>
-                </div>
+
               </div>
             </div>
 
-            <!-- Tab2 panel -->
+            <!-- Tab3 panel -->
             <div id="tab-3" class="tab-pane fade p-3 text-center" role="tabpanel" aria-labelledby="tab-3-tab">
 
               <div class="row">
@@ -182,5 +197,5 @@
   </div>
 
   <!-- Footer -->
-  <footer class="sticky-bottom" ng-include src="'./html/footer.html'"></footer>
+  <footer ng-include src="'./html/footer.html'"></footer>
 </div>

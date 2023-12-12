@@ -183,16 +183,13 @@ p{
   background-attachment: fixed; 
   background-size: 100% 100%;
 }
-th{
-  color: #492828;
-}
-th, td {
-  border-bottom: 3px solid #4143a7;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+td {
+  border-bottom: 1px solid #424249;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
 tr:hover {
-  background-color: rgb(77, 94, 168);
+  background-color: rgb(163, 166, 182);
   color: #ffffff;
 }
 td>a{
@@ -201,6 +198,7 @@ td>a{
 }
 td>a:hover{
   color: #ffffff;
+  font-weight: bold;
 }
 .comm_btn{
   background-color: #bdbdbd;
@@ -214,4 +212,11 @@ td>a:hover{
   background-color: #4143a7;
   color: #ffffff;
   font-size: 18px;
+}
+.table-text {
+  white-space: nowrap;
+}
+.comm_btn.active, .comm_btn:active {
+  background-color: #5a5858;
+  color:#ffffff;
 }
