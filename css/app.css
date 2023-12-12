@@ -220,3 +220,7 @@ td>a:hover{
   background-color: #5a5858;
   color:#ffffff;
 }
+.btn-courses{
+  font-size: 22px;
+  border-radius: 15px;
+}

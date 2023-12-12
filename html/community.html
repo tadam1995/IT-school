@@ -176,21 +176,17 @@
     </div>
   </main>
   <!-- Modal -->
-  <div id="my-modal-1" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <div id="my-modal-1" class="modal fade" data-bs-dismiss="modal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">{{teacherFull_name}}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img ng-src="./media/image/teacher/{{teacherImg}}" class="d-block w-100" alt="img">
           <p>{{teacherContent | translate:lang.data}}</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{'close' |
-            translate:lang.data}}</button>
         </div>
       </div>
     </div>
