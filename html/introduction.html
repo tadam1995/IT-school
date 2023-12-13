@@ -1,53 +1,54 @@
 <!-- Page container -->
 <div class="page-container d-conditional vh-100">
 
-    <!-- Navigate -->
-    <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
-  
-    <!-- Main -->
-    <main class="h-100 fade-in d-flex text-center w-100">
-  
-      <!-- Container -->
-      <div class="container py-5 login_container col-6 mb-3 mt-5">
-  
-        <!-- Row -->
-        <div class="row justify-content-center">
-  
-          <!-- Titel -->
-          <div class="row mb-2">
-            <h1 class="text-center text-capitalize text-small-caps ng-binding">
-              {{'introduction_title' | translate:lang.data}}
-            </h1>
-            <hr>
-          </div>
+  <!-- Navigate -->
+  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+
+  <!-- Main -->
+  <main class="h-100 fade-in text-center">
+
+    <!-- Container -->
+    <div class="container py-5 login_container col-6 mb-5 mt-5">
+
+      <!-- Row -->
+      <div class="row justify-content-center">
+
+        <!-- Titel -->
+        <div class="row mb-2">
+          <h1 class="text-center text-capitalize text-small-caps ng-binding">
+            {{'introduction_title' | translate:lang.data}}
+          </h1>
+          <hr>
         </div>
+      </div>
 
-        <div class="row">
+      <div class="row mx-3">
 
-          <!-- Title -->
-          
+        <!-- Title -->
 
-          <div class="mt-2">
-            <img src="./media/image/introduction/1.jpg" class="img-fluid float-start me-3 rounded fade-in-2s" alt="img">
-            <p class="text-justify mt-5">
-                {{'introduction_1_desc' | translate:lang.data}}
-            </p>
-            <hr>
-            <img src="./media/image/introduction/2.jpg" class="img-fluid float-end ms-3 rounded fade-in-3s" alt="img">
-            <p class="text-justify mt-3">
-                {{'introduction_2_desc' | translate:lang.data}}
-            </p>
-            <hr>
-            <img src="./media/image/introduction/3.jpg" class="img-fluid float-start me-3 rounded fade-in-4s" alt="img">
-            <p class="text-justify">
-                {{'introduction_3_desc' | translate:lang.data}}
-            </p>
-            <hr>
-            <img src="./media/image/introduction/4.jpg" class="img-fluid float-end me-3 rounded fade-in-5s ms-3 br-round" alt="img">
-            <p class="text-justify">
-                {{'introduction_4_desc' | translate:lang.data}}
-            </p>
-          </div>
+
+        <div class="mt-2">
+          <img src="./media/image/introduction/1.jpg" class="img-fluid float-start me-3 rounded fade-in-2s" alt="img">
+          <p class="text-justify mt-5">
+            {{'introduction_1_desc' | translate:lang.data}}
+          </p>
+          <hr>
+          <img src="./media/image/introduction/2.jpg" class="img-fluid float-end ms-3 rounded fade-in-3s" alt="img">
+          <p class="text-justify mt-3">
+            {{'introduction_2_desc' | translate:lang.data}}
+          </p>
+          <hr>
+          <img src="./media/image/introduction/3.jpg" class="img-fluid float-start me-3 rounded fade-in-4s" alt="img">
+          <p class="text-justify">
+            {{'introduction_3_desc' | translate:lang.data}}
+          </p>
+          <hr>
+          <img src="./media/image/introduction/4.jpg" class="img-fluid float-end me-3 rounded fade-in-5s ms-3 br-round"
+            alt="img">
+          <p class="text-justify">
+            {{'introduction_4_desc' | translate:lang.data}}
+          </p>
+        </div>
 
 
 
@@ -57,9 +58,9 @@
 
       </div>
 
-      
-    </main>
 
-    <!-- Footer -->
-    <footer ng-include src="'./html/footer.html'"></footer>
+  </main>
+
+  <!-- Footer -->
+  <footer ng-include src="'./html/footer.html'"></footer>
 </div>
