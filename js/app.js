@@ -323,6 +323,8 @@
       .catch(e => console.log(e));
 
       console.log($scope.course);
+
+      $scope.isCheckboxChecked = true; // Default value, you can set it based on your logic
     }
   ])
 

@@ -3,8 +3,6 @@
 // Set environment
 require_once('../../../common/php/environment.php');
 
-$_GET['data'] = '{"id": 3}';
-
 // Get arguments
 $args = Util::getArgs();
 

@@ -175,5 +175,8 @@
   "teachers10_content": "Sziasztok! Mészáros Éva vagyok, és veletek mélyedünk el a közösségi média marketing izgalmas területén. Az Innováció és Új Technológiák a Digitális Marketingben tantárgyakban segítek nektek megismerni a legfrissebb trendeket és módszereket. Célom, hogy felkészítselek titeket a digitális marketing dinamikus világára, különös hangsúlyt fektetve a közösségi média stratégiákra és az innovációra. Gyertek, és fedezzük fel együtt, hogyan lehetünk hatékonyak és kreatívak a digitális marketing terén!",
   "teachers11_content": "Sziasztok! Szabó Péter vagyok, és veletek együtt mélyedünk el a virtuális és kiterjesztett valóság alkalmazásaiban az egészségügyben és oktatásban. A VR és AR alkalmazások az Egészségügyben és Oktatásban tantárgyakban segítek nektek felfedezni a technológiai innováció határait ezeken a kulcsfontosságú területeken. Célom, hogy inspiráljalak titeket és segítsek kialakítani a kreatív és hatékony megoldásokat ezen a dinamikus és fejlődő területen. Gyertek, és vegyünk részt együtt a jövő egészségügyi és oktatási fejlesztéseiben!",
   "about": "rólunk",
-  "apply": "jelentkezés"
+  "apply": "jelentkezés",
+  "choose_option": "Kérlek válassz az alábbi kezdési időpontok közül: ",
+  "terms": "A jelentkezéssel megértem és elfogadom az iskola ",
+  "terms_a": "adatvédelmi szabályzatát."
 }

@@ -52,13 +52,20 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">
+          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">
             {{'apply' | translate:lang.data}}
           </h5>
           <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>ŰRLAP</p>
+          <h5>
+            {{course.course_name | translate:lang.data}}
+          </h5>
+          <p>
+            <i>
+            {{'choose_option' | translate:lang.data}}
+          </i>
+          </p>
           <form>
             <select class="form-select" 
                     aria-label="Default select example"
@@ -68,11 +75,18 @@
               <option value="Select one" 
 											disabled selected hidden></option>
             </select>
+            <input type="checkbox" name="chkbx" ng-model="isCheckboxChecked">
+            {{'terms' | translate:lang.data}}<a> {{'terms_a' | translate:lang.data}}</a>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{'close' |
-            translate:lang.data}}</button>
+          <button type="button" ng-class="{'disabled': user.id === null && !isCheckboxChecked}" 
+                                class="btn btn-primary text-capitalize" 
+                                data-bs-dismiss="modal"
+                                ng-disabled="!isCheckboxChecked">
+            {{'apply' | translate:lang.data}}</button>
+          <button type="button" class="btn btn-primary text-capitalize" data-bs-dismiss="modal">
+            {{'cancel' | translate:lang.data}}</button>
         </div>
       </div>
     </div>
