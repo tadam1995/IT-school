@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 05. 21:39
+-- Létrehozás ideje: 2023. Dec 19. 15:16
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -44,6 +44,42 @@ INSERT INTO `courses` (`course_id`, `course_name`, `description`) VALUES
 (4, 'courses4', 'courses4_description'),
 (5, 'courses5', 'courses5_description'),
 (6, 'courses6', 'courses6_description');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `courses_data`
+--
+
+CREATE TABLE `courses_data` (
+  `id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  `beg` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `courses_data`
+--
+
+INSERT INTO `courses_data` (`id`, `course_id`, `beg`) VALUES
+(1, 1, '2024-02-05'),
+(2, 1, '2024-09-02'),
+(3, 1, '2025-02-03'),
+(4, 2, '2024-02-05'),
+(5, 2, '2024-09-02'),
+(6, 2, '2025-02-03'),
+(7, 3, '2024-02-05'),
+(8, 3, '2024-09-02'),
+(9, 3, '2025-02-03'),
+(10, 4, '2024-02-05'),
+(11, 4, '2024-09-02'),
+(12, 4, '2025-02-03'),
+(13, 5, '2024-02-05'),
+(14, 5, '2024-09-02'),
+(15, 5, '2025-02-03'),
+(16, 6, '2024-02-05'),
+(17, 6, '2024-09-02'),
+(18, 6, '2025-02-03');
 
 -- --------------------------------------------------------
 
@@ -244,6 +280,12 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`course_id`);
 
 --
+-- A tábla indexei `courses_data`
+--
+ALTER TABLE `courses_data`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `courses_subjects`
 --
 ALTER TABLE `courses_subjects`
@@ -277,6 +319,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `courses`
   MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT a táblához `courses_data`
+--
+ALTER TABLE `courses_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT a táblához `courses_subjects`
