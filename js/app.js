@@ -301,14 +301,27 @@
     '$scope',
     '$state',
     '$stateParams',
-    function($rootScope, $scope, $state, $stateParams) {
+    'http',
+    function($rootScope, $scope, $state, $stateParams, http) {
 
       // Get/Check parameters
       $scope.course = $stateParams.course;
       if (!$scope.course) {
-        $state.go($rootScope.state.prev);
+        $state.go('home');
         return;
       }
+
+      // Http request get courses begin dates
+      http.request({
+        url: './php/course_dates.php',
+        data: {id: $scope.course.course_id}
+      })
+      .then(response => {
+        $scope.courseDates = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e));
+
       console.log($scope.course);
     }
   ])

@@ -38,8 +38,8 @@
     </div>
     <hr class="ms-5 me-5">
     <div class="text-center my-5">
-      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" data-bs-toggle="modal"
-        data-bs-target="#my-modal-1">
+      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" 
+              data-bs-toggle="modal" data-bs-target="#my-modal-1">
         <span class="text-capitalize">{{'apply' | translate:lang.data}}</span>
       </button>
     </div>
@@ -52,11 +52,23 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">{{'apply' | translate:lang.data}}</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">
+            {{'apply' | translate:lang.data}}
+          </h5>
           <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p>ŰRLAP</p>
+          <form>
+            <select class="form-select" 
+                    aria-label="Default select example"
+                    ng-model="date"
+                    ng-options="option as option for option in courseDates"
+                    required>
+              <option value="Select one" 
+											disabled selected hidden></option>
+            </select>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{'close' |
