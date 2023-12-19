@@ -37,12 +37,19 @@
       </div>
     </div>
     <hr class="ms-5 me-5">
-    <div class="text-center my-5">
+    <div class="text-center mb-3">
       <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" 
               data-bs-toggle="modal" data-bs-target="#my-modal-1">
         <span class="text-capitalize">{{'apply' | translate:lang.data}}</span>
       </button>
     </div>
+    <div class="text-center mb-3">
+      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" 
+              ui-sref="courses">
+        <span class="text-capitalize">{{'back' | translate:lang.data}}</span>
+      </button>
+    </div>
+
   </main>
 
   <!-- Modal -->
@@ -76,17 +83,41 @@
 											disabled selected hidden></option>
             </select>
             <input type="checkbox" name="chkbx" ng-model="isCheckboxChecked">
-            {{'terms' | translate:lang.data}}<a> {{'terms_a' | translate:lang.data}}</a>
+            {{'terms' | translate:lang.data}}<a data-bs-toggle="modal" data-bs-target="#my-modal-2"> {{'terms_a' | translate:lang.data}}</a>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" ng-class="{'disabled': user.id === null && !isCheckboxChecked}" 
+          <button type="button" ng-class="{'disabled': user.id === null || !isCheckboxChecked}" 
                                 class="btn btn-primary text-capitalize" 
                                 data-bs-dismiss="modal"
                                 ng-disabled="!isCheckboxChecked">
             {{'apply' | translate:lang.data}}</button>
           <button type="button" class="btn btn-primary text-capitalize" data-bs-dismiss="modal">
             {{'cancel' | translate:lang.data}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="my-modal-2" class="modal fade" 
+       data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-center">
+      <div class="modal-content"> 
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">
+            cím
+          </h5>
+        </div>
+        <div class="modal-body">
+          <h5>
+           szöveg
+          </h5>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary text-capitalize" data-bs-toggle="modal" data-bs-target="#my-modal-1">
+            {{'back' | translate:lang.data}}</button>
         </div>
       </div>
     </div>
