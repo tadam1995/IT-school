@@ -327,6 +327,28 @@
       // 
 
       $scope.isCheckboxChecked = false; 
+      
+      $scope.send = (course) => {
+        console.log(course, $scope.date)
+
+        http.request({
+          url: './php/students.php',
+          data: {
+            courseId: course.course_id,
+            beg: $scope.date,
+            userId: $rootScope.user.id
+          }
+        })
+        .then(response => {
+          if(response.affectedRows === 1){
+            alert("sikeres jelentkezés")
+          }
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e));
+
+        
+      };
     }
   ])
 

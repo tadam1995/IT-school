@@ -83,9 +83,13 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" ng-class="{'disabled': user.id === null || !isCheckboxChecked}"
-            class="btn btn-primary text-capitalize" data-bs-dismiss="modal" ng-disabled="!isCheckboxChecked">
-            {{'apply' | translate:lang.data}}</button>
+          <button type="button" 
+                  class="btn btn-primary text-capitalize" 
+                  ng-click="send(course)"
+                  data-bs-dismiss="modal" 
+                  ng-disabled="!isCheckboxChecked || !user.id || !date">
+            {{'apply' | translate:lang.data}}
+          </button>
           <button type="button" class="btn btn-primary text-capitalize" data-bs-dismiss="modal">
             {{'cancel' | translate:lang.data}}</button>
         </div>
