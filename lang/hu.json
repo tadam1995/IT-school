@@ -178,5 +178,6 @@
   "apply": "jelentkezés",
   "choose_option": "Kérlek válassz az alábbi kezdési időpontok közül: ",
   "terms": "A jelentkezéssel megértem és elfogadom az iskola ",
-  "terms_a": "adatvédelmi szabályzatát."
+  "terms_a": "adatvédelmi szabályzatát.",
+  "needlogin" : "Bejelentkezés szükséges!"
 }

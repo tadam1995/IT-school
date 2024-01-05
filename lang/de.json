@@ -176,5 +176,6 @@
   "teachers11_content": "Hallo! Ich bin Péter Szabó, und gemeinsam mit Ihnen erforschen wir die Anwendungen von Virtual und Augmented Reality im Gesundheits- und Bildungswesen. Im Kurs VR- und AR-Anwendungen im Gesundheits- und Bildungswesen werde ich Ihnen helfen, die Grenzen der technologischen Innovation in diesen Schlüsselbereichen zu erkunden. Mein Ziel ist es, Sie zu inspirieren und Ihnen zu helfen, kreative und effektive Lösungen in diesem dynamischen und sich entwickelnden Bereich zu entwickeln. Kommen Sie und lassen Sie uns gemeinsam an der Zukunft des Gesundheits- und Bildungswesens teilhaben!",
   "about": "über uns",
   "apply": "anwenden",
-  "choose_option": "Bitte wählen Sie aus den folgenden Startzeiten: "
+  "choose_option": "Bitte wählen Sie aus den folgenden Startzeiten: ",
+  "needlogin" : "Anmeldung erforderlich!"
 }

@@ -37,11 +37,14 @@
       </div>
     </div>
     <hr class="ms-5 me-5">
-    <div class="text-center mb-3">
-      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" data-bs-toggle="modal"
-        data-bs-target="#my-modal-1">
+    <div class="text-center mb-1">
+      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" ng-class="{'disabled': !user.id}"
+        data-bs-toggle="modal" data-bs-target="#my-modal-1">
         <span class="text-capitalize">{{'apply' | translate:lang.data}}</span>
       </button>
+    </div>
+    <div class="text-center mb-5">
+      <span class="fst-italic fs-6">{{'needlogin' | translate:lang.data}}</span>
     </div>
     <div class="text-center mb-3">
       <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" ui-sref="courses">
@@ -78,16 +81,14 @@
             </select>
             <label for="myCheckbox">
               <input type="checkbox" name="chkbx" id="myCheckbox" ng-model="isCheckboxChecked">
-              {{'terms' | translate:lang.data}}<a data-bs-toggle="modal" data-bs-target="#my-modal-2"> {{'terms_a' | translate:lang.data}}</a>
+              {{'terms' | translate:lang.data}}<a data-bs-toggle="modal" data-bs-target="#my-modal-2"> {{'terms_a' |
+                translate:lang.data}}</a>
             </label>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" 
-                  class="btn btn-primary text-capitalize" 
-                  ng-click="send(course)"
-                  data-bs-dismiss="modal" 
-                  ng-disabled="!isCheckboxChecked || !user.id || !date">
+          <button type="button" class="btn btn-primary text-capitalize" ng-click="send(course)" data-bs-dismiss="modal"
+            ng-disabled="!isCheckboxChecked || !date">
             {{'apply' | translate:lang.data}}
           </button>
           <button type="button" class="btn btn-primary text-capitalize" data-bs-dismiss="modal">
