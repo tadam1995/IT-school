@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 19. 19:33
+-- Létrehozás ideje: 2024. Jan 10. 21:34
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -21,6 +21,31 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `iskola`
 --
+
+DELIMITER $$
+--
+-- Függvények
+--
+CREATE DEFINER=`root`@`localhost` FUNCTION `BASE64_ENCODE` (`textIn` LONGBLOB) RETURNS LONGTEXT CHARSET utf8mb4 NO SQL
+BEGIN
+/*
+	Convert blob to base64 text, remove start, end spaces,
+	newline, carriage return, and tab characters from text 
+*/
+DECLARE textOut LONGTEXT CHARSET utf8mb4 DEFAULT '';
+IF (textIn IS NOT NULL) THEN
+	SET textOut = TO_BASE64(textIn);
+    SET textOut = TRIM(textOut);
+    IF (LENGTH(textOut) > 0) THEN
+    	SET textOut = REPLACE(textOut,"\n","");
+    	SET textOut = REPLACE(textOut,"\r","");
+    	SET textOut = REPLACE(textOut,"\t","");
+    END IF;
+END IF;
+RETURN textOut;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
