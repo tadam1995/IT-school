@@ -85,7 +85,6 @@
 
         <!-- Rental process -->
         <ul class="row list-unstyled text-center mt-4">
-
           <li class="col-12 col-lg-6 my-2"
               ng-repeat="x in [].constructor(4) track by $index">
             <div class="cardbox p-2 login_container my-3 mx-3">
@@ -97,11 +96,10 @@
                          alt="img">
                   </div>
                 </div>
+
                 <div class="col-6 text-muted text-start">  
                   <h4 class="mt-2">{{'homenews_'+($index+1)+'_title' | translate:lang.data}}</h4>
-                  <p>
-                    {{'homenews_'+($index+1)+'_desc' | translate:lang.data}}
-                  </p>
+                  <p>{{'homenews_'+($index+1)+'_desc' | translate:lang.data}}</p>
                 </div>
               </div>
             </div>

@@ -144,7 +144,7 @@
 
                 <!-- Account title -->
                 <div class="d-inline-block float-start navfont hover-underline-animation text-uppercase">
-                  {{'account' | translate:lang.data}}
+                     {{'account' | translate:lang.data}}
                 </div>
               </a>
 
@@ -158,12 +158,13 @@
                      href="#">
                     <span class="text-capitalize text-small-caps" 
                           ng-if="user.nick_name">
-                      {{user.nick_name}}
+                          {{user.nick_name}}
                     </span>
+
                     <span class="text-capitalize text-small-caps" 
                           ng-repeat="k in lang.rule[lang.type]"
                           ng-if="!user.nick_name">
-                      {{user[k]}}
+                          {{user[k]}}
                     </span>
                   </a>
                 </li>
@@ -174,8 +175,9 @@
                       ng-class="{'disabled': state.id === 'user' && userParamsType === 'profile'}"
                       ui-sref="profile">
                     <i class="fa-solid fa-user fa-lg"></i>
+
                     <span class="text-capitalize text-small-caps">
-                      {{'profile' | translate:lang.data}}
+                          {{'profile' | translate:lang.data}}
                     </span>
                   </a>
                 </li>
@@ -186,8 +188,9 @@
                      ng-class="{'disabled': state.id === 'user' && userParamsType === 'email'}"
                      ui-sref="email">
                     <i class="fa-solid fa-envelope fa-lg"></i>
+
                     <span class="text-capitalize text-small-caps">
-                      {{'change_email' | translate:lang.data}}
+                          {{'change_email' | translate:lang.data}}
                     </span>
                   </a>
                 </li>
@@ -198,8 +201,9 @@
                      ng-class="{'disabled': state.id === 'user' && userParamsType === 'password'}"
                      ui-sref="password">
                     <i class="fa-solid fa-key fa-lg"></i>
+
                     <span class="text-capitalize text-small-caps">
-                      {{'change_password' | translate:lang.data}}
+                          {{'change_password' | translate:lang.data}}
                     </span>
                   </a>
                 </li>
@@ -215,8 +219,9 @@
                      href="javascript:void(0)" 
                      ng-click="logout()">
                     <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+
                     <span class="text-uppercase">
-                      {{'logout' | translate:lang.data}}
+                          {{'logout' | translate:lang.data}}
                     </span>
                   </a>
                 </li>
@@ -237,8 +242,9 @@
                      class="me-1"
                      height="22" 
                      alt="flag">
+
                 <span class="text-capitalize text-small-caps navfont hover-underline-animation">
-                  {{lang.available[lang.index].local}}
+                      {{lang.available[lang.index].local}}
                 </span>
               </a>
 
@@ -257,10 +263,10 @@
                        height="22" 
                        alt="flag">
                   <span class="text-capitalize">
-                    {{x.name}}
+                       {{x.name}}
                   </span>
                   <span ng-if="x.name != x.local">
-                    ({{x.local}})
+                       ({{x.local}})
                   </span>
                 </li>
               </ul>
