@@ -2,7 +2,9 @@
 <div class="page-container d-conditional vh-100">
 
   <!-- Navigate -->
-  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+  <header class="sticky-top" 
+          ng-include src="'./html/navigate.html'"> 
+  </header>
 
   <!-- Main -->
   <main class="fade-in">
@@ -16,7 +18,7 @@
         <!-- Titel -->
         <div class="col-12 col-md-10 col-lg-8 text-center">
           <h1 class="text-center text-capitalize text-small-caps">
-            {{'community' | translate:lang.data}}
+              {{'community' | translate:lang.data}}
           </h1>
           <hr>
         </div>
@@ -28,7 +30,7 @@
         <!-- Grid -->
         <div class="col-12 col-md-10 col-lg-8 text-center">
           <p class="text-muted fs-5 fst-italic px-4 mt-1">
-            {{'community_title_desc' | translate:lang.data}}
+             {{'community_title_desc' | translate:lang.data}}
           </p>
           <hr>
         </div>
@@ -48,31 +50,47 @@
               <button id="tab-1-tab"
                       class="comm_btn btn-outline-secondary ms-2 mb-2 ű
                              btn-pills-tab active text-capitalize"
-                      data-bs-toggle="pill" data-bs-target="#tab-1" 
-                      role="tab" type="button" aria-controls="tab-1"
+                      data-bs-toggle="pill" 
+                      data-bs-target="#tab-1" 
+                      role="tab" 
+                      type="button" 
+                      aria-controls="tab-1"
                       aria-selected="true">
-                {{'about' | translate:lang.data}}
+                      {{'about' | translate:lang.data}}
               </button>
             </li>
 
-
             <!-- Tab2 -->
-            <li class="nav-item nav-item-pills mx-2" role="presentation">
+            <li class="nav-item nav-item-pills mx-2" 
+                role="presentation">
+
               <!-- Button -->
-              <button id="tab-2-tab" class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
-                data-bs-toggle="pill" data-bs-target="#tab-2" role="tab" type="button" aria-controls="tab-2"
-                aria-selected="false">
-                {{'teacher' | translate:lang.data}}
+              <button id="tab-2-tab" 
+                      class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
+                      data-bs-toggle="pill" 
+                      data-bs-target="#tab-2" 
+                      role="tab" 
+                      type="button" 
+                      aria-controls="tab-2"
+                      aria-selected="false">
+                      {{'teacher' | translate:lang.data}}
               </button>
             </li>
 
             <!-- Tab3 -->
-            <li class="nav-item nav-item-pills mx-2" role="presentation">
+            <li class="nav-item nav-item-pills mx-2" 
+                role="presentation">
+
               <!-- Button -->
-              <button id="tab-3-tab" class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
-                data-bs-toggle="pill" data-bs-target="#tab-3" role="tab" type="button" aria-controls="tab-3"
-                aria-selected="false">
-                {{'gallery' | translate:lang.data}}
+              <button id="tab-3-tab" 
+                      class="comm_btn btn-outline-secondary ms-2 mb-2 btn-pills-tab text-capitalize"
+                      data-bs-toggle="pill" 
+                      data-bs-target="#tab-3" 
+                      role="tab" 
+                      type="button" 
+                      aria-controls="tab-3"
+                      aria-selected="false">
+                      {{'gallery' | translate:lang.data}}
               </button>
             </li>
           </ul>
@@ -80,8 +98,6 @@
 
         <!-- Row Tab contents-->
         <div class="row justify-content-center">
-
-          <!-- <div class="col-12 col-md-10 col-lg-8 text-center"> -->
 
           <!-- Tab content -->
           <div class="tab-content">
@@ -96,17 +112,28 @@
                 <hr>
                 <h3 class="my-3"><em>{{'comm_tab_title' | translate: lang.data}}</em></h3>
                 <hr>
-                <img src="./media/image/community/1.jpg" class="img-fluid float-start me-3 rounded" alt="img">
+                <img src="./media/image/community/1.jpg" 
+                     class="img-fluid float-start me-3 rounded" 
+                     alt="img">
+
                 <p class="text-justify">
                   {{'community_1' | translate:lang.data}}
                 </p>
                 <hr>
-                <img src="./media/image/community/2.jpg" class="img-fluid float-end ms-3 rounded" alt="img">
+
+                <img src="./media/image/community/2.jpg" 
+                     class="img-fluid float-end ms-3 rounded" 
+                     alt="img">
+
                 <p class="text-justify">
                   {{'community_2' | translate:lang.data}}
                 </p>
                 <hr>
-                <img src="./media/image/community/3.jpg" class="img-fluid float-start me-3 rounded" alt="img">
+
+                <img src="./media/image/community/3.jpg" 
+                     class="img-fluid float-start me-3 rounded" 
+                     alt="img">
+
                 <p class="text-justify">
                   {{'community_3' | translate:lang.data}}
                 </p>
@@ -117,7 +144,8 @@
             <!-- Tab 2 panel -->
             <div id="tab-2" 
                  class="tab-pane fade p-3 text-center" 
-                 role="tabpanel" aria-labelledby="tab-2-tab">
+                 role="tabpanel" 
+                 aria-labelledby="tab-2-tab">
 
               <!-- <div class="col-10 col-sm-8 col-md-6 col-lg-4"> -->
 
@@ -138,16 +166,22 @@
                     <tr ng-repeat="teacher in teachers">
                       <td class="text-end">{{$index+1}}</td>
                       <td class="text-start">
-                        <a class="table-text" data-bs-toggle="modal" data-bs-target="#my-modal-1"
-                          data-img="{{teacher.img}}" data-content="{{teacher.content}}"
-                          data-full_name="{{teacher.full_name}}" ng-click="teacherData($event)">
+                        <a class="table-text" 
+                           data-bs-toggle="modal" 
+                           data-bs-target="#my-modal-1"
+                           data-img="{{teacher.img}}" 
+                           data-content="{{teacher.content}}"
+                           data-full_name="{{teacher.full_name}}" 
+                           ng-click="teacherData($event)">
                           {{teacher.full_name}}
                         </a>
                       </td>
+
                       <td class="text-start w-100 text-center table-text">{{teacher.phone}}</td>
                       <td class="text-start">{{teacher.email}}</td>
                       <td class="text-start table-text" 
                           ng-init="subjects=teacher.subjects.split(',')">
+
                         <ul>
                           <li ng-repeat="subject in subjects">
                             {{subject | translate:lang.data}}
@@ -157,25 +191,43 @@
                     </tr>
                   </tbody>
                 </table>
-              <!-- </div> -->
             </div>
 
             <!-- Tab3 panel -->
-            <div id="tab-3" class="tab-pane fade p-3 text-center" role="tabpanel" aria-labelledby="tab-3-tab">
+            <div id="tab-3" 
+                 class="tab-pane fade p-3 text-center" 
+                 role="tabpanel" 
+                 aria-labelledby="tab-3-tab">
 
               <div class="row">
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                  <img src="./media/image/community/g1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                  <img src="./media/image/community/g1.jpg" 
+                       class="w-100 shadow-1-strong rounded mb-4" 
+                       alt="img">
 
-                  <img src="./media/image/community/g2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="img">
-                  <img src="./media/image/community/g3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                  <img src="./media/image/community/g2.jpg" 
+                       class="w-100 shadow-1-strong rounded mb-4" 
+                       alt="img">
+
+                  <img src="./media/image/community/g3.jpg" 
+                       class="w-100 shadow-1-strong rounded mb-4" 
+                       alt="img">
                 </div>
+
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                  <img src="./media/image/community/g4.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="img">
-                  <img src="./media/image/community/g5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                  <img src="./media/image/community/g4.jpg" 
+                       class="w-100 shadow-1-strong rounded mb-4" 
+                       alt="img">
+
+                  <img src="./media/image/community/g5.jpg" 
+                       class="w-100 shadow-1-strong rounded mb-4" 
+                       alt="img">
                 </div>
+
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                  <img src="./media/image/community/g6.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="img">
+                  <img src="./media/image/community/g6.jpg" 
+                       class="w-100 shadow-1-strong rounded mb-4" 
+                       alt="img">
                 </div>
               </div>
             </div>
@@ -187,17 +239,33 @@
   </main>
 
   <!-- Modal -->
-  <div id="my-modal-1" class="modal fade" data-bs-dismiss="modal" 
-       data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
-       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div id="my-modal-1" 
+       class="modal fade" 
+       data-bs-dismiss="modal" 
+       data-bs-backdrop="static" 
+       ata-bs-keyboard="true" 
+       tabindex="-1"
+       aria-labelledby="staticBackdropLabel" 
+       aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">{{teacherFull_name}}</h5>
-          <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" 
+              id="staticBackdropLabel">
+              {{teacherFull_name}}
+          </h5>
+
+          <button type="button" 
+                  class="btn-close me-2" 
+                  data-bs-dismiss="modal" 
+                  aria-label="Close">
+          </button>
         </div>
+        
         <div class="modal-body">
-          <img ng-src="./media/image/teacher/{{teacherImg}}" class="d-block w-100" alt="img">
+          <img ng-src="./media/image/teacher/{{teacherImg}}" 
+               class="d-block w-100" 
+               alt="img">
           <p>{{teacherContent | translate:lang.data}}</p>
         </div>
       </div>

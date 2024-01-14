@@ -2,7 +2,9 @@
 <div class="page-container d-conditional vh-100">
 
   <!-- Navigate -->
-  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+  <header class="sticky-top" 
+          ng-include src="'./html/navigate.html'">
+  </header>
 
   <!-- Main -->
   <main class="fade-in">
@@ -58,7 +60,10 @@
                   data-bs-target="#carouselCarCaptions" 
                   data-bs-slide="{{x}}"
                   ng-repeat="x in ['prev','next'] track by $index">
-            <span class="carousel-control-{{x}}-icon" aria-hidden="true"></span>
+            <span class="carousel-control-{{x}}-icon" 
+                  aria-hidden="true">
+            </span>
+
             <span class="visually-hidden text-capitalize">{{x}}</span>
           </button>
         </div>
@@ -87,7 +92,9 @@
               <div class="row row-cols-1 row-col-md-2 g-4">
                 <div class="col-6">
                   <div class="position-relative mt-2">
-                    <img class="img-fluid img_car ms-2" ng-src="./media/image/home/{{$index+1}}.jpg" alt="img">
+                    <img class="img-fluid img_car ms-2" 
+                         ng-src="./media/image/home/{{$index+1}}.jpg" 
+                         alt="img">
                   </div>
                 </div>
                 <div class="col-6 text-muted text-start">  

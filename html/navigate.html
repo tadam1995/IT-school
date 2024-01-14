@@ -5,18 +5,28 @@
   <div class="container-fluid">
 
     <!-- Logo -->
-    <a class="nav-link" ng-class="{'disabled': state.id==='user'}" ui-sref="home">
-      <img class="logo" src="./media/image/logo/logo.jpg" alt="Your Logo">
+    <a class="nav-link" 
+       ng-class="{'disabled': state.id==='user'}" 
+       ui-sref="home">
+      <img class="logo" 
+           src="./media/image/logo/logo.jpg" 
+           alt="Your Logo">
     </a>
 
     <!-- Hamburger icon -->
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler bg-light" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
       <span class="navbar-toggler-icon bg-light"></span>
     </button>
 
     <!-- Navbar container -->
-    <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarNav">
+    <div class="collapse navbar-collapse mt-2 mt-md-0" 
+         id="navbarNav">
 
       <!-- Left align -->
       <div class="navbar-left me-auto">
@@ -27,8 +37,8 @@
           <!--Home-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2"
-              ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'home'}"
-              ui-sref="home">
+               ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'home'}"
+               ui-sref="home">
               <span>
                 <p class="hover-underline-animation navfont">{{'home_page' | translate:lang.data}}</p>
               </span>
@@ -38,8 +48,8 @@
           <!--Introduction-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2"
-              ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'introduction'}"
-              ui-sref="introduction">
+               ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'introduction'}"
+               ui-sref="introduction">
               <span>
                 <p class="hover-underline-animation navfont">{{'introduction' | translate:lang.data}}</p>
               </span>
@@ -49,8 +59,8 @@
           <!--Courses-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2"
-              ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'courses'}"
-              ui-sref="courses">
+               ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'courses'}"
+               ui-sref="courses">
               <span>
                 <p class="hover-underline-animation navfont">{{'courses' | translate:lang.data}}</p>
               </span>
@@ -60,8 +70,8 @@
           <!--Community-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2"
-              ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'community'}"
-              ui-sref="community">
+               ng-class="{'active cursor-default text-decoration-underline fw-bold fs-6 text-uppercase': state.id === 'community'}"
+               ui-sref="community">
               <span>
                 <p class="hover-underline-animation navfont">{{'community' | translate:lang.data}}</p>
               </span>
@@ -71,8 +81,8 @@
           <!--Contact-->
           <li class="nav-item">
             <a class="nav-link text-lowercase mt-2"
-              ng-class="{'active cursor-default fw-bold fs-6 text-uppercase': state.id === 'contact'}"
-              ui-sref="contact">
+               ng-class="{'active cursor-default fw-bold fs-6 text-uppercase': state.id === 'contact'}"
+               ui-sref="contact">
               <span>
                 <p class="hover-underline-animation navfont">{{'contact' | translate:lang.data}}</p>
               </span>
@@ -90,9 +100,11 @@
           <ul class="navbar-nav">
 
             <!-- Login -->
-            <li class="nav-item" ng-if="!user.id && (state.id !== 'user' || userParamsType !== 'login')">
-              <a class="nav-link" ui-sref="user({type: 'login'})"
-                ng-class="{'active': state.id === 'user' && userParamsType === 'login'}">
+            <li class="nav-item" 
+                ng-if="!user.id && (state.id !== 'user' || userParamsType !== 'login')">
+              <a class="nav-link" 
+                 ui-sref="user({type: 'login'})"
+                 ng-class="{'active': state.id === 'user' && userParamsType === 'login'}">
                 <span class="hover-underline-animation navfont text-uppercase">
                   {{'login' | translate:lang.data}}
                 </span>
@@ -100,9 +112,11 @@
             </li>
 
             <!-- Register -->
-            <li class="nav-item" ng-if="!user.id && state.id === 'user' && userParamsType === 'login'">
-              <a class="nav-link" ui-sref="user({type: 'register'})"
-                ng-class="{'active': state.id === 'user' && userParamsType === 'register'}">
+            <li class="nav-item" 
+                ng-if="!user.id && state.id === 'user' && userParamsType === 'login'">
+              <a class="nav-link" 
+                 ui-sref="user({type: 'register'})"
+                 ng-class="{'active': state.id === 'user' && userParamsType === 'register'}">
                 <span class="hover-underline-animation navfont text-uppercase">
                   {{'register' | translate:lang.data}}
                 </span>
@@ -110,17 +124,22 @@
             </li>
 
             <!-- Account -->
-            <li class="nav-item dropdown" ng-if="user.id">
-              <a id="userDropdown" href="#" class="nav-link dropdown-toggle menuitem"
-                ng-class="{'disabled': state.id === 'user' && userParamsType === 'profile' && helper.isEdit}"
-                ng-attr-aria-disabled="{{state.id === 'user' && userParamsType === 'profile' && helper.isEdit}}"
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown" 
+                ng-if="user.id">
+              <a id="userDropdown" 
+                 href="#" 
+                 class="nav-link dropdown-toggle menuitem"
+                 ng-class="{'disabled': state.id === 'user' && userParamsType === 'profile' && helper.isEdit}"
+                 ng-attr-aria-disabled="{{state.id === 'user' && userParamsType === 'profile' && helper.isEdit}}"
+                 role="button" 
+                 data-bs-toggle="dropdown" 
+                 aria-expanded="false">
 
                 <!-- Image -->
                 <div class="bg-img bg-img-cover overflow-hidden rounded-circle d-inline-block float-start me-2"
-                  style="width:32px;height:32px;"
-                  ng-style="{'background-image':user.img_type?'url(data:'+user.img_type+';base64,'+user.img+')':'url('+app.commonPath+'media/image/blank/'+(user.gender==='F'?'fe':'')+'male-blank.webp)'}"
-                  ng-show="user.img || user.gender">
+                     style="width:32px;height:32px;"
+                     ng-style="{'background-image':user.img_type?'url(data:'+user.img_type+';base64,'+user.img+')':'url('+app.commonPath+'media/image/blank/'+(user.gender==='F'?'fe':'')+'male-blank.webp)'}"
+                     ng-show="user.img || user.gender">
                 </div>
 
                 <!-- Account title -->
@@ -130,16 +149,20 @@
               </a>
 
               <!-- Dropdown menu -->
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <ul class="dropdown-menu dropdown-menu-end" 
+                  aria-labelledby="userDropdown">
 
                 <!-- User name/Nick name -->
                 <li>
-                  <a class="dropdown-item disabled" href="#">
-                    <span class="text-capitalize text-small-caps" ng-if="user.nick_name">
+                  <a class="dropdown-item disabled" 
+                     href="#">
+                    <span class="text-capitalize text-small-caps" 
+                          ng-if="user.nick_name">
                       {{user.nick_name}}
                     </span>
-                    <span class="text-capitalize text-small-caps" ng-repeat="k in lang.rule[lang.type]"
-                      ng-if="!user.nick_name">
+                    <span class="text-capitalize text-small-caps" 
+                          ng-repeat="k in lang.rule[lang.type]"
+                          ng-if="!user.nick_name">
                       {{user[k]}}
                     </span>
                   </a>
@@ -147,8 +170,9 @@
 
                 <!-- Profile -->
                 <li>
-                  <a class="dropdown-item" ng-class="{'disabled': state.id === 'user' && userParamsType === 'profile'}"
-                    ui-sref="profile">
+                  <a class="dropdown-item" 
+                      ng-class="{'disabled': state.id === 'user' && userParamsType === 'profile'}"
+                      ui-sref="profile">
                     <i class="fa-solid fa-user fa-lg"></i>
                     <span class="text-capitalize text-small-caps">
                       {{'profile' | translate:lang.data}}
@@ -158,8 +182,9 @@
 
                 <!-- Change email -->
                 <li>
-                  <a class="dropdown-item" ng-class="{'disabled': state.id === 'user' && userParamsType === 'email'}"
-                    ui-sref="email">
+                  <a class="dropdown-item" 
+                     ng-class="{'disabled': state.id === 'user' && userParamsType === 'email'}"
+                     ui-sref="email">
                     <i class="fa-solid fa-envelope fa-lg"></i>
                     <span class="text-capitalize text-small-caps">
                       {{'change_email' | translate:lang.data}}
@@ -169,8 +194,9 @@
 
                 <!-- Change password -->
                 <li>
-                  <a class="dropdown-item" ng-class="{'disabled': state.id === 'user' && userParamsType === 'password'}"
-                    ui-sref="password">
+                  <a class="dropdown-item" 
+                     ng-class="{'disabled': state.id === 'user' && userParamsType === 'password'}"
+                     ui-sref="password">
                     <i class="fa-solid fa-key fa-lg"></i>
                     <span class="text-capitalize text-small-caps">
                       {{'change_password' | translate:lang.data}}
@@ -185,7 +211,9 @@
 
                 <!-- Logout -->
                 <li>
-                  <a class="dropdown-item" href="javascript:void(0)" ng-click="logout()">
+                  <a class="dropdown-item" 
+                     href="javascript:void(0)" 
+                     ng-click="logout()">
                     <i class="fa-solid fa-right-from-bracket fa-lg"></i>
                     <span class="text-uppercase">
                       {{'logout' | translate:lang.data}}
@@ -197,24 +225,37 @@
 
 
             <!-- Language -->
-            <li class="nav-item dropdown" ng-if="lang.available && lang.available.length > 1">
-              <a id="langDropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <img ng-src="{{app.commonPath+'media/image/countries/'+lang.available[lang.index].img}}" class="me-1"
-                  height="22" alt="flag">
+            <li class="nav-item dropdown" 
+                ng-if="lang.available && lang.available.length > 1">
+              <a id="langDropdown" 
+                 href="#" 
+                 class="nav-link dropdown-toggle" 
+                 role="button" 
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                <img ng-src="{{app.commonPath+'media/image/countries/'+lang.available[lang.index].img}}" 
+                     class="me-1"
+                     height="22" 
+                     alt="flag">
                 <span class="text-capitalize text-small-caps navfont hover-underline-animation">
                   {{lang.available[lang.index].local}}
                 </span>
               </a>
 
-
               <!-- Dropdown menu -->
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+              <ul class="dropdown-menu dropdown-menu-end" 
+                  aria-labelledby="langDropdown">
 
                 <!-- Language items -->
-                <li data-lang-id="{{x.id}}" class="dropdown-item cursor-pointer" ng-click="changeLanguage($event)"
-                  ng-repeat="x in lang.available" ng-if="x.valid && $index != lang.index">
-                  <img ng-src="{{app.commonPath+'media/image/countries/'+x.img}}" class="me-1" height="22" alt="flag">
+                <li data-lang-id="{{x.id}}" 
+                    class="dropdown-item cursor-pointer" 
+                    ng-click="changeLanguage($event)"
+                    ng-repeat="x in lang.available" 
+                    ng-if="x.valid && $index != lang.index">
+                  <img ng-src="{{app.commonPath+'media/image/countries/'+x.img}}" 
+                       class="me-1" 
+                       height="22" 
+                       alt="flag">
                   <span class="text-capitalize">
                     {{x.name}}
                   </span>
@@ -226,9 +267,6 @@
             </li>
           </ul>
         </div>
-
-
-        </ul>
       </div>
     </div>
   </div>

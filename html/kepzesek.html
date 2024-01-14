@@ -2,7 +2,9 @@
 <div class="page-container d-conditional vh-100">
 
   <!-- Navigate -->
-  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+  <header class="sticky-top" 
+          ng-include src="'./html/navigate.html'">
+  </header>
 
   <!-- Main -->
   <main class="mt-5 fade-in">
@@ -11,7 +13,8 @@
     <div class="container pt-5 pt-5 pb-3">
 
       <!-- Row -->
-      <div class="row" style="position: relative;">
+      <div class="row" 
+           style="position: relative;">
 
         <!-- Titel -->
         <h1 class="text-center text-capitalize text-small-caps">
@@ -19,10 +22,12 @@
         </h1>
         <hr>
       </div>
+
       <div class="col-12 col-md-10 col-lg-8 mx-auto text-center">
         <hr>
         <p>{{course.description | translate:lang.data}}
           <hr>
+        </p>
       </div>
 
       <!-- Row -->
@@ -30,41 +35,61 @@
         <div ng-repeat="x in course.subjects">
           <h5 class="mt-3">{{x.subject_name | translate:lang.data}}</h5>
           <p>{{x.description | translate:lang.data}}</p>
-          <div class="mt-2" ng-repeat="y in x.teachers">
+
+          <div class="mt-2" 
+               ng-repeat="y in x.teachers">
             <h6>{{'instructor' | translate:lang.data}}: {{y.surname}} {{y.first_name}}</h6>
           </div>
         </div>
       </div>
     </div>
+
     <hr class="ms-5 me-5">
     <div class="text-center mb-1">
-      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" ng-class="{'disabled': !user.id}"
-        data-bs-toggle="modal" data-bs-target="#my-modal-1">
+      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" 
+              ng-class="{'disabled': !user.id}"
+              data-bs-toggle="modal" 
+              data-bs-target="#my-modal-1">
         <span class="text-capitalize">{{'apply' | translate:lang.data}}</span>
       </button>
     </div>
+
     <div class="text-center mb-5">
       <span class="fst-italic fs-6">{{'needlogin' | translate:lang.data}}</span>
     </div>
+
     <div class="text-center mb-3">
-      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" ui-sref="courses">
-        <span class="text-capitalize">{{'back' | translate:lang.data}}</span>
+      <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" 
+              ui-sref="courses">
+          <span class="text-capitalize">{{'back' | translate:lang.data}}</span>
       </button>
     </div>
 
   </main>
 
   <!-- Modal -->
-  <div id="my-modal-1" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div id="my-modal-1" 
+       class="modal fade" 
+       data-bs-backdrop="static" 
+       data-bs-keyboard="false" 
+       tabindex="-1"
+       aria-labelledby="staticBackdropLabel" 
+       aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">
+          <h5 class="modal-title text-capitalize" 
+              id="staticBackdropLabel">
             {{'apply' | translate:lang.data}}
           </h5>
-          <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <button type="button" 
+                  class="btn-close me-2" 
+                  data-bs-dismiss="modal" 
+                  aria-label="Close">
+          </button>
         </div>
+
         <div class="modal-body">
           <h5>
             {{course.course_name | translate:lang.data}}
@@ -75,48 +100,44 @@
             </i>
           </p>
           <form>
-            <select class="form-select" aria-label="Default select example" ng-model="date"
-              ng-options="option as option for option in courseDates" required>
-              <option value="Select one" disabled selected hidden></option>
+            <select class="form-select" 
+                    aria-label="Default select example" 
+                    ng-model="date"
+                    ng-options="option as option for option in courseDates" 
+                    required>
+              <option value="Select one" 
+                      disabled selected hidden>
+              </option>
             </select>
+
             <label for="myCheckbox">
-              <input type="checkbox" name="chkbx" id="myCheckbox" ng-model="isCheckboxChecked">
-              {{'terms' | translate:lang.data}}<a data-bs-toggle="modal" data-bs-target="#my-modal-2"> {{'terms_a' |
-                translate:lang.data}}</a>
+              <input type="checkbox" 
+                     name="chkbx" 
+                     d="myCheckbox" 
+                     ng-model="isCheckboxChecked">
+                     {{'terms' | translate:lang.data}}
+                <a href="./document/adatvedelmi-es-adatbiztonsagi-szabalyzat.pdf" 
+                   target="_blank">
+                   {{'terms_a' | translate:lang.data}}
+                </a>
             </label>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary text-capitalize" ng-click="send(course)" data-bs-dismiss="modal"
-            ng-disabled="!isCheckboxChecked || !date">
-            {{'apply' | translate:lang.data}}
-          </button>
-          <button type="button" class="btn btn-primary text-capitalize" data-bs-dismiss="modal">
-            {{'cancel' | translate:lang.data}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Modal 2 -->
-  <div id="my-modal-2" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-center">
-      <div class="modal-content">
-        <div class="modal-header justify-content-center">
-          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">
-            cím
-          </h5>
-        </div>
-        <div class="modal-body">
-          <h5>
-            szöveg
-          </h5>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-primary text-capitalize" data-bs-toggle="modal"
-            data-bs-target="#my-modal-1">
-            {{'back' | translate:lang.data}}</button>
+        <div class="modal-footer">
+          <button type="button" 
+                  class="btn btn-primary text-capitalize" 
+                  ng-click="send(course)" 
+                  data-bs-dismiss="modal"
+                  ng-disabled="!isCheckboxChecked || !date">
+                  {{'apply' | translate:lang.data}}
+          </button>
+
+          <button type="button" 
+                  class="btn btn-primary text-capitalize" 
+                  data-bs-dismiss="modal">
+                  {{'cancel' | translate:lang.data}}
+          </button>
         </div>
       </div>
     </div>

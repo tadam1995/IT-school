@@ -2,7 +2,8 @@
 <div class="page-container d-conditional vh-100">
 
 	<!-- Navigate -->
-  <header class="sticky-top" ng-include src="'./html/navigate.html'"></header>
+  <header class="sticky-top" 
+  		  ng-include src="'./html/navigate.html'"></header>
 
 	<!-- Main -->
   <main class="fade-in">
@@ -27,13 +28,13 @@
 
 				<!-- Form -->
 				<form class="mt-2 col-11 col-md-11 col-lg-8 col-xl-7 col-xxl-6"
-							ng-switch="userParamsType">
+					  ng-switch="userParamsType">
 
 					<!-- Identifier -->
 					<div class="row input-row mb-2" 
-							 ng-switch-when="profile">
+						 ng-switch-when="profile">
 						<label for="identifier" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<i class="fa-solid fa-id-badge" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'identifier' | translate:lang.data}}:
@@ -41,21 +42,21 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="identifier" 
-										 type="text"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.id"
-										 disabled="disabled">
+								   type="text"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.id"
+								   disabled="disabled">
 						</div>
 						<div class="col-1 pt-1"></div>
 					</div>
 
 					<!-- Type -->
 					<div class="row input-row mb-2" 
-							 ng-switch-when="profile">
+						 ng-switch-when="profile">
 						<label for="type" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<i class="fa-solid fa-user-gear" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'type' | translate:lang.data}}:
@@ -63,14 +64,14 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="type" 
-										 type="text"
-										 class="form-control form-control-sm d-inline-block"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 style="max-width:30px;"
-										 ng-model="model.type"
-										 disabled="disabled"
-										 maxlength="1">
+								   type="text"
+								   class="form-control form-control-sm d-inline-block"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   style="max-width:30px;"
+								   ng-model="model.type"
+								   disabled="disabled"
+								   maxlength="1">
 							<span class="ms-1 text-capitalize d-inline-block">
 								{{model.typeName | translate:lang.data}}
 							</span>
@@ -80,9 +81,9 @@
 
 					<!-- Email -->
 					<div class="row input-row mb-2" 
-							 ng-switch-when="profile">
+						 ng-switch-when="profile">
 						<label for="email" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<i class="fa-solid fa-id-badge" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'email' | translate:lang.data}}:
@@ -90,26 +91,26 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="email" 
-										 type="text"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.email"
-										 disabled="disabled">
+								   type="text"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.email"
+								   disabled="disabled">
 						</div>
 						<div class="col-1 pt-1"></div>
 					</div>
 
 					<!-- Dividing line -->
 					<hr class="text-muted" 
-							ng-switch-when="profile">
+						ng-switch-when="profile">
 
 					<!-- First name -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="first_name" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<span class="ms-1 text-capitalize">
 								{{'first_name' | translate:lang.data}}:
@@ -117,18 +118,18 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="first_name" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('first_name' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.first_name"
-										 ng-focus="methods.setFocusedElement($event)"
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="50"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('first_name' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.first_name"
+								   ng-focus="methods.setFocusedElement($event)"
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="50"
+								   ng-clear-icon>
 						</div>
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
@@ -139,37 +140,37 @@
 
 					<!-- Middle name -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="middle_name" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="ms-1 text-capitalize">
 								{{'middle_name' | translate:lang.data}}:
 							</span>
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="middle_name" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('middle_name' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.middle_name"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 maxlength="50"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('middle_name' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.middle_name"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   maxlength="50"
+								   ng-clear-icon>
 						</div>
 						<div class="col-1 pt-1"></div>
 					</div>
 
 					<!-- Last name -->
 					<div class="row input-row mb-2" 
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="last_name" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<span class="ms-1 text-capitalize">
 								{{'last_name' | translate:lang.data}}:
@@ -177,18 +178,18 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="last_name" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('last_name' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.last_name"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="50"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('last_name' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.last_name"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="50"
+								   ng-clear-icon>
 						</div>
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
@@ -200,15 +201,15 @@
 
 					<!-- Dividing line -->
 					<hr class="text-muted" 
-							ng-switch-when="register|profile" 
-							ng-switch-when-separator="|">
+						ng-switch-when="register|profile" 
+						ng-switch-when-separator="|">
 
 					<!-- Born -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="born" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-calendar-days" ></i>
 							<span class="ms-1 text-capitalize">
@@ -216,19 +217,21 @@
 							</span>
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
-							<input id="born" type="date"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 min="{{helper.minBorn}}"
-										 max="{{helper.maxBorn}}"
-										 ng-model="model.born"
-										 ng-focus="methods.setFocusedElement($event)"  
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 ng-clear-icon>
+							<input id="born" 
+								   type="date"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   min="{{helper.minBorn}}"
+								   max="{{helper.maxBorn}}"
+								   ng-model="model.born"
+								   ng-focus="methods.setFocusedElement($event)"  
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   ng-clear-icon>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -238,8 +241,8 @@
 
 					<!-- Gender -->
 					<fieldset class="row input-row mb-2"
-										ng-switch-when="register|profile" 
-							 			ng-switch-when-separator="|">
+							  ng-switch-when="register|profile" 
+							  ng-switch-when-separator="|">
 						<legend class="col-form-label col-form-label-sm col-sm-4 pt-0 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-venus-mars" ></i>
@@ -250,37 +253,38 @@
 						<div class="col-11 col-sm-7 position-relative">
 							<div class="form-check form-check-inline small">
 								<input class="form-check-input opacity-100" 
-											 type="radio"
-											 name="gender" 
-											 id="female" 
-											 value="F"
-											 ng-model="model.gender"
-											 ng-focus="methods.setFocusedElement($event)"
-										 	 ng-change="methods.changed()"
-											 ng-disabled="!helper.isEdit"
-											 required>
+									   type="radio"
+									   name="gender" 
+									   id="female" 
+									   value="F"
+									   ng-model="model.gender"
+									   ng-focus="methods.setFocusedElement($event)"
+									   ng-change="methods.changed()"
+									   ng-disabled="!helper.isEdit"
+									   required>
 								<label for="female"
-											 class="form-check-label opacity-100">
+									   class="form-check-label opacity-100">
 									{{'female' | translate:lang.data}}
 								</label>
 							</div>
 							<div class="form-check form-check-inline small">
 								<input class="form-check-input opacity-100" 
-											 type="radio" 
-											 name="gender" 
-											 id="male"
-											 value="M"
-											 ng-model="model.gender"
-											 ng-focus="methods.setFocusedElement($event)"
-										 	 ng-change="methods.changed()"
-											 ng-disabled="!helper.isEdit"
-											 required>
+									   type="radio" 
+									   name="gender" 
+									   id="male"
+									   value="M"
+									   ng-model="model.gender"
+									   ng-focus="methods.setFocusedElement($event)"
+									   ng-change="methods.changed()"
+									   ng-disabled="!helper.isEdit"
+									   required>
 								<label for="male"
-											 class="form-check-label opacity-100">
+									   class="form-check-label opacity-100">
 									{{'male' | translate:lang.data}}
 								</label>
 							</div>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -290,10 +294,10 @@
 
 					<!-- Image -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="image" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<i class="fa-solid fa-id-card fa-xl" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'image' | translate:lang.data}}:
@@ -301,43 +305,44 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative" style="height:100px;">
 							<input id="image" 
-										 type="file"
-										 accept="image/*"
-										 class="form-control form-control-sm d-none"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="helper.image"
-										 ng-disabled="!helper.isEdit"
-										 file-input
-										 ng-clear-icon='{"top":"40px","left":"120px"}'>
+								   type="file"
+								   accept="image/*"
+								   class="form-control form-control-sm d-none"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="helper.image"
+								   ng-disabled="!helper.isEdit"
+								   file-input
+								   ng-clear-icon='{"top":"40px","left":"120px"}'>
 							<label for="image">
 								<div class="bg-img bg-img-cover overflow-hidden rounded-circle border 
-														d-flex align-items-center justify-content-center"
-											ng-class="{'cursor-pointer': helper.isEdit}" 
-                   	  style="width:100px;min-width:100px;height:100px;"
-										  ng-style="{'background-image':model.img_type?'url(data:'+model.img_type+';base64,'+model.img+')':(model.gender?'url('+app.commonPath+'media/image/blank/'+(model.gender==='F'?'fe':'')+'male-blank.webp)':'')}">
+											d-flex align-items-center justify-content-center"
+									 ng-class="{'cursor-pointer': helper.isEdit}" 
+                   	  				 style="width:100px;min-width:100px;height:100px;"
+									 ng-style="{'background-image':model.img_type?'url(data:'+model.img_type+';base64,'+model.img+')':(model.gender?'url('+app.commonPath+'media/image/blank/'+(model.gender==='F'?'fe':'')+'male-blank.webp)':'')}">
 									<span class="text-center text-muted"
-												ng-show="!model.img && !model.gender">
+										  ng-show="!model.img && !model.gender">
 										<i class="fa-solid fa-upload" ></i><br>
 										<span class="fs-sm">Max: 64KB</span>
-									</span>							
-              	</div>
+									</span>
+								</div>
 							</label>
 						</div>
+
 						<div class="col-1"></div>
 					</div>
 
 					<!-- Dividing line -->
 					<hr class="text-muted" 
-							ng-switch-when="register|profile" 
-							ng-switch-when-separator="|">
+						ng-switch-when="register|profile" 
+						ng-switch-when-separator="|">
 
 					<!-- Country -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="country" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-flag" ></i>
 							<span class="ms-1 text-capitalize">
@@ -346,17 +351,17 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<select id="country"
-											class="form-select form-select-sm text-capitalize pe-4"
-											ng-model="model.country"
-											ng-focus="methods.setFocusedElement($event)"
-										 	ng-change="methods.changed()"
-											ng-disabled="!helper.isEdit"
-											ng-options="x.country for x in helper.countries"
-											required
-											ng-clear-icon='{"top":"2px","right":"-15px"}'>
+									class="form-select form-select-sm text-capitalize pe-4"
+									ng-model="model.country"
+									ng-focus="methods.setFocusedElement($event)"
+									ng-change="methods.changed()"
+									ng-disabled="!helper.isEdit"
+									ng-options="x.country for x in helper.countries"
+									required
+									ng-clear-icon='{"top":"2px","right":"-15px"}'>
 								<option ng-if="userParamsType==='register'" 
-												value="" 
-												disabled selected hidden>
+										value="" 
+										disabled selected hidden>
 								</option>
 							</select>
 						</div>
@@ -369,10 +374,10 @@
 
 					<!-- Phone (Country code / Phone) -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="phone" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-mobile-screen"></i>
 							<span class="ms-1 text-capitalize">
@@ -383,31 +388,31 @@
 							<div class="input-group position-relative">
 								<span>+</span>
 								<select id="country_code"
-												class="form-select form-select-sm ms-1"
-												style="max-width:85px;"
-												ng-model="model.country_code"
-												ng-focus="methods.setFocusedElement($event)"
-												ng-change="methods.changed()"
-												ng-options="x for x in helper.countryCodes"
-												ng-disabled="!helper.isEdit || !model.country || !helper.countryCodes || !helper.countryCodes.length || helper.countryCodes.length === 1"
-												required>
+										class="form-select form-select-sm ms-1"
+										style="max-width:85px;"
+										ng-model="model.country_code"
+										ng-focus="methods.setFocusedElement($event)"
+										ng-change="methods.changed()"
+										ng-options="x for x in helper.countryCodes"
+										ng-disabled="!helper.isEdit || !model.country || !helper.countryCodes || !helper.countryCodes.length || helper.countryCodes.length === 1"
+										required>
 									<option ng-if="userParamsType==='register'" 
-													value="" 
-													disabled selected hidden>
+											value="" 
+											disabled selected hidden>
 									</option>
 								</select>
 								<input id="phone" 
-											 type="tel"
-											 ng-attr-placeholder="{{helper.isEdit ? ('phone' | translate:lang.data) : ''}}"
-											 class="form-control form-control-sm"
-											 spellcheck="false" 
-											 autocomplete="off"
-											 ng-model="model.phone"
-											 ng-focus="methods.setFocusedElement($event)"
-											 ng-change="methods.changed()"
-											 ng-disabled="!helper.isEdit"
-											 required
-											 ng-clear-icon='{"top":"2px","right":"-1px"}'>
+									   type="tel"
+									   ng-attr-placeholder="{{helper.isEdit ? ('phone' | translate:lang.data) : ''}}"
+									   class="form-control form-control-sm"
+									   spellcheck="false" 
+									   autocomplete="off"
+									   ng-model="model.phone"
+									   ng-focus="methods.setFocusedElement($event)"
+									   ng-change="methods.changed()"
+									   ng-disabled="!helper.isEdit"
+									   required
+									   ng-clear-icon='{"top":"2px","right":"-1px"}'>
 							</div>
 						</div>
 						<div class="col-1 pt-1">
@@ -419,10 +424,10 @@
 
 					<!-- City -->
 					<div class="row input-row mb-2" 
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="city" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-city" ></i>
 							<span class="ms-1 text-capitalize">
@@ -431,18 +436,18 @@
 						</label>
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="city" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('city' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.city"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="100"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('city' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.city"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="100"
+								   ng-clear-icon>
 						</div>
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
@@ -453,32 +458,34 @@
 
 					<!-- Post code -->
 					<div class="row input-row mb-2" 
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="postcode" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-list-ol" ></i>
 							<span class="ms-1 text-capitalize">
 								{{'postcode' | translate:lang.data}}:
 							</span>
 						</label>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="postcode" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('postcode' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 style="max-width:170px;"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.postcode"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="10"
-										 ng-clear-icon='{"left":"165px"}'>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('postcode' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   style="max-width:170px;"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.postcode"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="10"
+								   ng-clear-icon='{"left":"165px"}'>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -488,31 +495,34 @@
 
 					<!-- Address -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register|profile" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="register|profile" 
+						 ng-switch-when-separator="|">
 						<label for="address" 
-									 class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-location-dot" ></i>
+
 							<span class="ms-1 text-capitalize">
 								{{'address' | translate:lang.data}}:
 							</span>
 						</label>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="address" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('address' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.address"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="200"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('address' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.address"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="200"
+								   ng-clear-icon>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -522,35 +532,38 @@
 
 					<!-- Dividing line -->
 					<hr class="text-muted" 
-							ng-switch-when="register">
+					    ng-switch-when="register">
 
 					<!-- Email -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="login|register" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="login|register" 
+						 ng-switch-when-separator="|">
 						<label for="email" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-envelope" ></i>
+
 							<span class="ms-1 text-capitalize">
 								{{'email' | translate:lang.data}}:
 							</span>
 						</label>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="email" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('email' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.email"
-										 ng-focus="methods.setFocusedElement($event)"
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="50"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('email' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.email"
+								   ng-focus="methods.setFocusedElement($event)"
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="50"
+								   ng-clear-icon>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -560,31 +573,35 @@
 
 					<!-- Email confirm -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register">
+						 ng-switch-when="register">
 						<label for="email2" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-regular fa-envelope" ></i>
+
 							<span class="ms-1 text-capitalize">
 								{{'email' | translate:lang.data}}
 							</span>
+
 							<span>{{'confirmation' | translate:lang.data}}:</span>
 						</label>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="email2" 
-										 type="text"
-										 ng-attr-placeholder="{{helper.isEdit ? ('email' | translate:lang.data) + ' ' + ('confirmation' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.email2"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit" 
-										 required
-										 maxlength="50"
-										 ng-clear-icon>
+								   type="text"
+								   ng-attr-placeholder="{{helper.isEdit ? ('email' | translate:lang.data) + ' ' + ('confirmation' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.email2"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit" 
+								   required
+								   maxlength="50"
+								   ng-clear-icon>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -594,31 +611,34 @@
 
 					<!-- Password -->
 					<div class="row input-row mb-0"
-							 ng-switch-when="login|register" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="login|register" 
+						 ng-switch-when-separator="|">
 						<label for="password" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-key" ></i>
+
 							<span class="ms-1 text-capitalize">
 								{{'password' | translate:lang.data}}:
 							</span>
 						</label>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="password" 
-										 type="password"
-										 ng-attr-placeholder="{{helper.isEdit ? ('password' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm input-password"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.password"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="20"
-										 ng-clear-icon>
+								   type="password"
+								   ng-attr-placeholder="{{helper.isEdit ? ('password' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm input-password"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.password"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="20"
+								   ng-clear-icon>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -628,9 +648,10 @@
 
 					<!-- Password rule -->
 					<div class="row mb-2"
-							 ng-switch-when="login|register" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="login|register" 
+						 ng-switch-when-separator="|">
 						<div class="col-0 col-sm-4"></div>
+
 						<div class="col-11 col-sm-7">
 							<span class="fs-sm text-muted">
 								{{'password_rule' | translate:lang.data}}.
@@ -640,31 +661,35 @@
 
 					<!-- Password confirm -->
 					<div class="row input-row mb-2"
-							 ng-switch-when="register">
+						 ng-switch-when="register">
 						<label for="password2" 
-									class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
+							   class="col-form-label col-form-label-sm col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-solid fa-unlock-keyhole" ></i>
+
 							<span class="ms-1 text-capitalize">
 								{{'password' | translate:lang.data}}
 							</span>
+
 							<span>{{'confirmation' | translate:lang.data}}:</span>
 						</label>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<input id="password2" 
-										 type="password"
-										 ng-attr-placeholder="{{helper.isEdit ? ('password' | translate:lang.data) + ' ' + ('confirmation' | translate:lang.data) : ''}}"
-										 class="form-control form-control-sm input-password"
-										 spellcheck="false" 
-										 autocomplete="off"
-										 ng-model="model.password2"
-										 ng-focus="methods.setFocusedElement($event)" 
-										 ng-change="methods.changed()"
-										 ng-disabled="!helper.isEdit"
-										 required
-										 maxlength="20"
-										 ng-clear-icon>
+								   type="password"
+								   ng-attr-placeholder="{{helper.isEdit ? ('password' | translate:lang.data) + ' ' + ('confirmation' | translate:lang.data) : ''}}"
+								   class="form-control form-control-sm input-password"
+								   spellcheck="false" 
+								   autocomplete="off"
+								   ng-model="model.password2"
+								   ng-focus="methods.setFocusedElement($event)" 
+								   ng-change="methods.changed()"
+								   ng-disabled="!helper.isEdit"
+								   required
+								   maxlength="20"
+								   ng-clear-icon>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -674,17 +699,20 @@
 
 					<!-- Show/Hide password -->
 					<div class="row mb-2"
-							 ng-switch-when="login|register" 
-							 ng-switch-when-separator="|">
+						 ng-switch-when="login|register" 
+						 ng-switch-when-separator="|">
 						<div class="col-0 col-sm-4"></div>
+
 						<div class="col-11 col-sm-7">
 							<div class="form-check form-check-inline small">
 								<input class="form-check-input" 
-											 type="checkbox"
-											 id="show-password"
-											 ng-disabled="!helper.isEdit"
-											 ng-display-password>
-								<label class="form-check-label" for="show-password">
+									   type="checkbox"
+									   id="show-password"
+									   ng-disabled="!helper.isEdit"
+									   ng-display-password>
+
+								<label class="form-check-label" 
+									   for="show-password">
 									<i class="fa-solid fa-eye mx-1" ></i>
 									<span>{{'display_password' | translate:lang.data}}</span>
 								</label>
@@ -697,60 +725,66 @@
 
 					<!-- Test code content -->
 					<div class="row mb-2"
-							 ng-if="helper.isEdit">
+						 ng-if="helper.isEdit">
 						<div class="col-form-label col-sm-4 text-sm-end fw-semibold">
 							<span class="fw-bold text-danger">*</span>
 							<i class="fa-regular fa-hand-point-right fa-xl" ></i>
+
 							<span class="ms-1 text-capitalize">
 								{{'code' | translate:lang.data}}:
 							</span>
 						</div>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<span class="text-start letter-spacing-2 fw-semibold fs-4">
 								{{helper.code}}
 						</span>
 						</div>
+
 						<div class="col-1"></div>
 					</div>
 
 					<!-- Test code input -->
 					<div class="row input-row mb-4"
-							 ng-if="helper.isEdit">
+						 ng-if="helper.isEdit">
 						<div class="col-form-label d-none d-sm-block col-sm-4"></div>
+
 						<div class="col-11 col-sm-7 position-relative">
 							<div class="input-group input-group-sm">
 								<div class="input-group-prepend">
-              		<span class="input-group-text rounded-0 h-100">
-              			<i class="fas fa-robot" ></i>
-              		</span>
-              	</div>
-              	<input id="testcode"
-              	       type="text" 
-              				 class="form-control form-control-sm"
-              				 spellcheck="false" 
-              				 autocomplete="off"
-											 ng-attr-placeholder="{{helper.isEdit ? ('code' | translate:lang.data) : ''}}"
-              				 required
-              				 maxlength="5"
-											 ng-model="model.testcode"
-											 ng-focus="methods.setFocusedElement($event)" 
-											 ng-change="methods.changed()"
-											 ng-disabled="!helper.isEdit"
-											 ng-keyup="methods.testcodeInit($event)"
-              				 style="min-width:120px!important;max-width:120px!important;"
-              				 ng-clear-icon='{"left":"150px"}'>
-              	<div class="input-group-append">
+									<span class="input-group-text rounded-0 h-100">
+              							<i class="fas fa-robot" ></i>
+              						</span>
+              					</div>
+
+              					<input id="testcode"
+              					       type="text" 
+              						   class="form-control form-control-sm"
+              						   spellcheck="false" 
+              						   autocomplete="off"
+									   ng-attr-placeholder="{{helper.isEdit ? ('code' | translate:lang.data) : ''}}"
+              						   required
+              						   maxlength="5"
+									   ng-model="model.testcode"
+									   ng-focus="methods.setFocusedElement($event)" 
+									   ng-change="methods.changed()"
+									   ng-disabled="!helper.isEdit"
+									   ng-keyup="methods.testcodeInit($event)"
+              						   style="min-width:120px!important;max-width:120px!important;"
+              						   ng-clear-icon='{"left":"150px"}'>
+              					<div class="input-group-append">
 									<button class="btn btn-sm btn-light text-capitalize text-small-caps btnClickEffect"
-													ng-click="methods.testcodeRefresh($event)"
-													ng-disabled="!helper.isEdit">
-              			<i class="fas fa-sync-alt" ></i>
+											ng-click="methods.testcodeRefresh($event)"
+											ng-disabled="!helper.isEdit">
+              							<i class="fas fa-sync-alt" ></i>
 										<span class="ms-1">
 											{{'refresh' | translate:lang.data}}
 										</span>
-              		</button>
-              	</div>
+              						</button>
+              					</div>
 							</div>
 						</div>
+
 						<div class="col-1 pt-1">
 							<span class="check-mark ms-1 fw-bold text-success d-hidden">
 								&check;
@@ -760,32 +794,34 @@
 
 					<!-- Dividing line -->
 					<hr class="text-muted" 
-							ng-if="helper.isEdit">
+						ng-if="helper.isEdit">
 
 					<!-- Buttons -->
 					<div class="row mb-2">
 
 						<!-- Accept -->
 						<div class="col-6 px-1 text-end" 
-								 ng-show="helper.isEdit">
+							 ng-show="helper.isEdit">
 							<button id="accept"
-											type="button" 
-											class="btn btn-primary text-capitalize text-small-caps btnClickEffect"
-											style="width:160px"
-											ng-click="methods.accept()"
-											disabled>
+									type="button" 
+									class="btn btn-primary text-capitalize text-small-caps btnClickEffect"
+									style="width:160px"
+									ng-click="methods.accept()"
+									disabled>
 								<span ng-if="userParamsType==='login'">
 									<i class="fa-solid fa-right-to-bracket" ></i>
 									<span class="ms-1">
 										{{'login' | translate:lang.data}}
 									</span>
 								</span>
+
 								<span ng-if="userParamsType==='register'">
 									<i class="fa-solid fa-address-card" ></i>
 									<span class="ms-1">
 										{{'register' | translate:lang.data}}
 									</span>
 								</span>
+
 								<span ng-if="userParamsType==='profile'">
 									<i class="fa-solid fa-floppy-disk"></i>
 									<span class="ms-1">
@@ -797,12 +833,12 @@
 
 						<!-- Cancel -->
 						<div class="col-6 px-1 text-start" 
-								 ng-show="helper.isEdit">
+							 ng-show="helper.isEdit">
 							<button id="cancel"
-											type="button" 
-											class="btn btn-secondary text-capitalize text-small-caps btnClickEffect"
-											style="width:160px"
-											ng-click="methods.cancel()">
+									type="button" 
+									class="btn btn-secondary text-capitalize text-small-caps btnClickEffect"
+									style="width:160px"
+									ng-click="methods.cancel()">
 								<i class="fa-solid fa-circle-xmark" ></i>
 								<span class="ms-1">
 									{{'cancel' | translate:lang.data}}
@@ -813,26 +849,26 @@
 
 						<!-- Forgot password -->
 						<div class="col-6 px-1 mt-3 text-end" 
-								 ng-if="userParamsType === 'login'">
-								 <a id="forgot_password"
-								 		href="" 
-								 		class="nav-link text-capitalize text-small-caps btnClickEffect"
-										ng-class="{'disabled link-secondary opacity-50': !helper.isForgotPasswordEnabled,
-															 'link-primary text-decoration-underline': helper.isForgotPasswordEnabled}"
-										ng-attr-aria-disabled="{{!helper.isForgotPasswordEnabled}}"
-										ng-click="methods.forgotPassword()">
-										{{'forgot_password' | translate:lang.data}}!
-								 </a>
+							 ng-if="userParamsType === 'login'">
+							<a id="forgot_password"
+							   href="" 
+							   class="nav-link text-capitalize text-small-caps btnClickEffect"
+							   ng-class="{'disabled link-secondary opacity-50': !helper.isForgotPasswordEnabled,
+							   		 'link-primary text-decoration-underline': helper.isForgotPasswordEnabled}"
+							   ng-attr-aria-disabled="{{!helper.isForgotPasswordEnabled}}"
+							   ng-click="methods.forgotPassword()">
+							   {{'forgot_password' | translate:lang.data}}!
+							</a>
 						</div>
 
 						<!-- Edit -->
 						<div class="col-12 px-1 text-center" 
-								 ng-show="!helper.isEdit">
+							 ng-show="!helper.isEdit">
 							<button id="edit"
-											type="button" 
-											class="btn btn-primary text-capitalize text-small-caps btnClickEffect"
-											style="width:160px"
-											ng-click="methods.edit()">
+									type="button" 
+									class="btn btn-primary text-capitalize text-small-caps btnClickEffect"
+									style="width:160px"
+									ng-click="methods.edit()">
 								<i class="fa-solid fa-pen-to-square" ></i>
 								<span class="ms-1">
 									{{'edit' | translate:lang.data}}
