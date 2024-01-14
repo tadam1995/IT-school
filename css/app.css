@@ -210,9 +210,6 @@ td>a:hover{
   color: #ffffff;
   font-size: 18px;
 }
-.table-text {
-  white-space: nowrap;
-}
 .comm_btn.active, .comm_btn:active {
   background-color: #5a5858;
   color:#ffffff;

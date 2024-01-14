@@ -39,7 +39,8 @@
         })
         .state('contact', {
           url: '/contact',
-          templateUrl: './html/contact.html'
+          templateUrl: './html/contact.html',
+          controller: 'contactController'
         })
         .state('kepzesek', {
           url: '/kepzesek',
@@ -353,26 +354,32 @@
   ])
 
   .controller("contactController", [
+    '$rootScope',
     '$scope', 
     'http', 
-    function ($scope, http) {
+    function ($rootScope, $scope, http) {
 
-      // ?
+      //
       $scope.formData = {
           subject: '',
           email: '',
           message: ''
       };
       
-      console.log(formData);
-      
       // process the form
       $scope.processForm = function () {
 
         // Http request
         http.request({
+          method: 'POST',
           url : `./php/contact.php`,
-          data: $scope.formData
+          data: {
+            lang: {
+              id: $rootScope.lang.id,
+              type: $rootScope.lang.type
+            },
+            params: $scope.formData
+          }
         })
         .then(response => {
           console.log(response);
