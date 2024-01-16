@@ -1,0 +1,8 @@
+<div class="page-container position-relative d-conditional
+						d-flex flex-column vh-100 overflow-auto"
+		 ng-class="$root.state.group">
+	<header ui-view="header"></header>
+	<main 	ui-view="" class="position-relative flex-fill fade-in"></main>
+	<footer ui-view="footer"></footer>
+	<ng-whait ng-if="['password_frogot','email_change','register'].includes(state.id)"></ng-whait>
+</div>

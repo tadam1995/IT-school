@@ -1,122 +1,93 @@
-<!-- Page container -->
-<div class="page-container d-conditional vh-100">
-
-  <!-- Navigate -->
-  <header class="sticky-top" 
-          ng-include src="'./html/navigate.html'">
-  </header>
-
-  <!-- Main -->
-  <main class="fade-in">
-
-    <!-- Container -->
-    <div class="container pt-5">
-
-      <!-- Row -->
-      <div class="row">
-
-        <!-- Titel -->
-        <h1 class="text-center text-capitalize text-small-caps">
-          {{'title' | translate:lang.data}}
-        </h1>
-        <hr>
+<!-- Container -->
+<div class="container pt-5">
+  <!-- Row -->
+  <div class="row">
+    <!-- Titel -->
+    <h1 class="text-center text-capitalize text-small-caps">
+      {{'title' | translate:lang.data}}
+    </h1>
+    <hr>
+  </div>
+  <!-- Row -->
+  <div class="row mt-3">
+    <!-- Carousel -->
+    <div id="carouselCarCaptions" 
+         class="carousel slide" 
+         data-bs-ride="carousel">
+      <!--- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" 
+                data-bs-target="#carouselCarCaptions" 
+                data-bs-slide-to="{{$index}}" 
+                ng-class="{'active': $index === 0}" 
+                aria-current="{{$index === 0 ? true : false}}" 
+                aria-label="Slide {{$index+1}}"
+                ng-repeat="x in carousel track by $index">
+        </button>
       </div>
-
-      <!-- Row -->
-      <div class="row mt-3">
-
-        <!-- Carousel -->
-        <div id="carouselCarCaptions" 
-             class="carousel slide" 
-             data-bs-ride="carousel">
-
-          <!--- Indicators -->
-          <div class="carousel-indicators">
-            <button type="button" 
-                    data-bs-target="#carouselCarCaptions" 
-                    data-bs-slide-to="{{$index}}" 
-                    ng-class="{'active': $index === 0}" 
-                    aria-current="{{$index === 0 ? true : false}}" 
-                    aria-label="Slide {{$index+1}}"
-                    ng-repeat="x in carousel track by $index">
-            </button>
-          </div>
-        
-          <!-- Carousel images -->
-          <div class="carousel-inner">
-
-            <div class="carousel-item"
-                 ng-class="{'active': $index === 0}"
-                 ng-repeat="x in carousel track by $index">
-              <img ng-src="./media/image/carousel/{{x}}" 
-                   class="d-block w-100" 
-                   alt="img">
-            </div>
-          </div>
-        
-          <!-- Controls -->
-          <button class="carousel-control-{{x}}" 
-                  type="button" 
-                  data-bs-target="#carouselCarCaptions" 
-                  data-bs-slide="{{x}}"
-                  ng-repeat="x in ['prev','next'] track by $index">
-            <span class="carousel-control-{{x}}-icon" 
-                  aria-hidden="true">
-            </span>
-
-            <span class="visually-hidden text-capitalize">{{x}}</span>
-          </button>
+    
+      <!-- Carousel images -->
+      <div class="carousel-inner">
+        <div class="carousel-item"
+             ng-class="{'active': $index === 0}"
+             ng-repeat="x in carousel track by $index">
+          <img ng-src="./media/image/carousel/{{x}}" 
+               class="d-block w-100" 
+               alt="img">
         </div>
       </div>
-
-      <!-- Row -->
-      <section class="mt-5 text-center text-muted homecontainer">
-
-        <!-- Title -->
-        <h3 class="fst-italic text-uppercase display-6">
-          {{'home_title' | translate:lang.data}}
-        </h3>
-
-        <!-- Content -->
-        <div class="row mt-5">
-          <hr>
-          <h4 class="">{{'homenews' | translate:lang.data}}</h4>
-        </div>
-
-        <!-- Rental process -->
-        <ul class="row list-unstyled text-center mt-4">
-          <li class="col-12 col-lg-6 my-2"
-              ng-repeat="x in [].constructor(4) track by $index">
-            <div class="cardbox p-2 login_container my-3 mx-3">
-              <div class="row row-cols-1 row-col-md-2 g-4">
-                <div class="col-6">
-                  <div class="position-relative mt-2">
-                    <img class="img-fluid img_car ms-2" 
-                         ng-src="./media/image/home/{{$index+1}}.jpg" 
-                         alt="img">
-                  </div>
-                </div>
-
-                <div class="col-6 text-muted text-start">  
-                  <h4 class="mt-2">{{'homenews_'+($index+1)+'_title' | translate:lang.data}}</h4>
-                  <p>{{'homenews_'+($index+1)+'_desc' | translate:lang.data}}</p>
-                </div>
+    
+      <!-- Controls -->
+      <button class="carousel-control-{{x}}" 
+              type="button" 
+              data-bs-target="#carouselCarCaptions" 
+              data-bs-slide="{{x}}"
+              ng-repeat="x in ['prev','next'] track by $index">
+        <span class="carousel-control-{{x}}-icon" 
+              aria-hidden="true">
+        </span>
+        <span class="visually-hidden text-capitalize">{{x}}</span>
+      </button>
+    </div>
+  </div>
+  <!-- Row -->
+  <section class="mt-5 text-center text-muted homecontainer">
+    <!-- Title -->
+    <h3 class="fst-italic text-uppercase display-6">
+      {{'home_title' | translate:lang.data}}
+    </h3>
+    <!-- Content -->
+    <div class="row mt-5">
+      <hr>
+      <h4 class="">{{'homenews' | translate:lang.data}}</h4>
+    </div>
+    <!-- Rental process -->
+    <ul class="row list-unstyled text-center mt-4">
+      <li class="col-12 col-lg-6 my-2"
+          ng-repeat="x in [].constructor(4) track by $index">
+        <div class="cardbox p-2 login_container my-3 mx-3">
+          <div class="row row-cols-1 row-col-md-2 g-4">
+            <div class="col-6">
+              <div class="position-relative mt-2">
+                <img class="img-fluid img_car ms-2" 
+                     ng-src="./media/image/home/{{$index+1}}.jpg" 
+                     alt="img">
               </div>
             </div>
-          </li>
-        </ul>
-
-        <!-- Comment -->
-        <div class="row">
-          <p class="col-11 col-sm-10 mx-auto">
-            {{'homenews_bottom' | translate:lang.data}}
-          </p>
-          <hr>
+            <div class="col-6 text-muted text-start">  
+              <h4 class="mt-2">{{'homenews_'+($index+1)+'_title' | translate:lang.data}}</h4>
+              <p>{{'homenews_'+($index+1)+'_desc' | translate:lang.data}}</p>
+            </div>
+          </div>
         </div>
-      </section>
+      </li>
+    </ul>
+    <!-- Comment -->
+    <div class="row">
+      <p class="col-11 col-sm-10 mx-auto">
+        {{'homenews_bottom' | translate:lang.data}}
+      </p>
+      <hr>
     </div>
-  </main>
-
-  <!-- Footer -->
-  <footer ng-include src="'./html/footer.html'"></footer>
+  </section>
 </div>
