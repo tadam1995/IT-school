@@ -21,6 +21,13 @@
       <div class="container formcontainer">
         <form name="contact_form">
           <input  type="text" 
+                  name="name" 
+                  class="form-control text-capitalize" 
+                  placeholder="{{'contact_name' | translate:lang.data}}" 
+                  ng-model="formData.name" 
+                  required>
+
+          <input  type="text" 
                   name="subject" 
                   class="form-control" 
                   placeholder="{{'contact_subject' | translate:lang.data}}" 
@@ -35,7 +42,7 @@
                  ng-model="formData.email" 
                  required>
            
-          <textarea  rows="5" 
+          <textarea  rows="3" 
                      cols="50" 
                      class="form-control" 
                      placeholder="{{'contact_message' | translate:lang.data}}" 

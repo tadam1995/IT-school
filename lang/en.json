@@ -179,5 +179,7 @@
   "choose_option": "Please choose from the following start times: ",
   "needlogin" : "Login required!",
   "returnText" : "Thank you for your interest, our colleagues will contact you soon.",
-  "yourMessage": "Your message"
+  "yourMessage": "Your message",
+  "contact_name" :"name...",
+  "greetings" :"Dear"
   }

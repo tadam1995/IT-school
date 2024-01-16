@@ -179,5 +179,7 @@
   "choose_option": "Bitte wählen Sie aus den folgenden Startzeiten: ",
   "needlogin" : "Anmeldung erforderlich!",
   "returnText" : "Vielen Dank für Ihre Anfrage, unsere Kollegen werden sich zeitnah bei Ihnen melden.",
-  "yourMessage": "Ihre Nachrichten"
+  "yourMessage": "Ihre Nachrichten",
+  "contact_name" :"nahme...",
+  "greetings" :"Lieber"
 }

@@ -43,7 +43,7 @@
   "postcode": "irányítószám",
   "address": "cím",
   "email": "email",
-  "confirmation": "megerősítése",
+  "confirmation": "megerősítés",
   "password": "jelszó",
   "password_rule": "6-20 karakter (kis-nagy betűt, és számot tartalmaz)",
   "display_password": "jelszót megjelenít",
@@ -181,5 +181,7 @@
   "terms_a": "adatvédelmi szabályzatát.",
   "needlogin" : "Bejelentkezés szükséges!",
   "returnText" : "Köszönjük a megkeresését, kollégáink hamarosan felveszik Önnel a kapcsolatot.",
-  "yourMessage": "Az Ön üzenete"
+  "yourMessage": "Az Ön üzenete",
+  "contact_name" :"név...",
+  "greetings" :"Tisztelt"
 }

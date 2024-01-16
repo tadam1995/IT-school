@@ -26,7 +26,8 @@ $constants = array(
 	"{{current_date}}" 			=> date("Y-m-d"),
 	"{{current_year}}" 			=> date("Y"),
 	"{{message}}" 					=> $args['params']['message'],
-	"{{email}}"                   => $args['params']['email']
+	"{{email}}"                   => $args['params']['email'],
+	"{{fromName}}"                => $args['params']['name']
 );
 
 // Merge language with constants
@@ -66,6 +67,7 @@ try {
 
 	// Az email tartalma
 
+  $phpMailerSchool->FromName = $args['params']['name'];
   $phpMailerUser->Subject = $args['params']['subject'];
   $phpMailerSchool->Subject = $args['params']['subject'];
   $phpMailerUser->Body 		= $phpMailerUser->getDocument();
