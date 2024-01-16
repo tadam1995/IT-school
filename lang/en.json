@@ -177,5 +177,7 @@
   "about": "about us",
   "apply": "apply",
   "choose_option": "Please choose from the following start times: ",
-  "needlogin" : "Login required!"
+  "needlogin" : "Login required!",
+  "returnText" : "Thank you for your interest, our colleagues will contact you soon.",
+  "yourMessage": "Your message"
   }

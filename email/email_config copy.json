@@ -1,0 +1,12 @@
+{
+	"fromNameLang": "IT {{school}}",
+	"img": {
+		"files": [
+			{
+				"name": "logo.jpg",
+				"alias": "logoimg"
+			}
+		],
+		"subFolder": "media/image/logo"
+	}
+}

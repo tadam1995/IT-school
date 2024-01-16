@@ -179,5 +179,7 @@
   "choose_option": "Kérlek válassz az alábbi kezdési időpontok közül: ",
   "terms": "A jelentkezéssel megértem és elfogadom az iskola ",
   "terms_a": "adatvédelmi szabályzatát.",
-  "needlogin" : "Bejelentkezés szükséges!"
+  "needlogin" : "Bejelentkezés szükséges!",
+  "returnText" : "Köszönjük a megkeresését, kollégáink hamarosan felveszik Önnel a kapcsolatot.",
+  "yourMessage": "Az Ön üzenete"
 }

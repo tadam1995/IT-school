@@ -4,15 +4,9 @@ use Util\Util as Util;
 use Language\Language as Language;
 use PHPMailer\Email as Email;
 
-
-$_POST['data'] = '{"lang":{"id":"hu","type":"east"},"params":{"subject":"sasaassa","email":"odry.attila@keri.mako.hu","message":"sasasa"}}';
-
 require_once('../../common/php/environment.php');
 
 $args = Util::getArgs();
-
-//$post_data = file_get_contents("php://input");
-//$data = json_decode($post_data);
 
 // Set language
 $lang = new Language($args['lang']);
@@ -20,12 +14,19 @@ $lang = new Language($args['lang']);
 // Translate error messages
 $errorMsg = $lang->translate(Email::$errorMessages);
 
+$langData = $lang->translate(array(
+	"{{confirmation}}"	=> "confirmation",
+	"{{returnText}}"	=> "returnText",
+	"{{yourMessage}}"   => "yourMessage"
+));
+
 // Set constants data
 $constants = array(
 	"{{lang_id}}" 					=> $args['lang']['id'],
 	"{{current_date}}" 			=> date("Y-m-d"),
 	"{{current_year}}" 			=> date("Y"),
-	"{{message}}" 					=> $args['params']['message']
+	"{{message}}" 					=> $args['params']['message'],
+	"{{email}}"                   => $args['params']['email']
 );
 
 // Merge language with constants
@@ -33,18 +34,28 @@ $langData = array();
 $langData = Util::objMerge($langData, $constants);
 
 // Create email
-$phpMailer = new Email($lang);
+$phpMailerUser = new Email($lang);
+$phpMailerSchool = new Email($lang);
+
 
 // Check is error
-if ($phpMailer->isError()) {
+if ($phpMailerUser->isError()) {
 
 	// Set error
-	Util::setError("{$phpMailer->getErrorMsg()}!", $phpMailer, $lang);
+	Util::setError("{$phpMailerUser->getErrorMsg()}!", $phpMailerUser, $lang);
 }
 
-// Set document
-$phpMailer->setDocument(array(
-	'fileName'		=> "contact.html",
+// Visszaigazolás az email elküldéséről
+
+$phpMailerUser->setDocument(array(
+	'fileName'		=> "contactUser.html",
+	'subFolder' 	=> 'email'
+), $constants, $langData);
+
+// Az iskola részére küldött email
+
+$phpMailerSchool->setDocument(array(
+	'fileName'		=> "contactSchool.html",
 	'subFolder' 	=> 'email'
 ), $constants, $langData);
 
@@ -53,23 +64,33 @@ $lang = null;
 
 try {
 
-	// Add rest properties
-  $phpMailer->Subject = $args['params']['subject'];
-  $phpMailer->Body 		= $phpMailer->getDocument();
-  $phpMailer->addAddress($args['params']['email']);
+	// Az email tartalma
+
+  $phpMailerUser->Subject = $args['params']['subject'];
+  $phpMailerSchool->Subject = $args['params']['subject'];
+  $phpMailerUser->Body 		= $phpMailerUser->getDocument();
+  $phpMailerSchool->Body 		= $phpMailerSchool->getDocument();
+  $phpMailerUser->addAddress($args['params']['email']);
+  $phpMailerSchool->addAddress('jakabhunorszki@gmail.com');
+  $phpMailerUser->isHTML(true);
+
 
 	// Send email
-  $phpMailer->send();
+  $phpMailerUser->send();
+  $phpMailerSchool->send();
+
 
 // Exception
 } catch (Exception $e) {
 
   // Set error
-	Util::setError("{$errorMsg['email_send_failed']}!", $phpMailer);
+	Util::setError("{$errorMsg['email_send_failed']}!", $phpMailerUser);
 }
 
 // Close email
-$phpMailer = null;
+$phpMailerUser = null;
+$phpMailerSchool = null;
+
 
 // Set response
 Util::setResponse('email_send_successful');
