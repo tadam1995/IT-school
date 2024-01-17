@@ -31,7 +31,9 @@
 
           <div class="mt-2" 
                ng-repeat="y in x.teachers">
-            <h6>{{'instructor' | translate:lang.data}}: {{y.surname}} {{y.first_name}}</h6>
+            <h6>{{'instructor' | translate:lang.data}}: 
+              {{y.surname}} {{y.first_name}}
+            </h6>
           </div>
         </div>
       </div>
@@ -43,18 +45,24 @@
               ng-class="{'disabled': !user.id}"
               data-bs-toggle="modal" 
               data-bs-target="#my-modal-1">
-        <span class="text-capitalize">{{'apply' | translate:lang.data}}</span>
+        <span class="text-capitalize">
+          {{'apply' | translate:lang.data}}
+        </span>
       </button>
     </div>
 
     <div class="text-center mb-5">
-      <span class="fst-italic fs-6">{{'needlogin' | translate:lang.data}}</span>
+      <span class="fst-italic fs-6">
+        {{'needlogin' | translate:lang.data}}
+      </span>
     </div>
 
     <div class="text-center mb-3">
       <button class="btn-courses btn btn-sm btn-primary px-4 shadow-sm" 
               ui-sref="courses">
-          <span class="text-capitalize">{{'back' | translate:lang.data}}</span>
+          <span class="text-capitalize">
+            {{'back' | translate:lang.data}}
+          </span>
       </button>
     </div>
 
@@ -68,7 +76,8 @@
        tabindex="-1"
        aria-labelledby="staticBackdropLabel" 
        aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered 
+                modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title text-capitalize" 

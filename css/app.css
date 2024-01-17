@@ -69,32 +69,39 @@ header {
 .courses-title {
   background-color:rgba(0,0,0,0.5);
 }
+
 .navbar, .footer{
   background-image: linear-gradient(to right, rgb(48, 50, 163) , rgb(103, 104, 173));
 }
+
 .nav-item{
   list-style-type: none;
   display: inline-block;
   margin-right: 20px;
 }
+
 .navfont{
   color:rgb(255, 255, 255) !important;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px !important;
 }
+
 .navbar-nav{
   width:100%;
   margin-left: 0;
   margin-bottom: 0
 }
+
 .foot-item{
   color:rgb(255, 255, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: small;
 }
+
 .courses_container {
   position: relative;
 }
+
 .image {
   opacity: 1;
   display: block;
@@ -103,6 +110,7 @@ header {
   transition: .5s ease;
   backface-visibility: hidden;
 }
+
 .btn.detail {
   background-color: rgb(255, 255, 255);
   border-color: rgb(255,255,255);
@@ -114,18 +122,22 @@ header {
   -webkit-transition: all .5s ease;
           transition: all .5s ease;
 }
+
 .btn.detail:hover {
   color:rgb(48, 50, 163);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
 }
 
+
 .courses_container:hover .btn.detail {
   opacity: 1;
 }
+
 .courses_container:hover .image {
   opacity: 0.5;
 }
+
 
 .courses_container:hover .middle {
   opacity: 1;
@@ -139,64 +151,77 @@ header {
   backdrop-filter: blur(50px);
   box-shadow: 5px 5px 8px rgb(71, 71, 71), 15px 15px 8px rgb(187, 187, 187);
 }
+
 .img_car{
   border-top-left-radius: 20px;
 }
+
 .fade-in { animation: fadeIn 1s; }
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 .fade-in-2s{
   animation: fadeIn 2s; }
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
 .fade-in-3s{
   animation: fadeIn 3s; }
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
 .fade-in-4s{
   animation: fadeIn 4s; }
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
 .fade-in-5s{
   animation: fadeIn 5s; }
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
 .br-round{
   border-bottom-right-radius: 20px !important;
 }
+
 .bg{
   background-image: url("../media/image/background/bg1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%;
 }
+
 td {
   border-bottom: 1px solid #424249;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
+
 tr:hover {
   background-color: rgb(163, 166, 182);
   color: #ffffff;
 }
+
 td>a{
   color:black;
   cursor: pointer;
 }
+
 td>a:hover{
   color: #ffffff28;
   font-weight: bold;
 }
+
 .comm_btn{
   background-color: #bdbdbd;
   border-radius: 10px;
@@ -205,19 +230,23 @@ td>a:hover{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
 }
+
 .comm_btn:hover{
   background-color: #6b6c8a;
   color: #ffffff;
   font-size: 18px;
 }
+
 .comm_btn.active, .comm_btn:active {
   background-color: #5a5858;
   color:#ffffff;
 }
+
 .btn-courses{
   font-size: 22px;
   border-radius: 15px;
 }
+
 p{
   font-family:sans-serif;
 }

@@ -36,7 +36,8 @@
               role="tablist">
 
             <!-- Tab1 -->
-            <li class="nav-item nav-item-pills mx-2 active" role="presentation">
+            <li class="nav-item nav-item-pills mx-2 active" 
+                role="presentation">
 
               <!-- Button -->
               <button id="tab-1-tab"
@@ -149,15 +150,25 @@
                      ng-if="teachers.length">
                 <thead class="table-light">
                   <tr>
-                    <th class="text-capitalize text-decoration-underline fs-6">#</th>
+                    <th 
+                      class="text-capitalize text-decoration-underline fs-6">#
+                    </th>
+
                     <th class="text-capitalize text-decoration-underline fs-6">
                         {{'name' | translate:lang.data}}
                     </th>
+
                     <th class="text-capitalize fs-6">
                       <u>{{'phone' | translate:lang.data}}</u>
                     </th>
-                    <th class="text-capitalize fs-6"><u>{{'email' | translate:lang.data}}</u></th>
-                    <th class="text-capitalize fs-6"><u>{{'course' | translate:lang.data}}</u></th>
+
+                    <th class="text-capitalize text-decoration-underline fs-6">
+                        {{'email' | translate:lang.data}}
+                    </th>
+
+                    <th class="text-capitalize text-decoration-underline fs-6">
+                        {{'course' | translate:lang.data}}
+                    </th>
                   </tr>
                 </thead>
 
@@ -176,7 +187,9 @@
                       </a>
                     </td>
 
-                    <td class="text-start w-100 text-center table-text">{{teacher.phone}}</td>
+                    <td class="text-start w-100 text-center table-text">
+                      {{teacher.phone}}
+                    </td>
                     <td class="text-start">{{teacher.email}}</td>
                     <td class="text-start table-text" 
                         ng-init="subjects=teacher.subjects.split(',')">
