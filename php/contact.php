@@ -17,13 +17,14 @@ $errorMsg = $lang->translate(Email::$errorMessages);
 $langData = $lang->translate(array(
 	"{{confirmation}}"	=> "confirmation",
 	"{{returnText}}"	=> "returnText",
-	"{{yourMessage}}"   => "yourMessage"
+	"{{yourMessage}}"   => "yourMessage",
+	"{{school}}"        => "school"
 ));
 
 // Set constants data
 $constants = array(
 	"{{lang_id}}" 					=> $args['lang']['id'],
-	"{{current_date}}" 			=> date("Y-m-d"),
+	"{{current_date}}" 			=> date('Y/m/d H:i:s'),
 	"{{current_year}}" 			=> date("Y"),
 	"{{message}}" 					=> $args['params']['message'],
 	"{{email}}"                   => $args['params']['email'],

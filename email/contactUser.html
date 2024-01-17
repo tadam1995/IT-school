@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{lang_id}}">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{contact}}</title>
 </head>
+
 <body>
-	<h1>{{greetings}} {{fromName}}!</h1>
-	<h1>{{confirmation}}</h1>
-	<h2>{{returnText}}</h2>
-	<h5>{{yourMessage}}:</h5>
-	<p><u>{{message}}</u></p>
+	<div style="text-align: center; background-color: rgb(223, 228, 227); width: fit-content; height: fit-content;">
+		<h1><u>{{confirmation}}</u></h1>
+		<h1>{{greetings}} {{fromName}}!</h1>
+		<h2>{{returnText}}</h2>
+		<h5>{{yourMessage}}:</h5>
+		<p><i>{{message}}</i></p>
+		<p style="font-size: smaller;"><i><u>{{school}}</u></i></p>
+		<p style="font-size: x-small;"><i>{{current_date}}</i></p>
+	</div>
 </body>
+
 </html>
