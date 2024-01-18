@@ -2,12 +2,13 @@
 			d-flex flex-column vh-100 overflow-auto"
 	ng-class="$root.state.group">
 	<header 
-		ui-view="header">
+		ui-view="header"
+		class="sticky-top">
 	</header>
 
 	<main 	
 		ui-view="" 
-		class="position-relative flex-fill fade-in">
+		class="position-relative flex-fill fade-in py-5">
 	</main>
 
 	<footer 

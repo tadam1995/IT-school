@@ -250,3 +250,9 @@ td>a:hover{
 p{
   font-family:sans-serif;
 }
+.nav-link {
+  color: white !important;
+}
+.page-container.user .form-dialog-header {
+  background-image: linear-gradient(to right, rgb(48, 50, 163) , rgb(103, 104, 173)) !important;
+}
