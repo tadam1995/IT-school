@@ -207,19 +207,19 @@
 
           <!-- Tab3 panel // gallery-->
           <div id="tab-3" 
-                class="tab-pane fade p-3 text-center" 
+                class="tab-pane fade p-3 justify-content-center" 
                 role="tabpanel" 
                 aria-labelledby="tab-3-tab">
 
-            <div class="row">
-              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 justify-content-center">
 
                 <div ng-repeat="x in [].constructor(16) track by $index"
                      data-index="{{$index+1}}"
                      ng-click="galleryClicked($event)">
                   <a>
                     <img ng-src="./media/image/community/gallery/{{$index+1}}.jpg"
-                      class="w-100 shadow-1-strong rounded mb-4"
+                      class="w-100 shadow-1-strong rounded mb-4 justify-content-center"
                       data-bs-toggle="modal" 
                       data-bs-target="#my-modal-2" 
                       alt="img">
@@ -304,7 +304,7 @@
 
 <!-- Moda2 // Gallery images-->
 <div id="my-modal-2" 
-      class="modal fade" 
+      class="modal fade modal-2-style" 
       data-bs-dismiss="modal" 
       data-bs-backdrop="static" 
       ata-bs-keyboard="true" 
@@ -314,11 +314,6 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" 
-            id="staticBackdropLabel">
-            {{teacherFull_name}}
-        </h5>
-
         <button type="button" 
                 class="btn-close me-2" 
                 data-bs-dismiss="modal" 
@@ -329,11 +324,10 @@
       <div class="modal-body"
            ng-if="galleryImgIndex>0">
         <img ng-src="./media/image/community/gallery/{{galleryImgIndex}}.jpg"
-                    class="w-100 shadow-1-strong rounded mb-4"
+                    class="w-100  shadow-1-strong rounded mb-4"
                     data-bs-toggle="modal" 
                     data-bs-target="#my-modal-2" 
                     alt="img">
-        <p>{{teacherContent | translate:lang.data}}</p>
       </div>
     </div>
   </div>
