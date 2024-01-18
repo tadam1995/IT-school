@@ -191,6 +191,12 @@
     'http',
     function($scope, http) {
 
+      $scope.galleryImgIndex = -1;
+      $scope.galleryClicked = (event) => {
+        let element = event.currentTarget,
+            index   = element.getAttribute('data-index');
+        $scope.galleryImgIndex = parseInt(index);
+      };
       $scope.teacherData = (event) => {
         let element = event.currentTarget;
         $scope.teacherImg = element.dataset.img;

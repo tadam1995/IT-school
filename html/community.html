@@ -213,7 +213,10 @@
 
             <div class="row">
               <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                <!-- <div ng-repeat="x in [].constructor(4) track by $index">
+
+                <div ng-repeat="x in [].constructor(6) track by $index"
+                     data-index="{{$index+1}}"
+                     ng-click="galleryClicked($event)">
                   <a>
                     <img ng-src="./media/image/community/gallery/{{$index+1}}.jpg"
                       class="w-100 shadow-1-strong rounded mb-4"
@@ -221,9 +224,9 @@
                       data-bs-target="#my-modal-2" 
                       alt="img">
                   </a>
-                </div> -->
+                </div>
 
-                <a>
+                <!-- <a>
                   <img src="./media/image/community/g1.jpg" 
                     class="w-100 shadow-1-strong rounded mb-4"
                     data-bs-toggle="modal" 
@@ -254,7 +257,7 @@
                 <img src="./media/image/community/g6.jpg" 
                       class="w-100 shadow-1-strong rounded mb-4" 
                       alt="img">
-              </div>
+              </div>-->
             </div>
           </div>
           <hr>
@@ -323,8 +326,9 @@
         </button>
       </div>
       
-      <div class="modal-body">
-        <img ng-src="./media/image/community/gallery/{{$index+1}}.jpg"
+      <div class="modal-body"
+           ng-if="galleryImgIndex>0">
+        <img ng-src="./media/image/community/gallery/{{galleryImgIndex}}.jpg"
                     class="w-100 shadow-1-strong rounded mb-4"
                     data-bs-toggle="modal" 
                     data-bs-target="#my-modal-2" 
