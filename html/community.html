@@ -42,7 +42,7 @@
             <!-- Button -->
             <button id="tab-1-tab"
                     class="comm_btn btn-outline-secondary ms-2 mb-2 ű
-                            btn-pills-tab active text-capitalize"
+                           btn-pills-tab active text-capitalize"
                     data-bs-toggle="pill" 
                     data-bs-target="#tab-1" 
                     role="tab" 
@@ -99,9 +99,9 @@
 
           <!-- Tab 1 panel -->
           <div id="tab-1" 
-                class="tab-pane fade show active p-3 text-center" 
-                role="tabpanel"
-                aria-labelledby="tab-1-tab">
+               class="tab-pane fade show active p-3 text-center" 
+               role="tabpanel"
+               aria-labelledby="tab-1-tab">
                 
             <div class="mt-5">
               <hr>
@@ -111,17 +111,16 @@
 
               <hr>
               <img src="./media/image/community/1.jpg" 
-                    class="img-fluid float-start me-3 rounded" 
-                    alt="img">
-
+                   class="img-fluid float-start me-3 rounded" 
+                   alt="img">
               <p class="text-justify">
                 {{'community_1' | translate:lang.data}}
               </p>
 
               <hr>
               <img src="./media/image/community/2.jpg" 
-                    class="img-fluid float-end ms-3 rounded" 
-                    alt="img">
+                   class="img-fluid float-end ms-3 rounded" 
+                   alt="img">
 
               <p class="text-justify">
                 {{'community_2' | translate:lang.data}}
@@ -129,8 +128,8 @@
 
               <hr>
               <img src="./media/image/community/3.jpg" 
-                    class="img-fluid float-start me-3 rounded" 
-                    alt="img">
+                   class="img-fluid float-start me-3 rounded" 
+                   alt="img">
 
               <p class="text-justify">
                 {{'community_3' | translate:lang.data}}
@@ -141,9 +140,9 @@
 
           <!-- Tab 2 panel // Teacher table-->
           <div id="tab-2" 
-                class="tab-pane fade p-3 text-center" 
-                role="tabpanel" 
-                aria-labelledby="tab-2-tab">
+               class="tab-pane fade p-3 text-center" 
+               role="tabpanel" 
+               aria-labelledby="tab-2-tab">
 
 
             <table class="table table-striped table-sm mt-3 w-auto" 
@@ -177,13 +176,13 @@
                   <td class="text-end">{{$index+1}}</td>
                   <td class="text-start">
                     <a class="table-text" 
-                        data-bs-toggle="modal" 
-                        data-bs-target="#my-modal-1"
-                        data-img="{{teacher.img}}" 
-                        data-content="{{teacher.content}}"
-                        data-full_name="{{teacher.full_name}}" 
-                        ng-click="teacherData($event)">
-                        {{teacher.full_name}}
+                       data-bs-toggle="modal" 
+                       data-bs-target="#my-modal-1"
+                       data-img="{{teacher.img}}" 
+                       data-content="{{teacher.content}}"
+                       data-full_name="{{teacher.full_name}}" 
+                       ng-click="teacherData($event)">
+                       {{teacher.full_name}}
                     </a>
                   </td>
 
@@ -207,9 +206,9 @@
 
           <!-- Tab3 panel // gallery-->
           <div id="tab-3" 
-                class="tab-pane fade p-3 justify-content-center" 
-                role="tabpanel" 
-                aria-labelledby="tab-3-tab">
+               class="tab-pane fade p-3 justify-content-center" 
+               role="tabpanel" 
+               aria-labelledby="tab-3-tab">
 
             <div class="row justify-content-center">
               <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 justify-content-center">
@@ -219,45 +218,12 @@
                      ng-click="galleryClicked($event)">
                   <a>
                     <img ng-src="./media/image/community/gallery/{{$index+1}}.jpg"
-                      class="w-100 shadow-1-strong rounded mb-4 justify-content-center"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#my-modal-2" 
-                      alt="img">
+                         class="w-100 shadow-1-strong rounded mb-4 justify-content-center"
+                         data-bs-toggle="modal" 
+                         data-bs-target="#my-modal-2" 
+                         alt="img">
                   </a>
                 </div>
-
-                <!-- <a>
-                  <img src="./media/image/community/g1.jpg" 
-                    class="w-100 shadow-1-strong rounded mb-4"
-                    data-bs-toggle="modal" 
-                    data-bs-target="#my-modal-2" 
-                    alt="img">
-                </a>
-
-                <img src="./media/image/community/g2.jpg" 
-                      class="w-100 shadow-1-strong rounded mb-4" 
-                      alt="img">
-
-                <img src="./media/image/community/g3.jpg" 
-                      class="w-100 shadow-1-strong rounded mb-4" 
-                      alt="img">
-              </div>
-
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="./media/image/community/g4.jpg" 
-                      class="w-100 shadow-1-strong rounded mb-4" 
-                      alt="img">
-
-                <img src="./media/image/community/g5.jpg" 
-                      class="w-100 shadow-1-strong rounded mb-4" 
-                      alt="img">
-              </div>
-
-              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                <img src="./media/image/community/g6.jpg" 
-                      class="w-100 shadow-1-strong rounded mb-4" 
-                      alt="img">
-              </div>-->
             </div>
           </div>
           <hr>
@@ -269,13 +235,13 @@
 
 <!-- Modal // Teacher description-->
 <div id="my-modal-1" 
-      class="modal fade" 
-      data-bs-dismiss="modal" 
-      data-bs-backdrop="static" 
-      ata-bs-keyboard="true" 
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel" 
-      aria-hidden="true">
+     class="modal fade" 
+     data-bs-dismiss="modal" 
+     data-bs-backdrop="static" 
+     ata-bs-keyboard="true" 
+     tabindex="-1"
+     aria-labelledby="staticBackdropLabel" 
+     aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -293,8 +259,8 @@
       
       <div class="modal-body">
         <img ng-src="./media/image/teacher/{{teacherImg}}" 
-              class="d-block w-100" 
-              alt="img">
+             class="d-block w-100" 
+             alt="img">
         <p>{{teacherContent | translate:lang.data}}</p>
       </div>
     </div>
@@ -304,13 +270,13 @@
 
 <!-- Moda2 // Gallery images-->
 <div id="my-modal-2" 
-      class="modal fade modal-2-style" 
-      data-bs-dismiss="modal" 
-      data-bs-backdrop="static" 
-      ata-bs-keyboard="true" 
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel" 
-      aria-hidden="true">
+     class="modal fade modal-2-style" 
+     data-bs-dismiss="modal" 
+     data-bs-backdrop="static" 
+     ata-bs-keyboard="true" 
+     tabindex="-1"
+     aria-labelledby="staticBackdropLabel" 
+     aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -324,10 +290,10 @@
       <div class="modal-body"
            ng-if="galleryImgIndex>0">
         <img ng-src="./media/image/community/gallery/{{galleryImgIndex}}.jpg"
-                    class="w-100  shadow-1-strong rounded mb-4"
-                    data-bs-toggle="modal" 
-                    data-bs-target="#my-modal-2" 
-                    alt="img">
+             class="w-100  shadow-1-strong rounded mb-4"
+             data-bs-toggle="modal" 
+             data-bs-target="#my-modal-2" 
+             alt="img">
       </div>
     </div>
   </div>
